@@ -1,0 +1,81 @@
+---
+categories:
+  - Raspberry pi 4
+  - Android studio
+date: 2021-10-29T08:13:22.000Z
+description: The post describes if the possible way to Install android studio in raspberry
+  pi 4.
+draft: false
+image: /images/post/2021/10/Install-android-studio-in-raspberry-pi-4.png
+tags:
+  - Raspberry
+  - Raspberry pi 4
+  - Android studio
+  - Install Android studio
+title: Install android studio in Raspberry pi 4
+metas:
+  image: /images/post/2021/10/Install-android-studio-in-raspberry-pi-4.png
+lastmod: 2023-03-09T15:05:56.503Z
+---
+
+Android Studio does not support raspberry pi 4. Currently, the android studio
+supports only Windows, Linux, and Mac OS.
+
+In Linux, officially, Android supports only Amd64 (64-bit processor)
+architecture operating system. So if you use Raspberry pi 4, raspberry pi 3,
+and other similar hardware, run on Arm64 architecture. Then make sure you do not
+install android studio on it. Whatever you use any method to try to install
+android studio on it.
+
+Check arm64 architecture in Debian-based distros.
+
+```bash
+sudo dpkg --print-architecture
+```
+
+![Output off Debian base architecture command looks like](/images/post/2021/10/carbon.png "Output off Debian base architecture command looks like")
+
+Some people say you use Debian multi-architecture to install i386 architecture
+and then install android studio. I also try it. But it does not work for me.
+
+Firstly you enable the installation of multi-architecture binaries, apt, and
+dpkg need configuration changes. So, for example, if you have an amd64
+architecture that you want to install i386 libraries onto, do the following:
+
+```bash
+sudo dpkg --add-architecture i386
+sudo apt-get update
+sudo apt-get install lib32z1 lib32ncurses5 lib32bz2-1.0 libstdc++6:i386 libfontconfig1:i386 libxext6:i386 libxrender1:i386 libgstreamer-plugins-base0.10-0:i386
+```
+
+i386 repo links are broken. It does not install in your raspberry pi 4.
+
+If you install ubuntu on raspberry pi 4. after running these commands, install
+android-studio on your raspberry pi 4. it does not install android-studio in
+your raspberry pi 4.
+
+#### Best Ways to download Android in arm64 by snap
+
+Firstly install snap package manager install your raspberry pi 4. after
+installation is complete, paste the snap android-studio install command in your
+raspberry pi 4. But the Android-studio snap command is also not working for
+raspberry pi 4.
+
+```bash
+sudo snap install android-studio --classic
+```
+
+![Snap command output in your terminal show architecture error](/images/post/2021/10/install-android-studio-on-raspberry-pi-4.png "Snap command output in your terminal show architecture error")
+
+Arm 64 is the main reason I wouldn't say I like raspberry pi 4 because lots of
+software and packages do not support arm64 architecture. They only support amd64
+architecture. I know arm64 is not 32bit; it is 64-bit architecture support.
+
+I know some people raspberry pi 4 is a small PC to build projects on li. So you
+use raspberry pi 4 to start working Linux. But my opinion is arm 64 architecture
+is a very big problem for developers. So which developers are working frontend
+developer, full-stack, and mobile app development?
+
+## Reference
+
+## [https://en.wikipedia.org/wiki/ARM_architecture_family#Cores](https://en.wikipedia.org/wiki/ARM_architecture_family#Cores)

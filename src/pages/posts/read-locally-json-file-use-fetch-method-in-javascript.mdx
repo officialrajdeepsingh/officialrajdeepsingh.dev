@@ -1,0 +1,193 @@
+---
+categories:
+  - javascript
+date: 2020-12-08T15:16:21.000Z
+description: In This Post, We  Learn How to  Read Locally JSON files Use Fetch Method In
+  Javascript. But We Do Not Use Import MetHod For Reading JSON File.
+image: /images/post/2020/12/Read-Locally-json-File-Use-Fetch-Method-In-JavaScript.png
+tags:
+  - javascript
+  - Fetch
+  - Fetch Method
+  - JSON
+  - Read json File
+  - Read Locally
+title: Read Locally JSON File use Fetch Method In JavaScript?
+draft: false
+metas:
+  image: /images/post/2020/12/Read-Locally-json-File-Use-Fetch-Method-In-JavaScript.png
+lastmod: 2023-03-09T15:08:14.876Z
+---
+
+### Let's Start It
+
+### Steps
+
+1. Folder Structure
+2. JSON File Structure
+3. Read **data.JSON** File Inside Root
+4. Read **Blog.json** File Inside src Folder
+
+### Demo
+
+<iframe width="928" height="500" src="https://codesandbox.io/embed/read-local-json-file-in-javascript-dnly0?file=/src/index.js:4-35" style="height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+
+If You Read JSON File, txt File, and Any Other File Inside JavaScript, use Fetch
+Method. Make Sure You use Live Server In JavaScript.
+
+Live Server Provide You A HTTP Response For Your Local Production and
+Development base Project You Use Express.js, Vscode Live Server Plugin For Local
+Production, and Any other Library.
+
+Secondly, Don't Import JavaScript Files. When Use Fetch Method In Your Project.
+
+```javascript
+import data from './Blog.json';
+// show Error Inside Your Browser
+fetch(data).then(function (response) {
+	response.json().then(function (data) {
+		console.log(data);
+	});
+});
+```
+
+**Resolve SyntaxError: Unexpected token `<` in JSON at position 0 Error**:
+Simple Remove Import Value Inside Fetch Method and Add URL inside fetch.
+
+### Show A Error Inside Console
+
+![SyntaxError: Unexpected token < in JSON at position 0](/images/post/2020/12/Error-json.png "SyntaxError: Unexpected token < in JSON at position 0")
+
+---
+
+### Folder Structure
+
+![Folder Structure](/images/post/2020/12/Json-Folder-Str.png "Folder Structure")
+
+I'm Read Two File In My Demo Project. First File Inside Root Folder And Second
+File Inside src Folder.
+
+---
+
+## JSON File Structure
+
+![JSON File Structure](/images/post/2020/12/Json-Str-LoOK-lIKE.png "JSON File Structure")
+
+JSON File Structure Most Important For Us, Because when JSON Data **Warp**
+Inside **Array**. In case You Use **Map() Method** And Get Data Easily Inside
+Your Project.
+
+```json
+[
+    {
+       "username": "officialrajdeepsingh",
+       "firstName": "Rajdeep",
+       "lastName": "Singh",
+       "gender": "Male",
+       "aboutAuthor": "Read Book, Music Lover and Web Developer"
+     },
+     ...
+ ]
+```
+
+You Write Directly Inside JSON File You Use **Object.entries() Method** Firstly,
+after use map() method For Read JSON File. Rest Of Code Same In My Demo
+Project.JSON data Access Not Easily In **Object.entries() Method**. I'm
+Recommend You To Wrap Your JSON Data Firstly Inside the Array.
+
+```json
+{
+	"username": "officialrajdeepsingh",
+	"firstName": "Rajdeep",
+	"lastName": "Singh",
+	"gender": "Male",
+	"aboutAuthor": "Read Book, Music Lover and Web Developer"
+}
+```
+
+---
+
+## Read data.json File Inside Root
+
+```javascript
+fetch('./data.json')
+	.then(function (response) {
+		return response;
+	})
+	.then(function (data) {
+		return data.json();
+	})
+	.then(function (Normal) {
+		const html = Normal.map(
+			(data) =>
+				`<div class="card"> 
+        <h4> ${data.username}</h4>
+        <h2> ${data.firstName}  ${data.lastName} </h2>
+        <h3> ${data.gender}</h3>
+        <h3> ${data.aboutAuthor}</h3>
+    </div>`,
+		);
+		document.getElementById('app').innerHTML = html;
+	})
+	.catch(function (err) {
+		console.log('Fetch problem show: ' + err.message);
+	});
+```
+
+- Inside Fetch Method, We Pass Absolute File Path. In My Case My File Inside Root Folder. So we use the Absolute path to look like `./data.json`. Then use **JSON()** method Get data to the Response.
+- Do Not use Import File, Inside Fetch Method URL.
+- Make Sure Your JSON File Access With URL (Checkout My Example URL).
+- When Add File Path With Live Server. Now Fetch Method Convert To a URL. If fetch Method Not Convert Then Show Error In Your Console.
+- In local Development, use Live Server For Convert Fetch method URL to Http response
+
+**Code sandbox Online Project My data.json File:**
+[https://dnly0.csb.app/data.json](https://dnly0.csb.app/data.json)
+
+---
+
+## Read Blog.json File Inside src Folder
+
+```javascript
+fetch('./src/Blog.json')
+	.then(function (response) {
+		return response;
+	})
+	.then(function (data) {
+		return data.json();
+	})
+	.then(function (Normal) {
+		const html = Normal.map(
+			(data) =>
+				`<div class="card"> 
+        <h4> ${data.username}</h4>
+        <h2> ${data.fullName}</</h2>
+        <h3> ${data.aboutAuthor}</h3>
+    </div>`,
+		);
+		document.getElementById('appData').innerHTML = html;
+	})
+	.catch(function (err) {
+		console.log('Fetch problem show: ' + err.message);
+	});
+```
+
+- Inside Fetch Method, We Pass Absolute File Path. In My Case My File Inside src
+  Folder. So we use the Absolute path to look like `./src/Blog.json`. Then use
+  **JSON()** method Get data to the Response.
+- Do Not use Import File, Inside Fetch Method URL.
+- Make Sure Your JSON File Access With URL (Checkout My Example URL).
+- When Add File Path With Live Server. Now Fetch Method Convert To a URL. If
+  fetch Method Not Convert Then Show Error In Your Console.
+- In local Development, use Live Server For Convert Fetch method URL to Http
+  response
+
+**Code sandbox Online Project Example My Blog.json**
+[https://dnly0.csb.app/src/Blog.json](https://dnly0.csb.app/src/Blog.json)
+
+---
+
+## Reference
+
+[https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
+
+[https://www.geeksforgeeks.org/javascript-fetch-method/](https://www.geeksforgeeks.org/javascript-fetch-method/)

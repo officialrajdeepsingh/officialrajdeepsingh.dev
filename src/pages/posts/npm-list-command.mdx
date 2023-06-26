@@ -1,0 +1,135 @@
+---
+categories:
+  - NPM
+date: 2022-04-03T09:54:55.000Z
+description: npm ls command helps to work out with all ready install dependencies.
+draft: false
+image: /images/post/2022/04/npm.png
+slug: npm-list-command
+summary: npm ls command helps to work out with all ready install dependencies.
+tags:
+  - npm
+  - npm-cli
+  - npm ls
+title: NPM list command
+lastmod: 2023-03-09T15:07:37.746Z
+metas:
+  image: /images/post/2022/04/npm.png
+---
+
+The NPM list command helps list all the dependencies you install in the root
+level project.
+
+Npm list command print the Package list based on the package.json and
+package.lock.json file.
+
+```bash
+npm ls
+npm ls <option> or <flags>
+```
+
+![Npm ls command](/images/post/2022/03/carbon.png "Npm ls command")
+
+NPM ls command is a similar command to the Linux ls command. But the difference
+in npm and ls command. Linux ls command prints directory or folders, and the npm
+ls command prints the installed packages in your project.
+
+NPM ls command print package information with a beautiful design format in your
+terminal.
+
+We discuss only daily base options or flags in npm. npm ls command provides
+many more flags, which many more flags work for the developer, and some commands
+are not under everyday use.
+
+We make sure with the npm ls command to speed up your workflow.
+
+### Option or Flags
+
+1. all
+2. JSON
+3. long
+4. global
+5. depth
+6. link
+7. package-lock-only
+
+## all
+
+npm ls --all print all the dependencies are depending upon the current project.
+
+```bash
+npm ls -all
+```
+
+https://gist.github.com/officialrajdeepsingh/337c51e0817df746aa22ed95823d1829
+
+### JSON
+
+`npm ls --json` command print the data in json formate in the terminal.
+
+```bash
+npm ls json
+```
+
+![output the npm ls --json](/images/post/2022/04/npm-ls---json.png "output the npm ls --json")
+
+### long
+
+`npm ls --long` print the extended information.
+
+```bash
+npm ls --long
+```
+
+![output the npm ls --long](/images/post/2022/04/npm-ls---long.png "output the npm ls --long")
+
+### global
+
+npm ls global command prints all global installed package lists in the terminal.
+
+```bash
+npm ls --global
+```
+
+![output the npm ls --global](/images/post/2022/04/npm-ls---global.png "output the npm ls --global")
+
+### depth
+
+npm ls depth command prints in-depth dependencies into the terminal.
+
+![output the npm ls --depth](/images/post/2022/04/npm-ls---depth.png "output the npm ls --depth")
+
+### link
+
+npm ls --link command only print the linked packages list in the terminal.
+
+```bash
+npm ls --link
+```
+
+![output the npm ls --link](/images/post/2022/04/npm-ls---link.png "output the npm ls --link")
+
+### package-lock-only
+
+npm ls package-lock-only command print dependence tree based on the `package-lock.json` file.
+
+![output the npm ls --package-lock-only](/images/post/2022/04/npm-ls---package-lock-only.png "output the npm ls --package-lock-only")
+
+---
+
+The npm ls command flags are not discussed in this article.
+
+1. workspace
+2. workspaces
+3. parseable
+4. omit
+5. unicode
+6. include-workspace-root
+
+---
+
+### References
+
+[https://docs.npmjs.com/cli/v8/commands/npm-ls#depth](https://docs.npmjs.com/cli/v8/commands/npm-ls#depth)
+
+---

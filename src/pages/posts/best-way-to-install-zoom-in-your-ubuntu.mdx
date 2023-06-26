@@ -1,0 +1,92 @@
+---
+categories:
+  - ubuntu
+date: 2022-05-24T08:00:00.000Z
+description: Install zoom in your Ubuntu ( 22.04 ) with  easy ways
+image: /images/install-zoom-in-ubuntu.png
+draft: false
+tags:
+  - zoom on Ubuntu
+  - install zoom
+  - Zoom
+  - ubuntu
+title: Best way to install zoom in your ubuntu
+lastmod: 2023-03-09T15:01:19.031Z
+type: post
+author: Rajdeep Singh
+---
+
+Now there are lots of people using zoom for meetings. Today I will tell you the best ways to install zoom in your ubuntu.
+
+I use snap to install zoom in my ubuntu. Most of the time, my zoom application is crashes. It is so frustrating for me.
+
+So I used the official zoom package app and installed zoom in ubuntu. There are two ways to install zoom in your ubuntu.
+
+1. With the help of UI
+2. Command-line
+
+## With the help of UI
+
+There is two-step involved in installing zoom in your ubuntu.
+
+1. Download zoom application
+2. Install application
+
+### Download zoom application
+
+You go to the zoom official page and download the zoom application file in the first step.
+
+![download zoom application  for ubuntu](/images/zoomdownload.png "Download Zoom")
+
+### Install application
+
+In the second step, you go to the download folder and run the application installer by pressing the mouse right-click, clicking again **open with other application** buttons, and click the **Install software** button.
+
+**Steps** > Open file with the **mouse right-click on file** > **open with other application** > **Install software.**
+
+After some seconds next screen is a popup, and click the install button. Your application installation process is starting.
+
+## Command-line
+
+There is two-step to install the zoom on the command line.
+
+1. Install with wget command
+2. Install application with `dpkg` command
+
+### Install with wget command
+
+In the first step, we download the zoom application file with `wget` command.
+
+```bash
+wget https://zoom.us/client/latest/zoom_amd64.deb -O zoom.deb
+```
+
+### Install application with `dpkg` command
+
+Your file is installed in a local download folder and goes to the folder. Then run the following command.
+
+```bash
+sudo dpkg -i  zoom.deb
+```
+
+After the command successfully runs in your terminal, your zoom application is installed.
+
+The most cases `wget` command download file is in the download folder. If you specify a different folder. you can also do that with `wget` command. then you go to the download folder and run `dpkg` the command with the file name. {.info}
+
+---
+
+## How to Uninstall zoom in ubuntu?
+
+You run the following command to remove the zoom application.
+
+```bash
+sudo apt remove --purge zoom
+```
+
+---
+
+## Conclusion
+
+I'm not recommended to snap to install zoom. Because of a lot of time, your zoom application is crashes, and your user experience is not so good.
+
+Suppose you install a Debian-based zoom application in your ubuntu. I strongly recommend installing the app directly and not using any third-party package manager like snap or flatpak.

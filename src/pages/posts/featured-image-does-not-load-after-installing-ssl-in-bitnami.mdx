@@ -1,0 +1,90 @@
+---
+categories:
+  - ghost cms
+date: 2020-11-25T09:08:12.000Z
+description: In My New Blog Post, We Learn How to Resolve Error In Ghost Featured Image
+  does not load after installing SSL In Bitnami.
+image: /images/post/2020/11/Feature-Image-Not-Show-Inside-Ghost-Domain.png
+tags:
+  - ghost cms
+  - ghost setup
+  - ghost with bitnami
+  - bitnami
+title: Featured Image Does Not Load After Installing SSL In Bitnami
+draft: false
+lastmod: 2023-03-09T15:02:01.635Z
+metas:
+  image: /images/post/2020/11/Feature-Image-Not-Show-Inside-Ghost-Domain.png
+---
+
+### Lets Start
+
+## **There are** two **steps:**
+
+1. Access your Ghost instance
+2. Enable Firewalls
+
+---
+
+### Access your Ghost instance
+
+![GCP Dashboard](/images/post/2020/11/Google-Console-5.png "GCP Dashboard")
+
+- Open Your Google Console Dashboard.
+
+---
+
+![VM INSTANCES](/images/post/2020/11/GCP-Dmain-5.png "VM INSTANCES")
+
+- Open Your Google Console Dashboard Then Click Top Left Conner humber icon. Click Compute Engine, Select VM Instance, Then Your VM Instance Page Open.
+
+---
+
+![Click SSH](/images/post/2020/11/Ghost-SSH--3.png ' Click SSH')
+
+- After the Open Instance page, click SSH Button.
+
+---
+
+![Terminal](/images/post/2020/11/open-new-SSH-3.png ' Terminal')
+
+- After Open Your Instance Page. Then Click SSH Button. Some You See Open New Window In button Side you See Your SSH terminal Successfully Open.
+
+---
+
+![Open Your Instances](/images/post/2020/11/Open-Vm-Intance.png 'Open Your Instances')
+
+- Open Your Currently Install Ghost Instances.
+
+---
+
+### Enable Firewalls
+
+![Enable Firewalls](/images/post/2020/11/Firewalls.png ' Enable Firewalls')
+
+When Your Instance Webpage, Open In Your Web browser. Then Go To Scroll Down Find **Firewalls Section** And **Enable** Both Firewalls.
+
+- Allow HTTP traffic (Enable)
+- Allow HTTPS traffic (Enable)
+
+After You Allow Https Or Http Request On Your Domain and After install SSL. Suppose You Do Not Enable Firewalls. You show error InSide GCP. Make Sure You Enable Firewalls Then Install SSL.
+
+### Note
+
+- Same Case You all ready Install SSL Your Domain. Your Website Image Not Show. In that Case, Firstly, **Enable** Your **Firewalls In Your Ghost** Instance.
+- And Config Your Domain Inside Your **Configure** `config.production.json` and Add Https In Side Url section.
+- Make Sure Restart Your Ghost CMS. This Most **Important** Step For You.
+
+### Example
+
+url:"**http**://officialrajdeepsingh.dev"
+
+Change Https In Side Your `config.production.json` File
+
+URL:"**https**://officialrajdeepsingh.dev"
+
+After You Change **the URL** In Your Website, you See an Image Success Render on Your website With an Absolute Path with SSL.
+
+[https://officialrajdeepsingh.dev/featured-image-does-not-load-after-installing-ssl-in-bitnami/](https://officialrajdeepsingh.dev/featured-image-does-not-load-after-installing-ssl-in-bitnami/)
+
+---

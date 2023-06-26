@@ -1,0 +1,87 @@
+---
+title: What is mdBook, and How to install mdBook CLI?
+description: mdBook is a command line tool specifically designed for rust developers.
+  mdbook help to create API documentation, tutorials, course materials, or
+  documentation with Markdown. Without knowledge of frontend development.
+
+date: 2023-02-16T10:19:55.398Z
+draft: false
+tags:
+  - documentation
+  - Install mdBook CLI
+  - "mdbook "
+  - mdBook CLI
+  - Rust
+  - mdbook CLI tool
+image: /images/what-is-mdbook-and-how-to-install-mdbook-cli.png
+categories:
+  - Rust
+lastmod: 2023-03-09T10:29:46.033Z
+metas:
+  image: /images/what-is-mdbook-and-how-to-install-mdbook-cli.png
+---
+
+mdBook is a Rust-based command line tool that helps create books with Markdown and Rust. With the mdBook tool, You can create a product, API documentation, tutorials, course materials, or anything. You can easily deploy various platforms like GitHub pages, etc.
+
+## Common Features
+- mdBook CLI  is a lightweight markdown tool.
+- mdbook cli integrated search, pagination, and navbar support.
+- Code highlighting for many different languages.
+- You can also run and edit code in the browser and copy code with one click.
+- mdbook Tool provides different themes, and you can change the theme with one click.
+- Preprocessors are extensions that can modify the raw Markdown before it gets sent to the renderer.
+- Adding or extend your mdBook functionality with [the plugin](https://github.com/rust-lang/mdBook/wiki/Third-party-plugins).
+- mdBook tool has been written in Rust for speed, safety, and simplicity.
+
+## How to install mdBook CLI?
+mdBook comes with two types of installation options available.
+1.Install with Pre-compiled binaries
+2. Build from source using cargo
+
+### Install with Pre-compiled binaries.
+It is a very complicated and time-consuming step for beginners, and I do not recommend it. 
+1. Go to the mdbook Github release page.
+2. Select the binary file according to your operating system and download it locally.
+3. Extract the folder and folder containing the mdbook executable file. 
+4. Now add your path into the PATH variable to run the mdbook executable for any location in your machine.
+
+
+### Build from source using cargo.
+The recommended way to install the mdbook CLI tool in your system with cargo CLI. Cargo is a cli tool provided by Rust foundation. It helps to create a new project, run the code, etc.
+But with cargo, Now you can install and build a Rust binary from to source and download it on the Default location is $HOME/.cargo/bin.
+
+You do not need to add the mdbook binary PATH manually into bashrc. The cargo automatically does it, and you can run the mdbook cli anywhere in the machine.
+
+```bash
+cargo install mdbook
+```
+Command out put look like
+![command output](/images/install-mdbook.png 'command output')
+
+## create the new book with mdbook cli
+```bash
+mdbook init my-first-book
+```
+
+The folder Output is look. 
+
+```bash
+tree
+.
+├── book
+├── book.toml
+└── src
+    ├── chapter_1.md
+    └── SUMMARY.md
+
+2 directories, 3 files
+```
+### Information
+1. `book.toml` file contain all the configuration related to the book.
+2. The `src` folder contains all your markdown files.
+3. The `book` folder contains production built.
+
+
+### Conclusion
+
+mdbook is a specific design for rust developers, and you do not need to learn any frontend framework for designing and building documents. With mdbook, you can easily write a document with Markdown and the functionality like search, navbar, code highlighting, pagination, etc., provided by mdbook.

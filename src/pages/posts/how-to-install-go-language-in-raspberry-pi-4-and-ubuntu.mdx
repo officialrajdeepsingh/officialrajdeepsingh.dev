@@ -1,0 +1,103 @@
+---
+categories:
+  - Raspberry pi 4
+  - ubuntu
+
+date: 2022-03-15T10:59:50.000Z
+description: Go language is a low-level language developed by Google.  You can install go
+  language in ubuntu and raspberry pi with one command.
+draft: false
+image: /images/post/2022/03/install-go-langauge.png
+tags:
+  - go language
+  - linux
+  - Raspberry pi 4
+  - ubuntu
+  - install go language
+title: How to Install Go language in Raspberry pi 4 and Ubuntu?
+metas:
+  image: /images/post/2022/03/install-go-langauge.png
+lastmod: 2023-03-09T15:04:35.342Z
+---
+
+You install go language in raspberry pi 4, Ubuntu and Linux. The go language
+installation process is similar for all the Linux distros.
+
+There is two way to install the go language in raspberry pi 4.
+
+1. Snap
+2. Command-line
+
+### Snap
+
+With the help of the [Snap store](https://snapcraft.io/go), the easy way to install Go language in Raspberry pi 4 and ubuntu.
+
+Simple you paste only one snap command in raspberry pi 4, and your go language install and config path automatics in raspberry pi 4.
+
+```bash
+sudo snap install go --classic
+```
+
+![Install Go language raspberry pi and ubuntu](/images/post/2022/03/carbon--3-.png "Install Go language raspberry pi and ubuntu")
+
+https://snapcraft.io/go
+
+### Note
+
+Install the go lang with Snap. Firstly, install snap cli in
+raspberry pi 4, and Ubuntu comes pre-install with a snap cli. { .info }
+
+---
+
+### Command-line
+
+The command-line provides both armhf and arm binary format of go language.
+Moreover, the command line utility helps the config everything inside raspberry
+pi 4 and ubuntu.
+
+```bash
+sudo apt-get install golang-go
+```
+
+![Install go language with apt-get in raspberry pi and ubuntu](/images/post/2022/03/carbon--5-.png "Install go language with apt-get in raspberry pi and ubuntu")
+
+---
+
+### Check the go language version in raspberry pi 4 and ubuntu
+
+```bash
+go version
+```
+
+![Check go language version in the terminal](/images/post/2022/03/carbon--6--1.png "Check go language version in the terminal")
+
+---
+
+### How to remove the go language package?
+
+- Snap
+- command-line
+
+### Snap
+
+Remove all the go language configurations and packages in Raspberry pi 4 and ubuntu.
+
+```bash
+snap remove go
+```
+
+![remove go language](/images/post/2022/03/carbon--4-.png "remove go language")
+
+If you install go with a snap then you remove go with a snap. { .info }
+
+### Command-line
+
+Remove or uninstall the go language package with all configuration use of the `apt-get` command.
+
+```bash
+sudo apt-get purge golang-go
+```
+
+### Conclusion
+
+I hope my article helps you. I'm not the go lang developer.

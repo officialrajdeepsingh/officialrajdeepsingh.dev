@@ -1,0 +1,91 @@
+---
+categories:
+  - ubuntu 22.04
+date: 2022-05-21T08:48:00.000Z
+description: Install the brave browser in Ubuntu with easy steps.
+image: /images/brave-browser.png
+tags:
+  - Install brave browser
+  - brave browser
+  - ubuntu-22.04
+  - ubuntu
+title: How to install brave browser in Ubuntu ( 22.04 )
+draft: false
+metas:
+  image: /images/brave-browser.png
+lastmod: 2023-03-09T15:03:38.052Z
+---
+
+In recent times, I have been attracted to the brave browser. Brave browser is
+attractive with many features. But I like it. Only one feature is strong
+ad-block.
+
+### Installation
+
+1. Official command
+2. Snap
+
+### Official command
+
+You can install a brave browser with official command. if you have already
+installed `apt-transport-https` and `curl` package in your machine. Then you
+skip the first step.
+
+Otherwise, both packages are not installed on your machine. the first step is to
+install `apt-transport-https` and `curl` package in your machines.
+
+```bash
+sudo apt install apt-transport-https curl
+```
+
+Next, step up the brave browser repository and package with the following
+commands.
+
+```bash
+sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
+
+echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+
+sudo apt update
+
+sudo apt install brave-browser
+```
+
+After you run step by step command in the terminal, in the end, you can install
+the brave browser.
+
+If you face any error in the apt update command time, ignore it and run the padding apt install command.{.danger}
+
+#### How to remove brave browser with apt command
+
+```bash
+sudo apt remove --purge brave-browser
+```
+
+### Snap
+
+Snap is an application packager manager for Linux. Snap all ready pre-install
+install come with ubuntu. Run the following command to install the brave browser
+in your ubuntu.
+
+```bash
+sudo snap install brave
+```
+
+#### Remove the brave browser with a snap
+
+```bash
+rajdeepsingh@officialrajdeepsingh:~$ snap remove --purge brave
+brave removed
+```
+
+#### Resources
+
+https://brave.com/linux/#release-channel-installation
+
+https://snapcraft.io/brave
+
+## Conclusion
+
+I hope you can install the brave browser in your ubuntu distro. Suppose you have
+any queries or questions. Ask me in the comment section.

@@ -1,0 +1,88 @@
+---
+categories:
+  - ghost cms
+date: 2020-11-20T06:36:37.000Z
+description: In Article, We discuss Config The Ghost Domain Url in your Google Cloud Help
+  of Bitnami.
+draft: false
+image: /images/post/2020/11/Remove-Bitnami-Logo.png
+tags:
+  - bitnami
+  - CMS
+  - ghost cms
+  - ghost setup
+  - gcp
+  - google cloud platform
+  - google cloud
+  - headless cms
+title: How To Remove Bitnami Corner Banner From Ghost CMS on Google Cloud Platform
+metas:
+  image: /images/post/2020/11/Remove-Bitnami-Logo.png
+lastmod: 2023-03-09T15:05:17.624Z
+---
+
+You Install Your Ghost Cms Blog Help Of Bitnami.By Default Bitnami, Add
+Corner Banner Logo On Your Website.
+
+## **There are 3 steps:**
+
+1. Access your Ghost instance
+2. Enter the command to disable banner
+3. Restart NGINX
+
+### Access your Ghost instance
+
+- Open Your Google Console Dashboard.
+
+![VM INSTANCES](/images/post/2020/11/GCP-Dmain-2.png "VM INSTANCES")
+
+- Open Your Google Console Dashboard Then Click Top Left Conner humber icon. Click Compute Engine, Select VM Instance, Then Your VM Instance Page Open.
+
+---
+
+![Instances](/images/post/2020/11/Ghost-SSH--1.png "Instances")
+
+- After the Open Instance page, click SSH Button.
+
+---
+
+![Terminal](/images/post/2020/11/open-new-SSH-1.png "Terminal")
+
+- After Open Your Instance Page. Then Click SSH Button. Some You See Open New window In button Side you See Your SSH terminal Successfully Open.
+
+---
+
+### Enter the command to disable banner && Restart NGINX
+
+**First** **Command**
+
+```bash
+sudo /opt/bitnami/apps/ghost/bnconfig --disable_banner 1
+```
+
+---
+
+**Second Command**
+
+```bash
+sudo /opt/bitnami/ctlscript.sh restart nginx
+```
+
+![Paste In terminal](/images/post/2020/11/rEMOVE-bANNER-lOGO.png "Paste In terminal")
+
+---
+
+### Conclusion
+
+If You Follow My article. You Definite Remove Bitnami Corner Banner Logo From
+Ghost CMS. If you have Any Problems or Errors, Contact Me. I try to help and
+solve your Problem
+
+---
+
+# Contact me
+
+- [https://www.facebook.com/officialrajdeepsingh/](https://www.facebook.com/officialrajdeepsingh/)
+- [https://www.facebook.com/groups/JavaScriptcode/](https://www.facebook.com/groups/JavaScriptcode/)
+- [https://www.facebook.com/groups/pythoncodejoin/](https://www.facebook.com/groups/pythoncodejoin/)
+- [officialrajdeepsingh@gmail.com](mailto:officialrajdeepsingh@gmail.com)

@@ -1,0 +1,119 @@
+---
+categories:
+  - Raspberry pi 4
+
+date: 2021-11-30T15:47:40.000Z
+description: VLC media is free, open-source software to watch videos on raspberry pi 4 and
+  any Linux distro. VLC provides a lot of features of users with an easily
+  understandable UI interface.
+draft: false
+image: /images/post/2022/03/vlc-media-player.png
+tags:
+  - linux
+  - VLC Media player
+  - Install VLC Media player
+  - Raspberry pi 4
+  - Raspberry
+title: Install VLC Media player in Raspberry pi 4
+metas:
+  image: /images/post/2022/03/vlc-media-player.png
+lastmod: 2023-03-09T15:06:39.027Z
+---
+
+The VLC media player is a free, open-source, cross-platform media player
+software and streaming media server.
+
+VLC media player developed by the VideoLAN project. The VLC media player is
+available for all desktop operating systems and mobile platforms.
+
+You use whatever distro in Linux. You install VLC with one command.
+
+There is only one way to install a VLC player in Raspberry pi 4. We use only an
+easy process to install a VLC player in raspberry pi 4.
+
+### **Install VLC by Two-step**
+
+1. Run system update command
+2. Run VLC install command
+
+### Run system update command
+
+In the first step, you update your raspberry pi 4. using the apt update command.
+This command updates your raspberry pi 4 and installs the latest version of the
+package.
+
+```bash
+sudo apt update
+```
+
+![Update your raspberry pi 4](/images/post/2021/11/raspberrypi4-update-command.png "Update your raspberry pi 4")
+
+### Run VLC install command
+
+After your system is updated, now you run the VLC install command in raspberry
+pi 4.
+
+```bash
+sudo apt install vlc -y
+```
+
+![Install vlc in raspberry pi 4](/images/post/2021/11/install-vlc-media-player-in-raspberry-pi-4.png "Install vlc in raspberry pi 4")
+
+### Uninstall or remove VLC media Raspberry pi 4
+
+Remove VLC media player with apt command with remove flag. The --purge command
+flag helps to remove the entire VLC package with configuration.
+
+```bash
+sudo apt remove --purge vlc -y
+```
+
+![Remove VLC media player with apt command](/images/post/2021/11/remove-or-install-vlc-in-raspberry-pi-4-.png "Remove VLC media player")
+
+---
+
+### How to run a VLC media player?
+
+There are two ways to run VLC media players.
+
+1. By command line
+2. With UI
+
+### By command line
+
+1. Open Command line tool (cmd tool) and write VLC command to launch the VLC media player. In This command, you open the VLC media player UI without video.
+
+```cmd
+vlc
+```
+
+2. This Command open video in VLC media player with UI interface.
+
+```cmd
+vlc home/memorie.mp4
+```
+
+### With UI
+
+Raspberry pi 4 UI interface help to open the VLC media player. You open the VLC
+UI interface with some mouse click, and you don't need to remember the VLC media
+player open command. UI interface help lots to open any video with VLC media
+player.
+
+1. By clicking the Raspbian logo in the top right-hand corner on the home screen.
+2. After hovering over the **Sound & Video** button, and sub-menu open in a new tab.
+3. Finally, click the **VLC Media Player** button. Now your VLC media UI interface is open for you.
+
+![Open VLC Media player In raspberry pi 4](/images/post/2021/11/vlc.png "Open VLC Media player In raspberry pi 4")
+
+---
+
+### Reference
+
+[https://www.videolan.org/vlc/#download](https://www.videolan.org/vlc/#download)
+
+[https://www.videolan.org/vlc/download-debian.html](https://www.videolan.org/vlc/download-debian.html)
+
+[https://en.wikipedia.org/wiki/VLC_media_player](https://en.wikipedia.org/wiki/VLC_media_player)
+
+---

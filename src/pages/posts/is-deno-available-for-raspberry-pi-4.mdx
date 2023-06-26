@@ -1,0 +1,149 @@
+---
+categories:
+  - deno
+  - Raspberry pi 4
+
+date: 2022-03-27T10:58:18.000Z
+description: Deno is helping build the fastest and most secure web application for
+  frontend, and backend developer.deno is available for raspberry pi 4.
+image: /images/post/2022/03/carbon--1--1.png
+tags:
+  - deno
+  - Raspberry pi 4
+  - Raspberry
+  - linux
+title: Is Deno available for Raspberry pi 4?
+draft: false
+metas:
+  image: /images/post/2022/03/carbon--1--1.png
+lastmod: 2023-03-09T15:06:53.933Z
+---
+
+Deno is a secure runtime environment for JavaScript and TypeScript. Deno uses a
+V8 engine and is built-in with Rust language.
+
+But I'm unfortunate to say; currently, deno( v1.20.3 ) is not available for
+Raspberry pi 4. you use another method to install deno in your raspberry pi 4.
+
+### Method
+
+1. With installer ( Not Working )
+2. With Rust ( Working )
+
+## With installer ( Official Command )
+
+You do not install deno directly with shell, PowerShell, snap cli, and other
+command-line utilities.
+
+### Deno Installation with shell
+
+Most of the time, you install deno on raspberry pi and the config path. In the
+and you face binary format error.
+
+```bash
+curl -fsSL https://deno.land/x/install/install.sh | sh
+```
+
+![Install Deno in raspberry pi 4](/images/post/2022/03/carbon--2-.png "Install Deno in raspberry pi 4")
+
+After, I install the deno with an official shell command and run the `deno --help` command in the terminal.
+You find a binary format error. That means the deno binary does not support raspberry pi 4.
+
+![Deno cannot execute binary file: Exec format error in Raspberry pi](/images/post/2022/03/carbon--1-.png "Deno cannot execute binary file: Exec format error in Raspberry pi")
+
+---
+
+## With Rust
+
+The only way is possible to install deno is in raspberry pi 4. which is Rust.
+You can use rust language to install deno.
+
+### Steps
+
+1. Install Rust
+2. Install Deno
+
+### Install Rust
+
+Firstly you install the rust language in your raspberry pi 4. For installation,
+you follow my article on that.
+
+[https://officialrajdeepsingh.dev/how-to-install-rust-language-in-raspberry-pi-4-and-ubuntu/](https://officialrajdeepsingh.dev/how-to-install-rust-language-in-raspberry-pi-4-and-ubuntu/)
+
+### Install Deno
+
+In the second step, you install deno with cargo. Cargo in builtin package
+manages in rust language.
+
+```bash
+cargo install deno --locked
+```
+
+### Tips
+
+1. Cargo command takes time to install deno. It depends on the internet, RAM, and card speed. According to my case, it takes 30 min to 1 hour because the internet connection is slow In my village.
+2. Your raspberry pi 4 has a 4GB RAM or higher RAM. It is working fine.
+
+If living in India and any other country which is a face power cut. Make sure you do not face a power cut during the installation process of deno.
+it does not damage your raspberry pi 4, for instance, it carpets your SD card. if your SD card is not of good quality. {.info}
+
+### Testing
+
+After Deno installs successfully with cargo, now you can check the version of
+deno.
+
+```bash
+deno --version
+```
+
+![Check the Deno version in the raspberry pi terminal](/images/post/2022/03/carbon--3--1.png "Check the Deno version in the raspberry pi terminal")
+
+### Uninstall deno
+
+```bash
+cargo uninstall deno
+```
+
+---
+
+### Why do we use Rust to install Deno in raspberry pi 4?
+
+Deno builds with rust language, and happily, Rust supports raspberry pi 4, and
+deno does not support Raspberry pi binary yet, so you use Rust to install Deno.
+
+### Is Deno safe for raspberry pi 4?
+
+Yes, it is safe. Deno works fine in raspberry pi 4.
+
+### Which work is safe and the fastest deno or node?
+
+Deno works faster and safest compared to node.js. The nodejs comes with a large
+file system( node_models folder ), that reason it is not safe for raspberry pi.
+Raspberry pi is not handled large folders, files. That reason, with nodejs, we
+do not build large web apps or projects in raspberry pi 4.
+
+### With Deno Build large or medium project in Raspberry pi 4?
+
+You build small and medium projects in deno. It is fine in raspberry pi 4. for a
+large project, and I'm not tested yet. So I can't say anything.
+
+---
+
+### References
+
+[https://snapcraft.io/deno](https://snapcraft.io/deno)
+
+[https://deno.land/manual/getting_started/installation](https://deno.land/manual/getting_started/installation)
+
+---
+
+### Conclusion
+
+I hope you install deno in raspberry pi 4. If you face any issues and queries,
+ask in the comment section.
+
+In the future, I will try to start a project with deno, WebAssembly, Rust, and
+Raspberry pi 4. I try to build a series on that. But I take time and lots of
+research.
+
+Another way you can read another person's articles on deno, WebAssembly, Rust, and Raspberry pi.

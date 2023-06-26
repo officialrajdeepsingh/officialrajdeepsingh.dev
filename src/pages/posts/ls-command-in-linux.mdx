@@ -1,0 +1,194 @@
+---
+categories:
+  - Linux
+  - Linux Commands
+date: 2021-01-28T10:57:32.000Z
+description: ls command mostly usable command in Linux. ls command tells us all the
+  presenting files in the directory.
+draft: false
+image: /images/post/2022/03/How-to-capture-screenshots-in-Raspberry-PI-4--2-.png
+tags:
+  - Linux
+  - Linux Commands
+  - Raspberry
+  - ls command
+  - list command
+title: Ls command in Linux
+metas:
+  image: /images/post/2022/03/How-to-capture-screenshots-in-Raspberry-PI-4--2-.png
+lastmod: 2023-03-09T15:07:17.006Z
+---
+
+Ls command Provide Information About Files Which Present inside the directory.
+By default, Provide current directory Information in alphabetical order.
+
+### Syntax
+
+```bash
+ls [OPTION]... [FILE]...
+```
+
+![output ls command info](/images/post/2021/01/ls-command-1.png "output ls command info")
+
+---
+
+### Options
+
+ls -a: Mean all Files Show Inside Terminal.
+
+![output all files](/images/post/2021/01/ls-command-all-2.png "output all files")
+
+ls -A: Mean almost all File But Do not Show . And .. Files.
+
+![Output files all the hidden file](/images/post/2021/01/ls-command-without-dots-1.png "Output files without . And ..")
+
+ls -l --author: this Command Work With -l Flag Or Option, and it prints out the
+author information of each file.
+
+![output file author information](/images/post/2021/01/ls-command-all-show-author-1.png "output file author information")
+
+ls -b: the ls command prints C-style escape characters in your terminal.
+
+![output c-style characters](/images/post/2021/01/ls-command-with-c-style-2.png "output c-style characters")
+
+ls --block-size=SIZE: This Flog Convert Your File With Different Size.Example
+Megabyte, kilobyte, and Other soo.
+
+- ls -l –-block-size=K : Convert File To Kilobyte
+- ls -l –-block-size=M : Convert File To Megabyte
+
+ls -c : this Flag Give You Output Recently modify files. This Option Never Be
+Work With -l Flag.
+
+![output recently modify files](/images/post/2021/01/Recently-modify-file-2.png "output recently modify files")
+
+ls --color[=WHEN] : Show Output With Colorize. The default can always be auto.
+if Stop This You Use never.
+
+- ls –color=never
+- ls –color=auto
+- ls-color=always
+- ls-color=yes
+- ls-color=force
+- ls-color=no
+- ls-color=tty
+- ls-color=if-tty
+
+![output some valid example in the color flag](/images/post/2021/01/ls-command-arguments.png "output some valid example in the color flag")
+
+ls -G : Print list Without Group Names.
+
+![output without group](/images/post/2021/01/outputwith-out-group.png "output without group")
+
+ls -h or ls --human-readable : Print Output with -l and -s. Show File Sizes In
+CMD like 1K 234M 2G.
+
+ls -i or ls --inode : print the index number of each file In Your Cmd.
+
+![output index number](/images/post/2021/01/print-index-number.png "output index number")
+
+ls -k or ls --kibibytes : this Flag Show You Block Size Of Each File. By
+default, Each Block Size is 1024-byte.-k Flag Working With -s Flag.
+
+ls -l : Print long listing Information format Pattern Inside Your Cmd.
+
+![output long list](/images/post/2021/01/ls-command-long-list.png "output long list")
+
+ls -m : m flag Show comma-separated list of entries Files.
+
+![output comma-separated file](/images/post/2021/01/ls-command--with-comma-1.png "output comma-separated file")
+
+ls -n or ls --numeric-uid-gid : Show you numeric user and group ids.
+
+![output user and group ids](/images/post/2021/01/output-group-ids.png "output user and group ids")
+
+ls -N : -N Flag print File names without comma-separated or quoting( , ).
+
+![output without comma separated](/images/post/2021/01/output-without-comma-saprate.png "output without comma separated")
+
+ls -o : Print Information Without List Group Information.
+
+![output without Group name](/images/post/2021/01/ls--o.png "output without Group name")
+
+ls -p or ls --indicator-style=slash : append Slash / After Your directories
+Files Name.
+
+Note: Indicate- style Work Same Or Note
+
+--indicator-style arguments are:
+
+- ‘none’
+- ‘slash’
+- ‘file-type’
+- ‘classify_’_
+
+![output with slash](/images/post/2021/01/ls--p.png "output with slash")
+
+ls -Q or ls --quote-name : Show Your File Name With _double-quotes._
+
+![output with double quotes](/images/post/2021/01/ls-Q.png "output with double quotes")
+
+ls --quoting-style=escape : use this flag to Style you are quoting Inside Your
+Terminal
+
+More arguments are
+
+- literal
+- shell
+- shell-always
+- shell-escape
+- shell-escape-always
+- c
+- c-maybe
+- escape
+- Locale
+- clocale
+
+![output with different style](/images/post/2021/01/ls-escape.png "output with different style")
+
+ls -r or ls --reverse : Print reverse order Your Files (z to a)
+
+![output reverse order](/images/post/2021/01/ls--r.png "output reverse order")
+
+ls -R or ls --recursive : print Your All Files With subdirectories Files.
+
+ls -s or ls --size : Print Size of each file With blocks Form.
+
+![the output size of each file](/images/post/2021/01/ls--s.png.png "the output size of each file")
+
+ls -S : Sort by File Size, Largest First.
+
+--sort=’none’ : Sort Your File, Base On Arguments Like time and size Read More
+Valid More Arguments are:
+
+- ‘none’
+- ‘time’
+- ‘size’
+- ‘extension’
+- ‘version’
+
+![output file according to size](/images/post/2021/01/ls--S.png "output file according to size")
+
+ls -t: Sort Your File Base On Modification Time and Newest Create First.
+
+![output file base on modification](/images/post/2021/01/ls--t.png "output file base on modification")
+
+ls -X: sort Your File Base On alphabetically.
+
+![output file on alphabetically](/images/post/2021/01/ls--X.png "output file on alphabetically")
+
+ls -1: Print list one file per line.
+
+![output list in one line](/images/post/2021/01/ls--1.png "output list in one line")
+
+ls --help: display document About ls Command.
+
+![output help pages](/images/post/2021/01/ls---help.png "output help pages")
+
+ls --version: Print Ls Command Version.
+
+![output version](/images/post/2021/01/ls--v.png "output version")
+
+ls -man: Check Your Manual Page Use -man Command.
+
+![output manual pages](/images/post/2021/01/man--ls.png "output manual pages")

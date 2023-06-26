@@ -1,0 +1,179 @@
+---
+categories:
+  - ubuntu
+  - IDE
+
+date: 2021-12-18T11:45:51.000Z
+description: A sublime text editor is a lite weight IDE for all ecosystems like Windows,
+  Mac, and Linux distro.
+draft: false
+image: /images/post/2021/12/Install-Sublime-text-IDE-in-Ubuntu.png
+tags:
+  - ubuntu
+  - sublime text IDE
+  - IDE
+  - code editor
+  - Linux code editor
+title: How to install sublime text IDE in Ubuntu?
+metas:
+  image: /images/post/2021/12/Install-Sublime-text-IDE-in-Ubuntu.png
+lastmod: 2023-03-09T15:05:04.964Z
+---
+
+Sublime is a great text editor for programmers. Sublime text IDE is a similar
+IDE like vscode editor.
+
+The programmer writes code quickly in the sublime text editor because the
+sublime text provides a simple UI interface for beginners.
+
+Sublime IDE is coming with a lot of functionality and language support. The most
+important feature is provided by sublime IDE.
+
+The new version of the subline comes with utilizing GPU's support Linux, Mac,
+and Windows. Sublime also supports Apple Silicon processors, Linux ARM64
+architecture, and Raspberry pi 4. Multiple tab support Sublime text editor
+support Typescript, jsx, and tsx file extension. Auto-complete and suggestion
+support in a sublime text editor. How to install Sublime text editor in Ubuntu?
+There are two ways to install a sublime text editor.
+
+1. Snap command
+2. Official command
+
+## Snap command
+
+Now Ubuntu is an official support snap store Linux packages manager. With the
+snap package manager, you install tons of packages locally in your distro. Snap
+install the package with one command.
+
+Mostly snap store command utility all ready install in Ubuntu. If it does not
+install, install the snap store command cli and then run the following command.
+
+```bash
+sudo snap install sublime-text --classic
+```
+
+#### Output Look like
+
+![Install sublime-text editor in Ubuntu](/images/post/2021/12/install-sublime-text-ide.png "Install sublime-text editor in Ubuntu")
+
+Now your command successfully runs in your terminal.
+
+[https://snapcraft.io/sublime-text](https://snapcraft.io/sublime-text)
+
+## How to open a sublime text editor in Ubuntu?
+
+You click on the ubuntu menu icon, scroll download, find sublime text editor,
+and click on it. Your sublime text editor is opening a new window in Ubuntu.
+
+![Open a sublime text editor in Ubuntu](/images/post/2021/12/install-sublinetext.png "Open a sublime text editor in Ubuntu")
+
+## How to uninstall sublime text editor in Ubuntu?
+
+You just run the following command and delete all configurations of sublime-text
+in one command.
+
+```bash
+sudo snap remove --purge  sublime-text
+```
+
+Note Only remove the sublime-text command when your install sublime-text editor
+with snap command. {.info}
+
+![Remove sublime-text editor in Ubuntu](/images/post/2021/12/remove-sublime-text-in-ubuntu.png "Remove sublime-text editor in Ubuntu")
+
+### Official command
+
+Official command setup provides by the sublime text editor team. for download
+the sublime text editor, your run serval one by one command.
+
+- Install GDP key
+
+```bash
+wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
+```
+
+![Install GDP Key in Ubuntu](/images/post/2021/12/sublimetext1.png "Install GDP Key in Ubuntu")
+
+### Setup HTTP sources
+
+```bash
+sudo apt-get install apt-transport-https
+```
+
+![Install HTTP source Linux package](/images/post/2021/12/sublimetext2.png "Install HTTP source Linux package")
+
+### Select the channel or Branch to use
+
+The Branch helps to download a sublime text editor on your laptop. I recommended
+downloading a stable branch on the laptop.
+
+#### Stable Branch
+
+```bash
+echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
+```
+
+![I choose a stable branch for installation](/images/post/2021/12/sublimetext3.png "I choose a stable branch for installation")
+
+#### Dev branch
+
+```bash
+echo "deb https://download.sublimetext.com/ apt/dev/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
+```
+
+#### Update apt sources
+
+Run Select channel command and after run an update to check everything is proper
+and update all old packages. after running sublime text install command.
+
+```bash
+sudo apt-get update
+```
+
+![Update your Ubuntu machine with the latest version](/images/post/2021/12/sublimetext4.png "Update your Ubuntu machine with the latest version")
+
+#### Install Sublime Text
+
+Update command runs successfully in the terminal, and now you install the
+sublime-text editor with the following command. Now your download is complete in
+Ubuntu and opens sublime-text like regular software.
+
+```bash
+sudo apt-get install sublime-text
+```
+
+![Finally, Run sublime text installation command](/images/post/2021/12/sublimetext5.png "Finally, Run sublime text installation command")
+
+## How to open a sublime text editor in Ubuntu?
+
+You click on the ubuntu menu icon, scroll download, find sublime text editor,
+and click on it. Your sublime text editor is opening a new window in Ubuntu.
+![Open Sublime-text editor in Ubuntu](/images/post/2021/12/install-sublinetext-1.png "Open Sublime-text editor in Ubuntu")
+
+## How to delete sublime text editor?
+
+```bash
+sudo apt-get purge sublime-text
+```
+
+![Delete sublime text editor in Ubuntu](/images/post/2021/12/sublimetext6.png "Delete sublime text editor in Ubuntu")
+
+---
+
+## References
+
+[https://www.sublimetext.com/download](https://www.sublimetext.com/download)
+
+[https://www.sublimetext.com/docs/linux_repositories.html](https://www.sublimetext.com/docs/linux_repositories.html)
+
+[https://snapcraft.io/docs/installing-snapd](https://snapcraft.io/docs/installing-snapd)
+
+---
+
+## Conclusion
+
+I hope you download sublime text editor in Ubuntu. I recommended using the snap
+command to install sublime-text IDE. If you have any problem, tell in the comment section.
+
+For more updates, click to join our subscriber list and get free benefit to
+lifetime access.

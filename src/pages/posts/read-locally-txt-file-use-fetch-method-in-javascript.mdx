@@ -1,0 +1,158 @@
+---
+categories:
+  - Javascript
+date: 2020-12-04T17:36:15.000Z
+description: Welcome To My New Blog Post. As You Knows We Learn, How to  Read Locally txt
+  File Use Fetch Method In Javascript.
+draft: false
+image: /images/post/2020/12/Read-Locally-txt-File-Use-Fetch-Method-In-JavaScript_.png
+tags:
+  - Javascript
+  - Fetch
+  - Fetch Method
+  - Read Locally Txt File
+  - Read Locally
+title: Read Locally txt File Use Fetch Method In JavaScript?
+lastmod: 2023-03-09T15:08:27.034Z
+metas:
+  image: /images/post/2020/12/Read-Locally-txt-File-Use-Fetch-Method-In-JavaScript_.png
+---
+
+## Let's Start It
+
+**Steps:**
+
+1. Folder Structure
+2. Read insideFolder.txt File
+3. Read InsideFolder.txt File
+
+## Demo
+
+<iframe width="928" height="500" src="https://codesandbox.io/embed/read-local-txt-file-in-javascript-vmiy4?file=/src/index.js:492-509" style=" height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+
+Download My Project Code And Play Online On CodeSandBox Editor
+
+---
+
+If You Read Txt File, JSON File, and Any Other File Inside Javascript, use Fetch
+Method. Make Sure You use Live Server In Javascript.
+
+Live Server Provide You A Http Method For Your Project. You Use Express.js,
+Vscode Live Server Plugin, and Any other Library.
+
+Secondly, We Don't Import Javascript Files. When Use Fetch Method In Your
+Project.
+
+```javascript
+import data from './read.txt';
+
+// Show Error When Use Fetch Method With Import Method
+fetch(data).then(function (response) {
+	return response;
+}).then(function (data) {
+	console.log(data);
+	return data.text();
+}).then(function (Normal) {
+	console.log(Normal);
+	document.getElementById('app').innerHTML = Normal;
+}).catch(function (err) {
+	console.log('Fetch problem show: ' + err.message);
+});
+```
+
+---
+
+![Error Look Like Your console](/images/post/2020/12/Error.png "Error Look Like Your console")
+
+- Show Error Inside Your Console. Go To Demo Un Comment My Error Code After
+  Check Your Console. You See the Same Error Inside Your Console.
+
+---
+
+### Fetch Method Syntax
+
+fetch( URL, Options )
+
+**Url** Option We Provide Path of Your File.
+
+### Example
+
+http://yourdomain.com/rootFolder.txt
+
+---
+
+### Folder Structure:
+
+Inside Folder, We Read Two File:
+
+- Read rootFolder.txt
+- Read insideFolder.txt
+
+![Folder Structure](/images/post/2020/12/Read-txt-File.png "Folder Structure")
+
+---
+
+## Read `insideFolder.txt` File
+
+```javascript
+fetch('./rootFolder.txt').then(function (response) {
+	return response;
+}).then(function (data) {
+	return data.text();
+}).then(function (Normal) {
+	document.getElementById('app').innerHTML = Normal;
+}).catch(function (err) {
+	console.log('Fetch problem show: ' + err.message);
+});
+```
+
+- Inside Fetch Method, We Pass Absolute File Path. In My Case My File Inside Root Folder. So we use the Absolute path look like "./rootFolder.txt". Then use **the text()** method. Get data from the Response.
+- Do Not use Import File, Inside Fetch Method URL.
+- Make Sure Your File Access With URL (Checkout My Example URL).
+- When Add File Path With Live Server. Now Fetch Method Convert To a URL. If fetch Method Not Convert Then Show Error In Your Console.
+- In local Development, use Live Server For Convert Fetch method URL to Http response
+
+**Code sandbox Online Project Example My insideFolder.txt File:**
+[https://vmiy4.csb.app/src/insideFolder.txt](https://vmiy4.csb.app/src/insideFolder.txt)
+
+---
+
+## Read `insideFolder.txt`
+
+```javascript
+//Read InsideFolder.txt File
+fetch('./src/insideFolder.txt').then(function (response) {
+	response.text().then(function (text) {
+		document.getElementById('appData').innerHTML = text;
+	});
+});
+```
+
+- Inside Fetch Method, We Pass Absolute File Path. In My Case My File Inside src
+  Folder. So we use the Absolute path look like `./src/rootFolder.txt`. Then use
+  **the text()** method to Get data from the Response.
+- Do Not use Import File, Inside Fetch Method URL.
+- Make Sure Your File Access With URL (Checkout My Example URL).
+- When Add File Path With Live Server. Now Fetch Method Convert To a URL. If fetch Method Not Convert Then Show Error In Your Console.
+- In local Development, use Live Server For Convert Fetch method URL to Http response
+
+**Code sandbox Online Project Example My insideFolder.txt File:**
+[https://vmiy4.csb.app/rootFolder.txt](https://vmiy4.csb.app/rootFolder.txt)
+
+---
+
+## Demo
+
+<iframe width="928" height="500" src="https://codesandbox.io/embed/read-local-txt-file-in-javascript-vmiy4?file=/src/index.js:492-509" style="height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+
+Download My Project Code And Play Online On CodeSandBox
+
+---
+
+## Reference
+
+[https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
+
+[https://www.geeksforgeeks.org/javascript-fetch-method/](https://www.geeksforgeeks.org/javascript-fetch-method/)
+
+---

@@ -1,0 +1,184 @@
+---
+categories:
+  - Raspberry pi 4
+  - Node js
+
+date: 2021-01-21T13:36:52.000Z
+description: In this my article, you install node js and npm latest version in your
+  raspberry pi 4.
+draft: false
+image: /images/post/2022/03/Install-Node.js-and-Npm-latest-Version-on-Raspberry-Pi-4.png
+tags:
+  - Raspberry
+  - Raspberry pi 4
+  - Node js
+  - npm
+  - install node js and npm
+title: How to install Node js and Npm latest Version on Raspberry Pi 4?
+metas:
+  image: /images/post/2022/03/Install-Node.js-and-Npm-latest-Version-on-Raspberry-Pi-4.png
+lastmod: 2023-03-09T15:06:32.454Z
+---
+
+Hey Everyone, my name is Rajdeep Singh. I'm a Front-end developer in India. you
+are interested to install npm and node.js latest version in your raspberry pi 4.
+then you are right place.
+
+**Now follow these steps.**
+
+### Steps
+
+1. Update & Upgrade your pi
+2. ARM Version
+3. Go to Official Nodejs
+4. Copy Link
+5. Extract The File
+6. Copy The Files Into The Directory
+7. Check Installation
+
+## Update & Upgrade your Pi
+
+Fastly update your raspberry pi 4 using update commands
+
+```bash
+sudo apt-get update
+```
+
+After the update command, you run the upgrade command to upgrade your raspberry pi
+package.
+
+```bash
+sudo apt-get upgrade
+```
+
+---
+
+## ARM Version
+
+Now you check your raspberry pi 4 arm architecture. so that we install node js and npm
+according to your arm architecture.
+
+Check ARM architecture use the following command.
+
+```bash
+uname -m
+```
+
+Currently in my Raspberry armv7l Architecture in your case may be different.
+
+![Output Arm architecture](/images/post/2021/01/RASPI-4.png "Output Arm architecture")
+
+---
+
+## Go to Official NodeJS
+
+Firstly goto [node js](https://nodejs.org/en/download/) official download page.
+
+![node.js official webpage](/images/post/2021/01/node.js-webpage.png "node.js official webpage")
+
+---
+
+## Copy Link
+
+Once open node js download page. then Right-click on Linux Binaries (ARM)
+version and copy the link address.
+
+- **Without command:**
+
+Goto node js download page and click to **ARMV7 button**. after a few seconds
+you download start it.
+
+- **With Command ( Recommended ):**
+
+My arm Architecture is **armv7l**. so that, I copy ARMV7 Link Address. In Your
+case, your ARM Architecture armv81. so that you copy **ARMV8** Link Address
+
+![copy link address](/images/post/2021/01/copy-link-address.png "copy link address")
+
+```bash
+wget paste-your-link
+```
+
+### My example
+
+```bash
+wget https://nodejs.org/dist/v14.15.4/node-v14.15.4-linux-armv7l.tar.xz
+```
+
+---
+
+## Extract The File
+
+Once downloaded Completed now Extract your file. you are extracting files by
+**Raspbian File manager** and secondly, use the **tar command** according to
+your mind.
+
+**Your file looks like this:**
+
+```bash
+tar -xzf node-vXX.XX.X-linux-armvXl.tar.gz
+```
+
+**In my example my file name:**
+
+```bash
+tar -xzf node-v14.15.4-linux-armv7l
+```
+
+If you face any error use the Raspbian File manager to
+extract the File. {.info}
+
+---
+
+## Copy The Files Into The Directory:
+
+run node js with any directory we need to copy all extracted files into the
+**"/usr/local"** folder.
+
+**Your file looks like this:**
+
+```bash
+tar -xzf node-vXX.XX.X-linux-armvXl.tar.gz
+```
+
+**Go to your extracted folder:**
+
+```bash
+cd node-v14.15.4-linux-armv7l
+```
+
+After entering your folder then copy all files, we use the `cp command`. The
+"-R" flag is to signify to the program to copy all the files recursively, i.e
+include all files within folders. "*" just means to copy everything in the
+folder.
+
+```bash
+sudo cp -R * /usr/local/
+```
+
+---
+
+## Check Installation:
+
+Now your Node js and npm are successfully Installed. now you verify your node
+and npm version. the simply run the following commands
+
+```bash
+node -v
+npm -v
+```
+
+All work fine, you see node and npm versions.
+
+If you run into any issues, just leave us a comment down below and we will try
+to help you guys!
+
+---
+
+### Reference
+
+[https://www.makersupplies.sg/blogs/tutorials/how-to-install-node-js-and-npm-on-the-raspberry-pi](https://www.makersupplies.sg/blogs/tutorials/how-to-install-node-js-and-npm-on-the-raspberry-pi)
+
+[https://nodejs.org/en/download/](https://nodejs.org/en/download/)
+
+---

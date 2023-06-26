@@ -1,0 +1,149 @@
+---
+categories:
+  - Ghost
+  - Bitnami
+  - Ghost CMS
+  - :80 Port Error
+  - Ghost Domain Configure
+date: 2020-11-24T14:51:48.000Z
+description: In My New Blog Post, We Learn How To Remove:80 Port Error Inside Your Ghost
+  Blog
+draft: false
+image: /images/post/2020/11/Ghost-80-port-Show-Error.png
+tags:
+  - Ghost
+  - Bitnami
+  - Ghost CMS
+  - :80 Port Error
+  - Ghost Domain Configure
+
+title: 80 Port Show at the end of Your Ghost domain name
+lastmod: 2023-03-09T15:01:14.456Z
+type: post
+author : Rajdeep Singh
+---
+
+
+## Lets Start
+
+### There are 3 steps
+
+1. Access your Ghost instance
+2. Basic Information About Ghost Config File
+3. Config Your `config.production.json` File.
+
+Go the the google cloud platform and logging into exciting account.
+
+![Show:80 Port Error Inside Your Ghost CMS](/images/post/2020/11/80-port-Ghost-Error-In-Ghost-CMS-1.png "Show:80 Port Error Inside Your Ghost CMS")
+
+#### Access your Ghost instance
+
+![Show:80 Port Error Inside Your Ghost Cms](/images/post/2020/11/Google-Console-4.png "GCP Dashboard")
+
+Open Your Google Console Dashboard
+
+---
+
+![Show:80 Port Error Inside Your Ghost Cms](/images/post/2020/11/GCP-Dmain-4.png "VM INSTANCES")
+
+Open your Google Console Dashboard Then Click Top Left Conner humber icon. Click Compute Engine, Select VM Instance, Then Your VM Instance Page Open.
+
+---
+
+![Click SSH](/images/post/2020/11/Ghost-SSH--4.png "Click SSH")
+
+After the Open instance page, click SSH button.
+
+---
+
+![Terminal](/images/post/2020/11/open-new-SSH-4.png "Terminal")
+
+After Open Your Instance Page. Then Click SSH Button and You can see new Window open in bottom side and you see your SSH terminal Successfully Open.
+
+---
+
+#### Basic Information About Ghost Config File
+
+The ghost requires the domain name to be specified in the `/opt/bitnami/apps/ghost/htdocs/config.production.json` file.
+
+Check Your config file. Simple use the cat command inside ssh terminal.
+
+```bash
+sudo cat /opt/bitnami/apps/ghost/htdocs/config.production.json
+```
+
+![Output Cat Command](/images/post/2020/11/Domain-url-80-port.png "Output Cat Command")
+
+when you open `config.production.json`, your URL look like.
+
+```bash
+url: 'example.com:80'
+```
+
+---
+
+#### Config Your `config.production.json` File
+
+Config the domain name in ghost cms. open your config `Config.production.json` file in side your terminal, use nano editor.
+
+If Like nano Editor so paste following command in terminal. Other Wish You can use any other editor Like Vim
+
+<Alert color="red">
+Config With Nano editor command (Recommended )
+</Alert>
+
+```bash
+sudo nano /opt/bitnami/apps/ghost/htdocs/config.production.json
+```
+<Alert>
+Config With Vim editor command 
+</Alert>
+
+```bash
+sudo Vim /opt/bitnami/apps/ghost/htdocs/config.production.json
+```
+
+---
+
+<Alert color="green">
+Config With Nano CMD: 
+</Alert>
+
+<Space h={30} />
+
+
+![Remove 80 Port In Your Domain](/images/post/2020/11/Remove-80-Port-.png "Remove 80 Port In Your Domain")
+
+Remove only `:80` inside your domain Url field.
+
+---
+
+![Remove 80 after Save Your File](/images/post/2020/11/Save-80-Port-File.png "Remove 80 after Save Your File")
+
+Remove `:80` port save your file with keyboard shortcut
+
+- Firstly **Ctrl + O**
+- Click **Enter**
+- Exit **Ctrl+ X**
+
+After You File Save And Restart Your Ghost
+
+```bash
+sudo /opt/bitnami/ctlscript.sh restart ghost
+```
+
+---
+
+![:80 Port Error Successfully Remove In Your Ghost](/images/post/2020/11/Sucess-Full-Remove-Ghost-Port-80-Error-1.png ":80 Port Error Successfully Remove In Your Ghost")
+
+After You success full remove `80` port error in your Ghost cms and your cms look like.
+
+---
+
+## References
+
+**Read More About 80 Port Error On Bitnami Community.**
+
+[https://community.bitnami.com/t/80-in-end-of-domain-name/68342](https://community.bitnami.com/t/80-in-end-of-domain-name/68342)
+
+---

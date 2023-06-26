@@ -1,0 +1,69 @@
+---
+categories:
+  - Linux
+  - linux command
+date: 2021-02-04T12:51:08.000Z
+description: use mkdir creates an empty director inside Linux
+draft: false
+image: /images/post/2022/03/How-to-install-pycharm-in-raspi-4--2-.png
+tags:
+  - Linux
+  - mkdir
+  - mkdir command
+  - mkdir in linux
+  - linux mkdir command
+title: mkdir Command in Linux
+lastmod: 2023-03-09T15:07:22.441Z
+metas:
+  image: /images/post/2022/03/How-to-install-pycharm-in-raspi-4--2-.png
+---
+
+mkdir Command helps create new directories if the directory present already
+doesn’t create new directories and gives a warning message inside the terminal.
+
+### Syntax
+
+```bash
+mkdir [OPTION]... DIRECTORY...
+```
+
+![mkdir command output](/images/post/2021/02/mkdir.png "mkdir command output")
+
+### Command Options
+
+mkdir -m=**Mode** linuxBook-m Option help to assign new permission on creating
+time (Like in chmod)
+
+**Mode Options**:
+
+- rwx: read-write execute permission on this file
+- wx: only write execute permission on this file
+- rx: only Read execute permission on this file
+- rw: only Read execute permission on this file
+
+![mkdir -m option output](/images/post/2021/02/mkdir--mflag.png "mkdir -m option output")
+
+**mkdir -p or mkdir --parents** -p option does not show an error if the
+directory exists. Also, the directory that exists then overwrites your
+directory. Your directory does not exist, then create a new directory.
+
+![mkdir -p option output](/images/post/2021/02/mkdir--pflag.png "mkdir -p option output")
+
+**mkdir -v or mkdir --verbose** check working behind mkdir command and print a
+message in the terminal after each created directory
+
+![mkdir -v flag output](/images/post/2021/02/mkdir--vflag-1.png "mkdir -v flag output")
+
+**mkdir --help** display this help and exit
+
+![mkdir --help flag output](/images/post/2021/02/mkdir---help-1.png "mkdir --help flag output")
+
+**mkdir --version** output mkdir command version information.
+
+![mkdir --version flag output](/images/post/2021/02/mkdir---version.png "mkdir --version flag output")
+
+**man mkdir** print mkdir manual page Information Inside Your Cmd Tool.
+
+![man mkdir output"](/images/post/2021/02/man-mkdir-.png "man mkdir output")
+
+---

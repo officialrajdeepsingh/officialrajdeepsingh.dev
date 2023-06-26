@@ -1,0 +1,125 @@
+---
+categories:
+  - reactjs
+  - Javascript
+date: 2020-11-10T06:56:42.000Z
+description: This article, I will help you with how to use bootstrap in react.js.it very
+  simple to add bootstrap in your project. we start with basic Intro.
+draft: false
+image: /images/post/2020/11/bootstrap.gif
+tags:
+  - Bootstrap
+  - css
+  - reactjs
+  - javascript
+title: How to use bootstrap in react.js?
+metas:
+  image: /images/post/2020/11/bootstrap.gif
+
+lastmod: 2023-03-09T15:05:36.007Z
+---
+
+## Basic information
+
+### What is react.js?
+
+React.js is one of the popular javascript libraries used to create stateful and
+reusable UI components. It was developed on Facebook. It is an open-source
+JavaScript library.
+
+### What is Bootstrap?
+
+Bootstrap is the most popular front-end development framework for building
+responsive web layouts with many components.
+
+I do not recommend using bootstrap.because bootstrap
+increase HTML and CSS file size. {.info}
+
+## Two Way
+
+### 1. Add Bootstrap in React Using NPM
+
+use this command to install bootstrap in our project.
+
+```bash
+npm install bootstrap --save
+```
+
+After installing the bootstrap, you will need to import the CSS file in your
+React app entry file.
+
+If you generated your project using the create-react-app tool, open the src
+folder find the entry file paste.
+
+```bash
+import 'bootstrap/dist/css/bootstrap.min.css';
+```
+
+You can now use the CSS classes and utilities in your application, but if you
+need to use the JavaScript components.
+
+You will also need to install the jquery and popper.js packages from npm. In
+your terminal, run the following commands:
+
+```bash
+npm install jquery popper.js
+```
+
+Next, go to the src/index.js file and add the following imports:
+
+```bash
+import $ from 'jquery';
+import Popper from 'popper.js';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
+```
+
+---
+
+### 2. Adding Bootstrap in React Using CDN
+
+In this method, you are integrating Bootstrap with React, i.e., via a CDN. This
+approach is easy for everyone because you need only add a `<link>` tag for
+Bootstrap CDN.
+
+Go to your project’s root folder, open the `public/index.html` file, and paste
+this code in the `<head>` section.
+
+```html
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+```
+
+If you need only Bootstrap components so in that case, you add JavaScript/jQuery
+in your React application.
+
+Add the following CDN file before the closing </body> tag:
+
+```html
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+```
+
+---
+
+### demo for CDN
+
+<iframe width="928" height="500" src="https://codesandbox.io/embed/how-to-use-bootstrap-in-reactjs-o1033" style="height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+
+---
+
+# Conclusion
+
+I hope you understand how to add bootstrap. But I recommend you to use
+react-bootstrap or reactstrap pre-built framework with react and bootstrap. Any
+queries and suggestions plz tell me in the comment box.
+
+---
+
+## Key Link
+
+1. [https://reactstrap.github.io/](https://reactstrap.github.io/)
+2. [https://react-bootstrap.github.io/getting-started/introduction/](https://react-bootstrap.github.io/getting-started/introduction/)
+3. [https://reactjs.org/](https://reactjs.org/)
+4. [https://getbootstrap.com/](https://getbootstrap.com/)
+
+---

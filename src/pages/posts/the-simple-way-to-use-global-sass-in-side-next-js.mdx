@@ -1,0 +1,97 @@
+---
+categories:
+  - NextJS
+date: 2020-11-28T09:47:05.000Z
+description: "Learn Next.js Easy And Simple ways #SeriesPart4."
+draft: false
+image: /images/post/2020/11/Official-Global-Sass-Blog-Thumb-1.png
+tags:
+  - Next.js
+  - Next
+  - Next.js Framework
+  - Next.js Tutorial
+  - Sass
+  - Add Sass Inside Next
+  - Global Sass
+title: The Simple Way to Use Global Sass In side Next js
+metas:
+  image: /images/post/2020/11/Official-Global-Sass-Blog-Thumb-1.png
+lastmod: 2023-03-09T15:09:11.382Z
+---
+
+Hey, My Name is Rajdeep Singh. In this Next.js Series Part 4, We Learn How to
+Add Global Sass in the next.js App and Build a Simple Scss Project With Next.js.
+
+You Follow My Next Series Previous Post and Config Sass Inside Your Project.Now
+We Start Configuration Global Sass in Side Your Project.You Don't Read My
+Previous Article On a Sass/Scss Configuration. Firstly Read My Previous Article
+After reading This Article.
+
+**Previous Article:**
+
+https://medium.com/officialrajdeepsingh/how-to-add-sass-scss-in-next-js-77a2b34f1ff3
+
+---
+
+# Whats Is Next.js?
+
+Make Sure You Read First Basic Introduction About Next.js. which Cover With
+Three Article #SeriesStart
+
+https://medium.com/officialrajdeepsingh/what-is-next-js-7922041a5775
+
+https://medium.com/officialrajdeepsingh/how-to-add-css-in-next-js-3254016d7544
+
+https://medium.com/officialrajdeepsingh/how-to-add-sass-scss-in-next-js-77a2b34f1ff3
+
+---
+
+### Let's Start It:
+
+**Step:**
+
+1. **Create Custom App**
+2. **Import Sass**
+
+### Create Custom App:
+
+![Create Custom App](/images/post/2020/11/Custom-App.png "Create Custom App")
+
+- Create a `pages/_app.js` file In Side Pages Folder. If already present. Then
+  Paste Code Inside File.
+
+---
+
+### Import Sass
+
+![Paste Code Inside _app.js](/images/post/2020/11/Paste-Code-And-Import.png "Paste Code Inside _app.js")
+
+- Paste Code Inside Your `_app.js` File And Import Your scss File With Absolute
+  Path and Restart your Application.
+
+```javascript
+// _app.js
+import '../styles/global.scss';
+
+// This default export is required in a new `pages/_app.js` file.
+export default function MyApp({ Component, pageProps }) {
+	return <Component {...pageProps} />;
+}
+```
+
+---
+
+### Project Demo:
+
+<iframe width="928" height="500" src="https://codesandbox.io/embed/add-global-scss-in-nextjs-p4t4b?file=/pages/_app.js" style=" height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+
+- If You Play Online With My Sass Project.
+- If Interested, Download the Code Locally And Play it.
+
+---
+
+### Reference:
+
+[https://nextjs.org/docs/basic-features/built-in-css-support](https://nextjs.org/docs/basic-features/built-in-css-support)
+
+---

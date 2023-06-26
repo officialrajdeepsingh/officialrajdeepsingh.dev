@@ -1,0 +1,162 @@
+---
+categories:
+  - reactjs
+date: 2020-11-10T11:18:25.000Z
+description: Learn a modern Quiz app demo here
+draft: false
+image: /images/post/2020/11/REACT-MORDERN-QUIZ.gif
+tags:
+  - reactjs
+  - react
+  - reactjs tutorial
+  - Quiz
+  - react Quiz
+  - react Quiz Project
+title: Create Modern Quiz With React Js
+type: post
+lastmod: 2023-03-09T15:01:35.815Z
+---
+
+Hey, Welcome to react series My Name, Rajdeep Singh. In series, we learn about react.js, but This time, we create a small react project. The Project Name quiz app.
+
+Watch The Demo on **code sandbox** And **Download** Code.
+
+Download Code on GitHub: [react-quiz-app](https://github.com/officialrajdeepsingh/react-quiz-app)
+
+Demo Here: [click here](https://b95nf.csb.app/)
+
+<iframe width="928" height="500" src="https://codesandbox.io/embed/react-quiz-app-b95nf?from-embed" style=" height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+
+---
+
+## Let’s start:
+
+### Requirement:
+
+1. Basic React knowledge
+2. Code Editor or IDE
+3. Smiley Face
+
+---
+
+## Learn Basic of Reactjs
+
+https://medium.com/@officialrajdeepsingh/what-is-reactjs-d83a61260dbc
+
+---
+
+## Step
+
+1. Create React App
+2. Learn Folder Str.
+3. Index.js File
+4. Demo Data
+5. Components
+
+### Create React App
+
+First, Create New React Project on your laptop using `create-react-app` command.
+
+```javascript
+npx create-react-app quiz app
+cd my-app
+npm start
+```
+
+---
+
+### Learn Folder Str
+
+In the react Src folder, there are 3 components and one is `data.js` file.
+
+## ![Src folder structure](/images/post/2020/11/quiz-app.png 'Src folder structure')
+
+### Index.js File
+
+Index.js main file in the react src folder. we add CSS file and import component file on index.js
+
+We import the Header and Quiz component to this place
+
+Most Important create render Method on here.
+
+## ![index.js file code](/images/post/2020/11/react-quiz.png 'index.js file code')
+
+### Style For Quiz:
+
+All Styles for the body, header, MainDiv as card, And a button. Create on this file.
+
+![Style CSS](/images/post/2020/11/react-quiz-code.png 'Style CSS')
+
+### Demo Data:
+
+data.js file, I create a variable Name Quizdata. We assign data from of array in the Quizdata variable.
+
+Each index, we create an object. in the object, we add an id, Quiz, FindAnswer, and rightAnswer
+
+In FindAnswer, We add the array with three values.
+
+## ![Data.js file](/images/post/2020/11/react-quiz-code-app.png "Data.js file")
+
+### Components
+
+#### Header:
+
+Header component we return a simple h1 tag for the app title. {.info}
+
+![Header.js](/images/post/2020/11/react-quizs.png "Header.js")
+
+---
+
+#### Quiz:
+
+Quiz components work with 5 step
+
+## 1 step:
+
+Create the state. In-State we create an object. in this object, we create a dataQuestion variable with an array
+
+## 2 step
+
+We create a function. function name **setStateFunstion** in this function use react setState method And set data form data.js
+
+## 3 step
+
+ComponentDidMount simple we call setStateFunstion
+
+## 4 step
+
+In this step, we use map(). Map function work with an array. In this array map() get data and then we return h2 and Answer component.
+
+Answer Components access data help props we provide here.
+
+## ![Quiz.js](/images/post/2020/11/react-quiz-component.png "Quiz.js")
+
+## Answer
+
+### Two-step
+
+with two-step to learn Answer.js
+
+#### 1 step
+
+Create a state with 3 parameters first Answer, second clickCheck, and third rightAnaswer.
+
+#### 2 step
+
+We use javascript ternary operator, map function, and event function to clickCheck true to get value to return a button. In this button, we call an Event function.
+
+When some buddy clicks on the button, the button function uses The setState method set false on clickCheck.
+
+Then the ternary operator runs false code to get answer data so simple.
+
+![Answer.js](/images/post/2020/11/quiz-answer.png "Answer.js")
+
+---
+
+### Conclusion
+
+I hope you read my article Build own quiz app.
+
+Any suggestions and issues plz tell me to feel free.
+
+---

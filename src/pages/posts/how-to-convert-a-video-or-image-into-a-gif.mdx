@@ -1,0 +1,70 @@
+---
+title: How to convert a video or image into a GIF in linux?
+description: Convert your images or videos to GIFs with the Rust Gifski tool.
+date: 2023-02-05T16:43:05.214Z
+draft: false
+image: /images/rust-gifski-tool.png
+tags:
+  - Rust
+  - Gifski
+  - Gifski tool
+  - Gif converter
+  - Rust-tool
+  - Linux
+categories:
+  - Rust tool
+lastmod: 2023-03-09T15:03:22.193Z
+
+metas:
+  image: /images/rust-gifski-tool.png
+---
+[Gifski](https://gif.ski/) is a highest-quality GIF encoder rust-based CLI Tool that helps to convert your image or video into a gif convert. Gifski CLI is based on FFmpeg.
+
+The Gifski tool is only available to install with Cargo and Debian. For Another operating system, you can build directly from the source. 
+
+## Install with Cargo
+
+You can install the gifski tool with Cargo, With the following command. But Cargo cli only helps fully when you work with Cargo, and you need a `Cargo.toml` file. But you do not install gifski cli globally with Cargo.
+
+
+```bash
+cargo install gifski
+```
+
+## Install with Debian
+You can install the Debian package with Cargo with the following command. It is the best way to install gifski cli.
+
+### Step
+1. Download the `.deb` [file from gifski GitHub repository](https://github.com/ImageOptim/gifski/releases).
+2. Install the `.deb` file with the `dpkg` command.
+
+```bash
+wget https://github.com/ImageOptim/gifski/releases/download/1.10.0/gifski_1.10.0_amd64.deb
+sudo dpkg -i  gifski_1.10.0_amd64.deb
+```
+After completing the installation successfully, you can run the gifski with the terminal. 
+
+## Why do we use Gifski?
+FFmpeg is the best tool for image manipulation. You convert the image to GIFs, compress the GIF, video, zip, etc.
+Gifski CLI is a small Cli, and it provides the most useful feature, and you do not need to spend time learning. Another hand FFmpeg CLI takes too much time to learn, and it is too complicated for beginners.
+
+## How to use Gifski?
+Gifski is a lot easier as compared to FFmpeg. You do not need to spend time. You can learn gifski with the following command.
+```bash
+gifski --fps 22 --quality 40 --width 1224 --height 624  --output testing.gif minimalist-video.webm 
+```
+
+###  Options
+
+1. `--output`  A destination where we store the file ( --output my.gif )
+2. `--fps` The animation frame rate to create the GIFs ( default: 20 )
+3. `--quality`  Lower quality may give a smaller files size ( default: 90 )
+4. `--width`  Adding width for gif (  default 800x600 )
+5. `--height`  Adding height for gif  (  default 800x600 )
+6. `--quiet`  Hide the standard output/console in terminal
+7. `gifski --help`  Print help
+8. `gifski --version`  Print version
+
+## Conclusion
+FFmpeg features a rich library for image manipulation as compared to Gifski. Gifski is a small and easy-to-use library. 
+The downside of gifski cli is only works with the GIF encoder. You can not compress the Gifs.

@@ -1,0 +1,101 @@
+---
+categories:
+  - ubuntu
+date: 2022-07-13T08:38:00.000Z
+description: The bun is a new run time environment for javascript blazing fast
+image: /images/zustand-and-nextjs-1.png
+tags:
+  - bun in debian
+  - Install bun in ubuntu
+  - bun javascript run time
+  - bun
+title: "How to install bun in debian distros? "
+draft: false
+metas:
+  image: /images/zustand-and-nextjs-1.png
+lastmod: 2023-03-09T15:03:55.070Z
+---
+
+The bun is a new javascript run time environment in the beta stage. The bun is
+only available for testing and not for deployment. You can easily install bun in
+your system like Windows, Linux or macOS.
+
+### Install the bun in Debian
+
+```bash
+curl https://bun.sh/install | bash
+```
+
+The output of the command.
+
+![Install bun](/images/install-bun.png "Install bun")
+
+According to the curl output, you add the path in `.bashrc` the file. You edit
+`.bashrc` file with nano or any other IDE or editor.
+
+```bash
+nano .bashrc
+```
+
+After your `.bashrc` file is open in your nano editor. Now you paste the bun
+configuration code into the `.bashrc` file.
+
+```bash
+BUN_INSTALL="/home/{YOUR-USER-NAME}/.bun"
+PATH="$BUN_INSTALL/bin:$PATH"
+```
+
+The bun path configuration is always different for everyone. Your bun configuration is shown in the output of the curl command. You copy your bun configuration and paste it. {.info}
+
+### How to save the `.bashrc` file in nano?
+
+1. First, press `ctrl + o` commands
+2. In the second step, you hit enter.
+3. Then `ctrl + x` close the nano editor.
+
+Now your `.bashrc` file is saved.
+
+### How to check bun is installed in my operating system?
+
+To check the bun installation, you run the bun version and help the command for
+verification.
+
+- bun version command
+
+```bash
+bun --version
+0.1.2
+```
+
+- bun helping command
+
+```bash
+bun --help
+bun: a fast bundler, transpiler, JavaScript Runtime and package manager for web software.
+
+  dev       ./a.ts ./b.jsx        Start a bun Dev Server
+  bun       ./a.ts ./b.jsx        Bundle dependencies of input files into a .bun
+
+  create    next ./app            Start a new project from a template (bun c)
+  run       test                  Run JavaScript with bun, a package.json script, or a bin
+  install                         Install dependencies for a package.json (bun i)
+  add       @compiled/react       Add a dependency to package.json (bun a)
+  remove    backbone              Remove a dependency from package.json (bun rm)
+
+  upgrade                         Get the latest version of bun
+  completions                     Install shell completions for tab-completion
+  discord                         Open bun's Discord server
+  help                            Print this help menu
+```
+
+---
+
+## Reference
+
+- [https://bun.sh/](https://bun.sh/ "https://bun.sh/")
+- [https://medium.com/nextjs/how-to-create-a-new-nextjs-project-with-a-bun-4a95f5a00523](https://medium.com/nextjs/how-to-create-a-new-nextjs-project-with-a-bun-4a95f5a00523 "https://medium.com/nextjs/how-to-create-a-new-nextjs-project-with-a-bun-4a95f5a00523")
+
+## Conclusion
+
+The bun is a game change run time environment for javascript. I know bun is a beta stage.
+Shortly, the bun is successfully implanted in the javascript world. Then it changes the entire javascript ecosystem.

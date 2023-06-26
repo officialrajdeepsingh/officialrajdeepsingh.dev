@@ -1,0 +1,98 @@
+---
+categories:
+  - ghost cms
+date: 2020-11-13T14:12:06.000Z
+description: I'm Very Happy to see you again On My second Part OF the Ghost CMS
+  Series.GhostCMSSeries#2.
+draft: false
+image: /images/post/2020/11/Setup-Ghost-CMS.png
+tags:
+  - Content management System
+  - bitnami
+  - GCP
+  - ghost cms
+  - ghost with bitnami
+  - One Click Deploy
+  - India GCP
+  - Google Cloud Platform
+  - Setup Ghost
+  - Setting
+title: Setup Newly Launch Ghost CMS On Google Cloud Platform?
+lastmod: 2023-03-09T15:08:37.316Z
+metas:
+  image: /images/post/2020/11/Setup-Ghost-CMS.png
+---
+
+In This Second Article. We Discuss Some Setup in your ghost CMS. Which Most
+Important And Recommended For You.
+
+- Make Sure When You Launch New Ghost Cms Blog, Firstly Change Your Email and
+  Password.
+- Assign a static external IP address to your VM instance In GCP.
+
+---
+
+### **Firstly Change Email and Password on Your Blog**
+
+**Goto To Dashboard.**
+
+[https://Your-Domain.com/ghost/](https://Your-Domain.com/ghost/)
+
+![Dashboard](/images/post/2020/11/Install-Ghost-Profile-.png "Dashboard")
+
+Click Bottom **Left corner Dropdown** Icon Select Profile. After Open Your Staff
+Page.
+
+- Scroll Down On-Page Find Email And Password Section.
+- Fill Your Email And Add Your Old Password, Then Enter Your New Password.
+- Click Change Password and After Click Save Button.
+
+![Change Email And Password](/images/post/2020/11/New-Video--online-video-cutter.com-.gif "Change Email And Password")
+
+---
+
+### Assign a static external IP address to your
+
+By Default, GCP Create Your Instance With Ephemeral external IP address. You assign a permanent IP to your Instance. You Change Your Ip address to set a Static External IP address.
+
+Some Case You Forget change Ephemeral external IP address in that Case When You Restart Your Ghost CMS, Apache, or NGX, Your Ip Address Change. Your Domain Not Connect Properly In Your GCP. {.info}
+
+**Read More About external IP address.**
+
+Firstly GoTo
+[https://console.cloud.google.com/networking/addresses](https://console.cloud.google.com/networking/addresses)
+
+---
+
+![Change External IP Address](/images/post/2020/11/Create-External-ip.png "Change External IP Address")
+
+Visit External IP Address Page Click Ephemeral DropDown Icon.
+
+---
+
+![Click Static Button](/images/post/2020/11/create-External-Ip-Static.png "Click Static Button")
+
+Open New Tab Select Static Button Click it.
+
+---
+
+![Fill information](/images/post/2020/11/Create-External-IP-Name.png "Fill information")
+
+Fill Name And Description Box Information. Click Reserve Button
+
+---
+
+![Your Ip Address Success full Create](/images/post/2020/11/External-IP.png "Your Ip Address Success full Create")
+
+When Your Ip Successful creates Show You IP type In Type column.
+
+---
+
+### **Conclusion:**
+
+Static external IP address Most Important Never Forget It. If you Forget, Your
+Website Faces Trouble.
+
+If You Follow My article.You Definite Launch Your Own Website With Ghost CMS on
+GCP. If you have Any Problems or Errors, Contact Me. I try to help solve your
+problem.

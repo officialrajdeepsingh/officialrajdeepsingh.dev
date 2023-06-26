@@ -1,0 +1,153 @@
+---
+categories:
+  - reactjs
+date: 2020-12-12T11:42:50.000Z
+description: Some Time You Try To Read JSON File Without Create Own Custom Server In React.
+  You are not successful. In this Post, We Learn How to Read JSON File In
+  React.js Without Build Custom Server And Use JavaScript  Fetch Method.
+image: /images/post/2020/12/Read-Json-File-In-React.js-1.png
+tags:
+  - reactjs
+  - react
+  - Read json File
+  - javascript Framework
+  - reactjs tutorial
+  - react Project
+  - Fetch Method In React
+  - Fetch
+  - Fetch Method
+title: Read Locally JSON File Use Fetch Method In React js?
+draft: false
+metas:
+  image: /images/post/2020/12/Read-Json-File-In-React.js-1.png
+lastmod: 2023-03-09T15:08:23.097Z
+---
+
+### Let's start it
+
+### Steps
+
+1. Folder Structure
+2. JSON File Structure
+3. Read JSON File
+
+### Folder Structure
+
+![React Folder Structure](/images/post/2020/12/screenshot-codesandbox.io-2020.12.12-13_15_34.png "React Folder Structure")
+
+Our JSON File place Inside Public Folder In React.js Project. ReactJS Public
+Folder Access By URL.
+
+---
+
+### JSON File Structure
+
+![JSON File Structure](/images/post/2020/12/screenshot-codesandbox.io-2020.12.12-14_06_51.png "JSON File Structure")
+
+JSON File Structure Most Important For Us, Because when JSON Data **Warp**
+Inside **Array**. In case You Use **Map() Method** And Get Data Easily Inside
+Your Project.
+
+```json
+[
+    {
+       "username": "officialrajdeepsingh",
+       "firstName": "Rajdeep",
+       "lastName": "Singh",
+       "gender": "Male",
+       "aboutAuthor": "Read Book, Music Lover and Web Developer"
+     },
+     ...
+ ]
+```
+
+You Write Directly Inside JSON File You Use `Object.entries() Method` Firstly,
+after use map() method For Read JSON File. Rest Of Code Same In My Demo
+Project.JSON data Access Not Easily In `Object.entries()` Method. I'm
+Recommend You To Wrap Your JSON Data Firstly Inside the Array.
+
+```json
+{
+	"username": "officialrajdeepsingh",
+	"firstName": "Rajdeep",
+	"lastName": "Singh",
+	"gender": "Male",
+	"aboutAuthor": "Read Book, Music Lover and Web Developer"
+}
+```
+
+---
+
+### Read JSON File
+
+```javaScript
+// react
+import React, { useState } from 'react';
+// Own Css
+import './styles.css';
+
+export default function App() {
+	// react Hook For State Handler
+	const [data, setData] = useState(null);
+
+	// Fetch Function
+	fetch('./data.json').then(
+		function (res) {
+			return res.json();
+		},
+	).then(function (data) {
+		// store Data in State Data Variable
+		setData(data);
+	}).catch(
+		function (err) {
+			console.log(err, ' error');
+		},
+	);
+
+	return (
+		<div className='App'>
+			{
+				// use data State Variable For Get Data Use JavaScript Map Mathod
+				data
+					? data.map(
+						function (data) {
+							return (
+								<div className='card'>
+									<h4>{data.username}</h4>
+									<h2>{data.firstName} {data.lastName}</h2>
+									<h3>{data.gender}</h3>
+									<h3>{data.aboutAuthor}</h3>
+								</div>
+							);
+						},
+					)
+					: ''
+			}
+		</div>
+	);
+}
+```
+
+- Inside Fetch Method, We Pass Public Folder File Name Only.
+- In My Case My File Inside Public Folder. So we use look like "./data.json".But
+  Do Not Use Absolute Path Look Like `./public/data.json`.
+- Then use **json()** method Get data From The Response.
+- Do Not use Import File, Inside Fetch Method URL.
+- react.js Server Convert **Public Folder** File Access With URL to **HTTP
+  Response**.
+- Make Sure Your JSON File Access With URL (Checkout My Example URL).
+
+### Local Development Access Your File Inside React.js App
+
+http://your-react-server-port/data.json
+
+### Example My React Demo Project
+
+[https://7v6ny.csb.app/data.json](https://7v6ny.csb.app/data.json)
+
+---
+
+## Reference
+
+[https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
+[https://www.geeksforgeeks.org/javascript-fetch-method/](https://www.geeksforgeeks.org/javascript-fetch-method/)

@@ -1,0 +1,91 @@
+---
+categories:
+  - Raspberry pi 4
+
+date: 2021-01-19T08:54:05.000Z
+description: Remove Software inside Your Raspberry 4 with three copy & paste  Commands.
+draft: false
+image: /images/post/2022/03/How-to-remove-unnecessary-software-from-your-Raspberry-pi-4.png
+tags:
+  - Raspberry
+  - Raspberry pi 4
+  - Raspi 4
+  - Remove Software
+  - Uninstall Software
+title: How to remove unnecessary software from your Raspberry pi 4
+metas:
+  image: /images/post/2022/03/How-to-remove-unnecessary-software-from-your-Raspberry-pi-4.png
+lastmod: 2023-03-09T15:05:21.191Z
+---
+
+In this post, we learn how to remove unnecessary pre-install software in the raspberry pi 4 models. Firstly, you check out all software inside your raspberry pi 4.
+
+```bash
+dpkg -l | grep ii | less
+```
+
+dpkg command is a package manager for Debian-based operating system. You are interested to learn more about the dpkg command, make sure you read the
+manual pages.
+
+```bash
+man dpkg
+```
+
+**dpkg command** provides you a list of all the programs. This list tells you currently installs Software or program in your raspberry pi 4.
+
+### How to Remove Programs in rasp pi 4?
+
+In my example, I will remove minecraft pi for my raspberry system. when
+successfully remove your software. that software not be shown inside Programming
+Folder on raspberry 4
+
+```bash
+sudo apt-get remove --purge minecraft-pi
+sudo apt-get clean
+sudo apt-get autoremove
+```
+
+![remove minecraft pi game in raspberry 4](/images/post/2021/01/remove-software.png "remove minecraft pi game in raspberry 4")
+
+**Note** use this command you remove everything related to Minecraft
+
+1. **--purge**: flag help to remove packages and config files also.
+2. **Clean**: clean flag clears out the local repository of retrieved package
+   files.It removes everything but the lock file from /var/cache/apt/archives/
+   and /var/cache/apt/archives/partial/.
+
+Next, we will remove any unnecessary packages that have
+been installed as dependencies for the software we no longer have used to this.
+We do this with the following command. {.info}
+
+```bash
+sudo apt-get autoremove
+```
+
+![autoremove command in raspberry pi 4](/images/post/2021/01/auto-remove.png "autoremove command in raspberry pi 4")
+
+---
+
+### How to Remove Scratch Programs in raspberry pi 4?
+
+You will, Following my commands you remove all files related to Scratch.
+
+```bash
+sudo apt-get remove --purge scratch
+sudo apt-get clean
+sudo apt-get autoremove
+```
+
+![remove Scratch](/images/post/2021/01/scratch-remove.png "remove Scratch")
+
+---
+
+### How to Remove LibreOffice Programs in rasp pi 4?
+
+You will Follow my commands to remove all files related to Libra Office.
+
+```bash
+sudo apt-get remove --purge libreoffice*
+sudo apt-get clean
+sudo apt-get autoremove
+```

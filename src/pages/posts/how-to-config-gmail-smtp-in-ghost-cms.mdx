@@ -1,0 +1,157 @@
+---
+categories:
+  - ghost cms
+
+date: 2021-01-11T08:46:24.000Z
+description: Gmail Provide Free SMTP Services For us. Setup Gmail SMTP Send Free Email In
+  Ghost CMS With Copy and Paste Code.
+image: /images/post/2021/01/Gmail-Provide.png
+tags:
+  - Ghost
+  - ghost cms
+  - Config Gmail
+  - SMTP in Ghost CMS
+  - Setup Gmail SMTP In Ghost CMS
+title: How To Config Gmail SMTP in Ghost CMS?
+draft: false
+metas:
+  image: /images/post/2021/01/Gmail-Provide.png
+lastmod: 2023-03-09T15:03:06.239Z
+---
+
+Gmail SMTP Provide Free Send 2000 Email Par day. If You use Zoho free Account,
+You Never Be Send Free Email With SMTP.
+
+[https://support.google.com/a/answer/176600?hl=en](https://support.google.com/a/answer/176600?hl=en)
+
+You Use Gmail For SMTP. You Must Follow Me All Steps. All The Steps Require:
+
+1. Enable Two-Step Authentication In Gmail
+2. Create App Password In Gmail
+3. Configure in Ghost
+4. Restart Your Ghost CMS.
+
+## Enable 2-Step Verification In Gmail
+
+Firstly Enable 2-Step Verification In Your Gmail Account. You Do not Enable
+2-Step Verification. You Never Send Email, And You Face an Error In Ghost CMS.
+
+![Authentication required Send Email Error in Ghost CMS](/images/post/2021/01/SMTP-Error.png "Authentication required Send Email Error in Ghost CMS")
+
+## Enable 2-Step Verification
+
+![Home Dashboard](/images/post/2021/01/Account-Gmail.png "Home Dashboard")
+
+-   Go To My Account On Google [Click Here](https://myaccount.google.com/).
+-   After Open Your Account Dashboard Inside Web Browser.
+
+![Home Dashboard Click Security tab](/images/post/2021/01/smtp-server.png "Home Dashboard Click Security tab")
+
+-   Click the Security Tab.
+
+![Click 2-step Verification](/images/post/2021/01/Securit-in-Google-Account.png "Click 2-step Verification")
+
+-   After Scroll Down, Click Again On 2-Step Verification
+-   Fill in Your Requirement Details And On You 2-Step Verification Inside Your Google Account.
+
+---
+
+### Create App Password In Gmail
+
+Firstly Create A new Password For Your SMTP. App Password Help To Secure Your
+Account And You Do Not Provide A real Account Password information in You SMTP.
+
+![Home Dashboard](/images/post/2021/01/Account-Gmail-1.png "Home Dashboard")
+
+-   Go To My Account On Google [Click Here](https://myaccount.google.com/).
+-   After Open Your Account Dashboard Inside Web Browser.
+
+![Home Dashboard Click To Security tab](/images/post/2021/01/smtp-server-1.png "Home Dashboard Click To Security tab")
+
+-   Click the Security Tab.
+
+![Click To App Password tab](/images/post/2021/01/Sercruit-in-google-accunt-dashboard.png "Click To App Password tab.")
+
+-   Click the **Security** Tab. After Scroll Down, Click Again On App Password.
+
+![Click To Select App tab](/images/post/2021/01/App-Passward.png "Click To Select App tab.")
+
+-   Click Select app.
+
+![Click To Other (Custom Name)](/images/post/2021/01/App-Password.png "Click To Other (Custom Name)")
+
+-   Select Other(Custom name) Tab.
+
+![Enter Your Custom App Name](/images/post/2021/01/App-passwaod-3.png "Enter Your Custom App Name")
+
+-   Fill Your Custom Name Inside Input Element. after Click Generate Button
+
+![Copy Password](/images/post/2021/01/App-password-4.png "Copy Password")
+
+-   Copy Your App Password and Click Done.
+
+---
+
+## Configure in Ghost:
+
+Configure Your email settings inside the **config.production.json** file. You
+add the code below just after the _database_ section.
+
+Suppose You Use Bitnami To Install Ghost CMS. So Follow
+This Path /opt/bitnami/apps/ghost/htdocs/config.production.json to Change Code,
+And You Do not use Bitnami `config.productio.json` file inside Your Ghost Root
+Folder. {.info}
+
+```json
+...
+"mail": {
+  "from": "Your-Gmail@gmail.com",
+  "transport": "SMTP",
+  "options": {
+    "host": "smtp.gmail.com",
+    "service": "Gmail",
+    "port": "465",
+    "secure": true,
+    "auth": {
+      "user": "Your-Gmail@gmail.com",
+      "pass": "Paste Your-App-Password"
+    }
+  }
+},
+...
+```
+
+In this example, you use Your Gmail. Replace **Your-Gmail@gmail.com** and Paste
+Your **Copy App Password**.
+
+---
+
+### Restart Your Ghost CMS
+
+Then, restart all Ghost CMS Services for changes to take effect.
+
+Run Command In Ghost Install Folder.{.success}
+
+```bash
+ghost restart
+```
+
+If You Use Bitnami to Install Ghost CMS, Make Sure Your Restart Ghost CMS And
+Apache.
+
+```bash
+sudo /opt/bitnami/ctlscript.sh restart ghost
+sudo /opt/bitnami/ctlscript.sh restart apache
+```
+
+---
+
+### Reference
+
+## [https://support.google.com/a/answer/176600?hl=en](https://support.google.com/a/answer/176600?hl=en)
+
+### Read More About Ghost CMS
+
+[https://officialrajdeepsingh.dev/how-to-add-custom-domain-on-your-google-compute-engine/](https://officialrajdeepsingh.dev/how-to-add-custom-domain-on-your-google-compute-engine/)
+
+[https://officialrajdeepsingh.dev/setup-newly-launch-ghost-cms-on-google-cloud-platform/](https://officialrajdeepsingh.dev/setup-newly-launch-ghost-cms-on-google-cloud-platform/)

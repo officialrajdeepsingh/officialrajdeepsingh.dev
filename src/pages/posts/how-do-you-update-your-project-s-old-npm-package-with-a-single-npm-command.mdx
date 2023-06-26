@@ -1,0 +1,47 @@
+---
+draft: false
+title: How do you update your project's old nodejs package with a single npm command?
+description: Update your old nodejs package with a single npm command.
+date: 2023-01-12T09:31:39.609Z
+image: /images/how-do-you-update-your-project-s-old-nodejs-package-with-a-single-npm-command.png
+tags:
+  - npm
+  - old package
+  - npm outdated
+  - old npm package
+
+metas:
+  image: /images/how-do-you-update-your-project-s-old-nodejs-package-with-a-single-npm-command.png
+
+lastmod: 2023-03-09T15:02:23.254Z
+---
+
+NPM is a popular package manager for nodejs developers. When our project is big, and as a developer, we need to update node js regularly, but for a larger project, it takes lots of time to check and update every package one by one. Instead, we use npm in-built functionality to update all old node.js packages with one single command.
+
+## How to check which node.js package is old?
+
+For that, npm provide the `npm outdated` command that helps to print a list of the old package in the terminal.
+
+```bash
+npm outdated
+```
+
+![npm outdated command output](/images/pnpm-outdated.png)
+
+## How to update all the old node.js packages?
+
+You need to run only one `npm update` command to update all old nodejs packages with a single command.
+
+```bash
+npm update
+```
+
+![npm update command output](/images/npm-update.png)
+
+## How to update only one old nodejs package?
+
+You update a single package by package name with the npm update command.
+
+```bash
+npm update next
+```

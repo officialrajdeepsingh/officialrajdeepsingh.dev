@@ -1,0 +1,212 @@
+---
+categories:
+  - Linux command
+  - Linux
+date: 2021-09-14T10:18:08.000Z
+description: Tree command show contents of directories in tree format structure.
+image: /images/post/2021/09/linux-tree-command.png
+tags:
+  - Linux Commands
+  - Linux
+  - Tree Command
+  - Linux tree command
+title: What is the Linux tree command, and how is it used?
+draft: false
+lastmod: 2023-03-09T15:11:58.132Z
+metas:
+  image: /images/post/2021/09/linux-tree-command.png
+---
+
+Tree command help to list out the contents of directories in a tree-like format.
+Tree command provides tree diagram in-depth listing files.
+
+Most commonly use tree commands in writing documentation, and secondly, we use
+tree commands to understand project directory structure.
+
+If you use Linux and think the tree command is not your help. Because I have UI
+to understand every directory. that time, you're mistaken.
+
+Most of the time app or project is very big. Because of many files, folders, or
+directories in the app, you do not observe and understand what happens in the
+app and which folders and files are stored. Secondly, where I store my custom
+components are directories and folders.
+
+You also face the same problem. Then you are right place. You understand the
+tree command concept by example.
+
+The most common example. When I build React.js open-source admin dashboard, I
+create many custom components and directories for my app., like header, footer,
+nav, and card directories, to separate every custom component and sass file.
+
+This structure, I understand. But this is an open-source project. When I write
+documentation for the open-source react dashboard on GitHub. Then I manually
+design an image to tell others which folder to have a header component you
+change and where is asset folder is.
+
+![This folder or directories structure do not understand](/images/post/2021/09/array.png "This folder or directories structure do not understand")
+
+I just run the tree command to design a simple tree structure in my command
+terminal and use it in your documentation.
+
+![Linux tree command result](/images/post/2021/09/carbon.png "Linux tree command result")
+
+---
+
+## How to install the tree command?
+
+Firstly check the tree command install by default in your system. so firstly,
+run it if you face an not found error. After a run command, that means tree
+command not installed in your system firstly install it.
+
+![install tree command](/images/post/2021/09/tree-command.png "install tree command")
+
+Install tree command in your system in many ways.
+
+1. Yum
+2. Brew
+3. Snap
+4. Apt
+
+### Yum
+
+You use it to install the tree command on RHEL/CentOS/Fedora Linux. We have to
+type the following command on the terminal:
+
+```bash
+yum install tree
+```
+
+### Brew
+
+If we want to install a tree command in the Apple OS system, then type:
+
+```bash
+Brew install tree
+```
+
+### Snap
+
+Install tree command with the help of snapcraft or snap.
+
+```bash
+sudo snap install tree
+```
+
+### Apt
+
+The apt command is a common way to install any software and package and widely
+use it in your system.
+
+```bash
+sudo apt install tree
+```
+
+---
+
+## How to use the tree command?
+
+Tree program available for Unix and Unix-like systems. That means it is
+available for all the different platforms like Linux, Windows, and mac os.
+
+Tree command also supports all the Linux distros.
+
+Using the tree command is very easy. You write-tree command in your terminal.
+
+### Syntax
+
+```bash
+tree
+
+Or
+
+sudo tree
+```
+
+## Output
+
+![tree command output](/images/post/2021/09/Terminal.png "tree command output")
+
+---
+
+## Flag and Options
+
+Tree command also provides some flag or option to enhance the operating speed.
+We discuss some tree command options or flags. Whatever you say, both mean the
+same.
+
+Some tree flags are handy, and you also use daily basis in life. Other flags are
+more advanced for us. if you are interested to learn more, I recommend using the
+help command and man command
+
+### tree <directories name>
+
+First, write-tree command. then write directory name
+
+![Directory](/images/post/2021/09/man-command-for-tree--2-.png "directory")
+
+---
+
+### tree -a
+
+This -a flag print All files. By default, the tree does not print hidden files.
+
+![tree -a](/images/post/2021/09/Terminal-tree--a--1-.png "tree -a")
+
+---
+
+### tree -d
+
+This -d flag helps to show only directories List.
+
+![tree -d](/images/post/2021/09/Terminal-tree--a.png "tree -d")
+
+---
+
+### tree -f
+
+This -f flag print the full path prefix for each file and directories.
+
+![tree -f](/images/post/2021/09/Terminal-tree--f.png "tree -f")
+
+---
+
+### tree -s
+
+Tree -s flag prints the size in bytes of each file and directory.
+
+![tree -s](/images/post/2021/09/Terminal-tree--s.png "tree -s")
+
+---
+
+### tree --help
+
+The help flag prints help messages in your terminal and automatic exit.
+
+![tree --help](/images/post/2021/09/Terminal-tree---help.png "tree --help")
+
+---
+
+### man tree
+
+Man command help to print manual page information on the terminal.
+
+![man tree](/images/post/2021/09/man-command-for-tree--1-.png "man tree")
+
+---
+
+## Remove or uninstall the tree command in the system
+
+You install the tree command help of the **apt command**. You uninstall or
+remove the tree command package in just one command.
+
+```bash
+sudo apt remove --purge tree
+```
+
+1. Remove flag tell the command to remove this package.
+2. --purge flag help to remove everything related to tree commands like file,
+   folder, and configuration.
+
+### Output
+
+![remove tree command in your system](/images/post/2021/09/remove.png "remove tree command in your system")

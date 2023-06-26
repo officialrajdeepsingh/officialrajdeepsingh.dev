@@ -1,0 +1,138 @@
+---
+categories:
+  - ghost cms
+date: 2022-03-13T13:18:26.000Z
+description: ""
+draft: false
+image: /images/post/2022/03/Why-do-we-use-browser-base-IDE-in-Raspberry-pi-4--1-.png
+tags:
+  - ghost cms
+  - ghost with bitnami
+  - bitnami
+  - page speed
+title: Disable Page speed in Bitnami Ghost CMS
+metas:
+  image: /images/post/2022/03/Why-do-we-use-browser-base-IDE-in-Raspberry-pi-4--1-.png
+lastmod: 2023-03-09T15:01:50.201Z
+---
+
+You deploy ghost CMS with bitnami on google cloud. First, make sure you disable page speed in ghost cms—page speed help to convert your images into webp format to improve web speed in the browser.
+
+### Note
+
+Disable page speed in apache ways is the same of all cloud provide.{.info}
+
+For converting images into webp format, the image URL starts the break. You face an issue. Some of the pictures do not load, and you debug the problem. You find `mod_pagespeed` is rewriting the image URL, your image URL is broken, and your image does not load.
+
+```html
+https://officialrajdeepsingh.dev/content/images/2021/02/xmkdir--mflag.png.pagespeed.ic.05T5AX_xYP.webp
+```
+
+### What happen Imges URL broken in bitnami ghost CMS?
+
+Ghost already load different image sizes according to display. All image breakpoint config in the side ghost CMS. that reason `mod_pagespeed` does not work correctly in ghost CMS.
+
+### How to solve the issue?
+
+There is only one way to solve it. That is disabled page speed by default configuration in apache.
+
+**Steps**
+
+1. Open SSH
+2. Login Bitnami user
+3. Comment two line
+
+### Open SSH
+
+In the first step, You open the ssh terminal in your instance. For example purposes, I'm using a google cloud inbuilt SSH terminal.
+
+In google > Deployment manager > Select ghost installation instance > Click open SSH terminal
+
+![Open ssh in google cloud](/images/post/2022/03/open-ssh-in-gcp-1.png "Open ssh in google cloud")
+
+### Login Bitnami user
+
+In the second step, you log in with a bitnami user to easily edit and update the files in-app.
+
+```bash
+sudo su bitnami
+```
+
+### Comment two line
+
+In the last step, you edit a file httpd.conf file in your apache configuration.
+
+1. Edit file
+2. Restart apache
+3. Remove cache
+4. Restart apache again
+
+### Edit File
+
+You edit httpd.conf file with nano and vim editor. For example, I use a nano text editor.
+
+```bash
+nano /opt/bitnami/apache2/conf/httpd.conf
+```
+
+The open file looks like a terminal with a nano text editor. You find two lines of code with include page speed statement in httpd.conf file.
+
+```bash
+Include conf/pagespeed.conf
+Include conf/pagespeed_libraries.conf
+```
+
+![Remove page speed configuration in apache](/images/post/2022/03/ghost-cms.png "Remove page speed configuration in apache")
+
+You comment two lines in httpd.conf file. For commenting, you add a **#** hash symbol on the beginning line.
+
+```bash
+#Include conf/pagespeed.conf
+#Include conf/pagespeed_libraries.conf
+```
+
+![Comment pagespeed configuration in apache](/images/post/2022/03/commenttheline-in-ghost.png "Comment pagespeed configuration in apache")
+
+**How to save files in nano editor?**
+
+1. Simple press keyboard **CTRL + O** command
+2. Hit Enter
+3. **CTRL + X** to close nano editor window
+
+### Restart apache
+
+After successfully comment two-line of the code and now restarting the apache.
+
+```bash
+sudo /opt/bitnami/ctlscript.sh restart apache
+```
+
+### Remove cache
+
+All the images per cache all image locally and rewrite URL. If you do not remove the cache, your website does not work correctly—so clear cache in apache.
+
+```bash
+sudo touch /opt/bitnami/apache2/var/cache/mod_pagespeed/cache.flush
+```
+
+### Restart apache again
+
+After successfully pagespeed cache in apache, now more time to restart apache again.
+
+```bash
+sudo /opt/bitnami/ctlscript.sh restart apache
+```
+
+Now your website is ready to use. You do not see any broken image URL on your website.
+
+---
+
+### References
+
+https://forum.ghost.org/t/image-url-broken/29007
+
+---
+
+### Conclusion
+
+I'm a big thank [Martin Webster](https://forum.ghost.org/u/mjw) on the ghost forum to guide me in removing broken image URLs on the ghost CMS website.

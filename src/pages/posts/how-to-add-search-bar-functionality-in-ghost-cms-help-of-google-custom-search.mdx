@@ -1,0 +1,149 @@
+---
+categories:
+  - ghost cms
+date: 2021-10-12T14:22:10.000Z
+description: In ghost CMS, There are many ways to add search bar functionality in ghost
+  CMS. But most commonly use Google's custom search tool to add a search bar.
+draft: false
+image: /images/post/2021/10/add-ghost-serchbar.png
+tags:
+  - ghost cms
+  - Add Searchbar in Ghost
+  - ghost setup
+title: How to Add Search bar functionality in Ghost CMS Help of Google Custom Search
+metas:
+  image: /images/post/2021/10/add-ghost-serchbar.png
+lastmod: 2023-03-09T15:02:48.280Z
+---
+
+Ghost create own in built search functionality, Now this article is outdated {.info}
+
+Ghost CMS very easily integrates with google's custom search bar. You copy and
+paste code in your ghost theme and update. After a second google search bar
+appears on your website.
+
+In this article, I'm showing you a search bar functionality with a
+[Ghost Casper theme](https://ghost.org/themes/casper/).
+
+### Let's start it
+
+1. Open Google Programmable Search Engine
+2. Add code in your Theme
+
+## Open Google Programmable Search Engine
+
+Firstly go to the
+[Programmable Search Engine dashboard](https://programmablesearchengine.google.com/controlpanel/all?optin=true)
+create an account help of google when your account creates successfully. Google Programmable Search Engine dashboard looks like in the browser.
+
+![Programmable Search Engine dashboard](/images/post/2021/10/programmable-search-engine-dashborad-1.png "Programmable Search Engine Dashboard")
+
+### Follow the steps
+
+- Add Search Engines
+- Fill Information Form
+- Search Engine Create Successfully
+
+### Add Search Engines
+
+![Search Engine](/images/post/2021/10/Programmable-Search-engine-existing-1.png "Search Engine")
+If you have any engines, show them here. otherwise, you create your search
+engine click to add button
+
+### Fill Information Form
+
+![programmable search engine dashboard steps](/images/post/2021/10/programmable-search-engine-dashborad-steps.png "programmable search engine dashboard steps")
+
+In This Page, you fill your search engine name. You fill in any name which you
+like. After adding your website, click to add button. Your website adds
+successfully. Now click on to create button.
+
+### Search Engine Create SuccessFully
+
+![programmable search engine dashboard steps](/images/post/2021/10/programmable-search-engine-dashborad-steps-2-1.png "programmable search engine dashboard steps")
+
+When your search engine creates successfully, you see a confirmation page, copy
+your code, and paste it inside your Theme.
+
+Customize the option shows you all customization for your search engine, and the
+preview page tells how to look at the search bar like your show on your website.
+
+![Programmable Search Engine Customize](/images/post/2021/10/programmable-search-engine-dashborad-steps-3.png "Programmable Search Engine Customize")
+
+### Code breakdown
+
+![Search bar in Ghost CMS](/images/post/2021/10/Searchbar.png "Search bar in Ghost CMS")
+Script tag allows adding a search bar to your website. in a script tag, also
+have your Programmable search engine unique id. That id help in the
+customization of search bar functionality on the Google dashboard.
+
+---
+
+## Add code in your Theme
+
+Firstly open your [Ghost Casper theme](https://ghost.org/themes/casper/) or any
+other theme you like and open it in your favorite code editor(IDE).
+
+### Copy Code
+
+```javascript
+<script async src="https://cse.google.com/cse.js?cx=5440b4783041f4ed2"></script>
+<div class="gcse-search"></div>
+```
+
+### Paste code
+
+You open the Casper theme in the code editor and open **default.hbs** file in
+the code editor. You paste code in the header section.
+
+![Paste Google Programmable Search Engine code in your ghost theme](/images/post/2021/10/add-searchbar-in-ghost.png "Paste Google Programmable Search Engine code in your ghost theme")
+
+I open **default.hbs** file and paste custom google search bar code after
+navigation (Line number 21) div in Casper theme.
+
+You show the search bar in different places. You paste code according to your
+thought. But logic is the same for all **ghost themes**.
+
+### Add CSS
+
+```html
+<div class="gcse-search"></div>
+```
+
+You target the **gcse-search** class and apply your CSS properties to the Casper
+theme. Make sure you write and paste your CSS into the following path.
+
+![Add CSS on your Theme](/images/post/2021/10/APPLY-CSS-ON-GHOST-THEME.png "Add CSS on your Theme")
+
+```css
+screen.css
+.gse-searchbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 400px;
+}
+```
+
+Apply CSS in Ghost their many ways. but I'm showing you a common way in the image
+to apply your custom CSS. Most of the CSS changes in the google dashboard with
+one click. if you are not satisfied. then your apply custom CSS add an inbuilt
+folder.
+
+In other ways, you also create a CSS separate file built-in folder and attach
+it to your ghost theme.
+
+---
+
+### Conclusion
+
+I think Google Programmable Search Engine fan is easy to integrate with Ghost
+and any other website. But google search functionality work only when your
+website adds on the google webmaster tool. Otherwise, your search is not very
+good for other users. Maybe after some time, ghost cms official launch search
+functionality for Theme. Right now, ghost cms do not do that. But use ghost API,
+you also build custom search functionality for your Theme. in the next article,
+we also discuss that.
+
+---

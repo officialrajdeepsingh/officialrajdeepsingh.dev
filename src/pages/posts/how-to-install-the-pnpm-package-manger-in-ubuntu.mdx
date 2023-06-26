@@ -1,0 +1,103 @@
+---
+categories:
+  - nodejs
+  - PNPM
+date: 2022-05-15T16:41:00.000Z
+description: pnpm is a slimmer package manager like npm and yarn. You can easily install
+  pnpm on your Ubuntu or other Linux distro.
+image: /images/pnpm.png
+tags:
+  - nodejs
+  - javascript package manager
+  - pnpm
+  - package manager
+title: How to install the pnpm package manager in Ubuntu?
+draft: false
+lastmod: 2023-03-09T15:05:08.513Z
+metas:
+  image: /images/pnpm.png
+---
+
+Pnpm (**performant npm**) is a similar package manager to the npm and yarn. NPM,
+Pnpm and yarn package managers work for nodejs. PNPM is a fast and secure
+package manager for nodejs. You can easily install PNPM in your ubuntu.
+
+There are three ways to install PNPM in ubuntu.
+
+### Steps
+
+1. Curl
+2. Wget
+3. NPM
+
+## Curl
+
+Install PNPM with the curl command. Firstly download locally, and after the curl
+command runs `install.sh` bash file runs automatically.
+
+```bash
+curl -fsSL https://get.pnpm.io/install.sh | sh -
+```
+
+#### **Command output**
+
+```bash
+curl -fsSL https://get.pnpm.io/install.sh | sh -
+==> Extracting pnpm binaries 7.0.0
+Copying pnpm CLI from /tmp/tmp.rmncvtCcXR/pnpm to /home/rajdeepsingh/.local/share/pnpm/pnpm
+Updated /home/rajdeepsingh/.bashrc
+Setup complete. Open a new terminal to start using pnpm.
+```
+
+---
+
+## Wget
+
+It does not have the curl command installed in your system, and you use the wget
+command in ubuntu. Wget command works similar to the curl command.
+
+```bash
+wget -qO- https://get.pnpm.io/install.sh | sh -
+```
+
+---
+
+curl and Wget command install package from npm repository with a bash script. {.danger}
+
+---
+
+## NPM
+
+NPM, you can install pnpm with npm and yarn using the following command.
+
+```bash
+npm install -g pnpm
+
+or
+
+yarn global add pnpm
+```
+
+---
+
+## How to update PNPM?
+
+To update the pnpm with a one command.
+
+```bash
+pnpm add -g pnpm
+```
+
+---
+
+## Conclusion
+
+PNPM is the next future of the node package manager. Slowly pnpm is growing
+among developers in the near day. I think lots of people start using pnpm in the
+project.
+
+The second thing I hope developers, teachers, writers and YouTubers raise
+awareness about is pnpm. So lots of developers use pnpm daily in life.
+
+I hope you can install pnpm in your ubuntu without any problem. If you face any
+issues, let me know in the comment section.

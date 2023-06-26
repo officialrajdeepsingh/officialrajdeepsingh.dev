@@ -1,0 +1,170 @@
+---
+categories:
+  - Raspberry pi 4
+date: 2021-12-23T12:33:04.000Z
+description: Snap command is a Linux base command-line utility help to install and manage
+  all Linux base app in your Linux distro.
+draft: false
+image: /images/post/2021/12/Install-snap-cli-in-raspberry-pi-4.png
+tags:
+  - Raspberry
+  - Raspberry pi 4
+  - snapcraft
+  - snap cli
+  - snap command
+title: How to install snap cli in raspberry pi 4?
+metas:
+  image: /images/post/2021/12/Install-snap-cli-in-raspberry-pi-4.png
+lastmod: 2023-03-09T15:04:57.203Z
+---
+
+Snap is a command cli tool designed by Ubuntu and Canonical. Snap cli does not
+work single. It is part of the software. according to snap documentation.
+
+1. snap is both the command line interface and the application package format
+2. snapd is the background service that manages and maintains your snaps
+3. snapcraft is the command and the framework used to build your snaps
+4. Snap Store provides a place to upload your snaps and for users to browse and install.
+
+This term decides by official docs, which are correct. But as a beginner-level
+developer, snap is a cli tool that helps install software on different Linux
+distros. Because in the Linux ecosystem, there are many distros available for
+developers and Linux lovers.
+
+Suppose somebody deploys their software on each distro on Linux. In that case,
+that is very time-consuming. At that time, snap helps build package binary and
+deploy on the snap store so that everyone installs software, according to distro.
+
+## How to check snap-cli install in your raspberry4?
+
+Check your snap cli install or not install raspberry pi 4. if this command show
+error, that means snap-cli does not install in your raspberry pi 4. Because in
+current time, the snap store does not support all package support installation
+to raspberry pi 4 binary. The most cases, raspberry pi os, does not provide by
+default support of snap-cli.
+
+![How to Check snap installation](/images/post/2021/12/snap-version-2.png "How to Check snap installation")
+
+## How to install snap store in raspberry pi 4?
+
+You install snap command cli with 4 steps
+
+1. Update your raspberry pi os
+2. Install snap command
+3. Reboot system
+4. Install snap core
+5. Test your snap installation
+
+## Update your raspberry pi os
+
+The first step you update your raspberry pi OS package with the latest version.
+For updating, you use the apt command.
+
+```bash
+sudo apt update
+```
+
+![Update your raspberry pi 4](/images/post/2021/12/update-in-raspberry-pi-4.png "Update your raspberry pi 4")
+
+## Install snap command
+
+Your raspberry pi os package is updated, and now you run the snap installation
+command with sudo.
+
+```bash
+sudo apt install snapd
+```
+
+![Install snapd-cli in raspberry pi 4](/images/post/2021/12/install-snapd-in-raspberry-pi-4.png "Install snapd-cli in raspberry pi 4")
+
+## Reboot system
+
+Your snap command installation process is complete. Now you start rebooting your
+raspberry pi os with the command line, or maybe manually using raspberry pi os
+UI.
+
+```bash
+sudo reboot
+```
+
+## Install snap core
+
+After rebooting, I finished. Now you install snap core for a snapd latest
+version—Snap core help to run snap services in the background.
+
+```bash
+sudo snap install core
+```
+
+![Install snap core in raspberry pi 4](/images/post/2021/12/snap-install-core-in-raspberry-pi-4.png "Install snap core in raspberry pi 4")
+
+Suppose you face any issue with the snap core. I suggest you run refresh core.
+It is an optional command.
+
+```bash
+snap refresh core
+```
+
+## Test your snap installation
+
+There are two ways to test your snap installation
+
+- With Snap version command
+- With package Installation
+
+## With Snap version command
+
+The snap version command print the exact version of your installed snap-cli.
+
+```bash
+snap version
+```
+
+![Check the version of snap installation packages](/images/post/2021/12/snap-version-.png "Check the version of snap installation packages.")
+
+## With package Installation
+
+You download a random snap package locally with the snap command. For test
+purposes, I install [hello-world](https://snapcraft.io/hello-world) snap in your
+raspberry pi 4. In this test, you also check everything works fine in raspberry
+pi 4. The hello-world snap is not compulsory to install in your snap; whatever a
+package, select on the snap store and install it. For example purpose I install
+it.
+
+```bash
+snap install hello-world
+```
+
+![Install hello-world snap in your raspberry pi 4](/images/post/2021/12/hello-world-in-snap-in-raspberry-pi-4.png "Install hello-world snap in your raspberry pi 4")
+
+## How to Remove hello-world snap-in raspberry pi 4?
+
+The snap remove flag or option helps remove the snap package in your raspberry
+pi 4.
+
+```bash
+snap remove hello-world
+```
+
+![Remove hello-world snap in your raspberry pi 4](/images/post/2021/12/remove-snap-in-raspberry-pi-4.png "Remove hello-world snap in your raspberry pi 4")
+
+## How to remove snap-cli all packages in raspberry pi 4?
+
+The following command helps remove all snap package configurations in your
+raspberry pi 4.
+
+```bash
+sudo apt purge  snapd
+```
+
+---
+
+## Conclusion
+
+I hope you understand the concept of the snap-cli installation. Tell me in the
+comment section if you have any problems or issues.
+
+For more updates, click to join our subscriber list and get free benefit to
+lifetime access.
+
+You also learn next.js with [next.js](https://medium.com/nextjs) publication.

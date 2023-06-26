@@ -1,0 +1,106 @@
+---
+categories:
+  - Raspberry pi 4
+
+date: 2022-04-02T10:50:32.000Z
+description: You use Google to check whether the internet is working or not. Right now your
+  life is changing you run a simple command to check internet speed on Ubuntu
+  and Raspberry pi 4.
+draft: false
+image: /images/post/2022/04/internet-speed-test.png
+tags:
+  - Raspberry pi 4
+  - ubuntu
+  - Linux
+  - internet speed test
+  - snap cli
+title: Test internet speed in ubuntu and raspberry pi 4 with CLI tool
+metas:
+  image: /images/post/2022/04/internet-speed-test.png
+lastmod: 2023-03-09T15:08:46.042Z
+---
+
+Speedtest cli helps to tell the current internet speed in your terminal. Speed
+test cli is a terminal-based tool that helps test internet speed on your laptop,
+PC, etc. The speed test tool was designed and developed by
+[Ookla](https://www.speedtest.net/about/eula). Speed test gives you all test
+results in your terminal. So You do not open the browser. _Instead, go_ to the
+website and with for the internet speed result.
+
+You use my article also work with Debian base all distros.
+
+There are two ways to install speed test cli in raspberry pi four and ubuntu.
+
+1. Official command support
+2. With snap
+
+### Official command support
+
+The official command provides by a speed test. In the first step, you run two
+commands. the first command is the curl command, and the second is an apt-get
+command.
+
+### Curl
+
+Curl command help to step speed test installer and fetch all required file
+locally.
+
+```bash
+curl -s https://install.speedtest.net/app/cli/install.deb.sh | sudo bash
+```
+
+![Install speed test in ubuntu and raspberry pi 4 command line](/images/post/2022/04/speedtest.png "Install speed test in ubuntu and raspberry pi 4 command 1ine")
+
+### Apt-get
+
+Apt-get help to set up your local speed test installer package in ubuntu and
+raspberry pi 4.
+
+```bash
+sudo apt-get install speedtest
+```
+
+![Install speed test in ubuntu and raspberry pi 4 command 2](/images/post/2022/04/apt-get-install-speed-test.png "Install speed test in ubuntu and raspberry pi 4 command 2")
+
+### How to uninstall or remove the speed test with the apt-get command?
+
+```bash
+sudo apt-get purge speedtest
+```
+
+![Uninstall or remove speed test in Ubuntu and Raspberry pi 4](/images/post/2022/04/remove-speed-test-with-apt-get.png "Uninstall or remove speed test in Ubuntu and Raspberry pi 4")
+
+---
+
+### With snap
+
+You run the snap command with the speed test package. Then, snap cli automatic
+setup everything for you.
+
+```bash
+sudo snap install speed-test
+```
+
+### How to uninstall or remove the speed test with snap?
+
+```bash
+sudo snap remove  --purge speedtest
+```
+
+---
+
+### How to test whether the speed test is installed or not?
+
+```bash
+speedtest
+```
+
+---
+
+### References
+
+[https://www.speedtest.net/apps/cli](https://www.speedtest.net/apps/cli)
+
+[https://snapcraft.io/speed-test](https://snapcraft.io/speed-test)
+
+---

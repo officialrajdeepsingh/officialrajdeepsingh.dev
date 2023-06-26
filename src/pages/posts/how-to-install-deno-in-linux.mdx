@@ -1,0 +1,91 @@
+---
+categories:
+  - deno
+date: 2022-09-12T08:43:00.000Z
+description: Install deno in linux with easy ways.
+image: /images/manage-multiple-nodejs-version-with-pnpm-2.png
+tags:
+  - install deno
+  - deno
+  - ubuntu
+  - linux
+title: How to install deno in linux?
+draft: false
+lastmod: 2023-03-09T15:04:03.759Z
+metas:
+  image: /images/manage-multiple-nodejs-version-with-pnpm-2.png
+---
+
+Deno is a new runtime environment for javascript. You can install deno with a
+bash script. For Installation, you need a curl command.
+
+```bash
+curl -fsSL https://deno.land/install.sh | sh
+```
+
+Output looks like
+![Install deno with curl command](/images/install-deno-with-curl-command.png "Install deno with curl command")
+
+After Installation is complete, restart your laptop or pc. {.info}
+
+## How to upgrade the old deno to the new version?
+
+You can upgrade deno with `deno upgrade` command.
+
+![How to upgrade old deno to new deno version](/images/deno-upgrade.png "How to upgrade old deno to new deno version")
+
+---
+
+## How to delete deno in Linux?
+
+Uninstalling the deno process is a trick for a new person. However, with my step
+base guideline, you can easily delete the deno and deno configuration.
+
+### Steps
+
+- Delete deno folder
+- Delete deno configuration
+
+#### Delete deno folder
+
+Firstly, You can delete the `.deno` folder in your distro. Then, you can delete
+it with `sudo rm -R $HOME/.deno` command.
+
+`sudo rm -R $HOME/.deno` command does not delete only the deno folder. It also
+deletes the entire configuration and cache.
+
+You can also remove the deno folder with `which deno` command `sudo rm -R $( which deno )` {.info}
+
+#### Delete deno configuration
+
+In the second step, You can delete the deno configuration in `.bashrc` file.
+Which is added automatically on the installation time.
+
+open bash `.bashrc` file with any IDE. for example, I use nano Linux IDE and
+open `.bashrc` file with nano `nano ./.bashrc`
+
+After oping `.bashrc` file, then you find the following configuration.
+
+```javascript
+# Manually add the directory to your $HOME/.bashrc (or similar)
+export DENO_INSTALL="/home/rajdeepsingh/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
+```
+
+If the Following configuring is found, then delete it. Now deno uninstalls
+successfully in your distro.
+
+Remove configuration in `.bashrc` file and suggest reopening the terminal or restarting your system. {.info}
+
+---
+
+## Conclusion
+
+I hope you understand the deno installation. If you have any problems, ask in
+the comment section.
+
+---
+
+## References
+
+[https://deno.land/#installation](https://deno.land/#installation "https://deno.land/#installation")

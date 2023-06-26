@@ -1,0 +1,191 @@
+---
+categories:
+  - reactjs
+date: 2020-11-10T07:48:54.000Z
+description: In the post, I’m telling you How to add Context Menu in react.js with some
+  easy steps.
+draft: false
+image: /images/post/2022/03/How-to-add-custom-context-menu-in-react.js.png
+tags:
+  - reactjs
+  - Menu
+  - Custom Context menu
+  - reactjs course
+  - reactjs tutorial
+  - custom nav bar
+title: How to add custom context menu in react-js?
+metas:
+  image: /images/post/2022/03/How-to-add-custom-context-menu-in-react.js.png
+lastmod: 2023-03-09T15:02:39.308Z
+---
+
+## Let's Start It
+
+### What is the Context menu?
+
+When click mouse Right-click opens
+
+## Demo
+
+![How to add a custom context menu in react.js?](/images/post/2022/03/video.gif 'How to add a custom context menu in react.js?')
+
+a menu bar in DOM or Browser that is Context Menu in react.js.
+
+---
+
+## **How to Create a Context Menu?**
+
+Creating a Context Menu is very easy, with a few steps to add to your project.
+When you build a react.js app, use NPM.
+
+- Create react app `npx create-react-app my-app`
+- cd `my-app`
+- `npm i react-contextmenu`
+- `import { ContextMenu, MenuItem, ContextMenuTrigger } from "react-contextmenu"`;
+
+When import all the stuff after use ContextMenuTrigger, ContextMenu, and
+MenuItem.
+
+---
+
+### All the props list Get Here
+
+https://github.com/vkbansal/react-contextmenu
+
+### Play with code and read official docs
+
+https://github.com/vkbansal/react-contextmenu
+
+Are you build a Context menu without any library, then read this article. {.info}
+
+[https://medium.com/@subalerts/https-medium-com-implementing-custom-context-menu-in-react-js-part-1-b103260c724c](https://medium.com/@subalerts/https-medium-com-implementing-custom-context-menu-in-react-js-part-1-b103260c724c)
+
+---
+
+## Code
+
+```javascript
+import React, { Component } from 'react';
+// import all stuff about react-contextmenu
+import { ContextMenu, ContextMenuTrigger, MenuItem } from 'react-contextmenu';
+import './RightClick.scss';
+export default class App extends Component {
+	// get object data after display on alert
+	handleClick = (e, data) => {
+		alert(`Clicked on menu ${data.item}`);
+	};
+	render() {
+		return (
+			<div className='bg'>
+				{
+					/* Note: ContextMenuTrigger and ContextMenu id same
+More example :> https://github.com/vkbansal/react-contextmenu/tree/master/examples
+read Doc:>https://github.com/vkbansal/react-contextmenu
+          */
+				}
+				<ContextMenuTrigger id='add_same_id'>
+					<div className='hight'>Right Click for Open Menu</div>
+				</ContextMenuTrigger>
+				<ContextMenu className='menu' id='add_same_id'>
+					<MenuItem
+						onClick={this.handleClick}
+						data={{ item: 'Home' }}
+						className='menuItem'
+					>
+						Home
+					</MenuItem>
+					<MenuItem
+						onClick={this.handleClick}
+						data={{ item: 'Post' }}
+						className='menuItem'
+					>
+						Post
+					</MenuItem>
+					<MenuItem
+						onClick={this.handleClick}
+						data={{ item: 'Create Post' }}
+						className='menuItem'
+					>
+						Create Post
+					</MenuItem>
+					<MenuItem
+						onClick={this.handleClick}
+						data={{ item: 'All Post' }}
+						className='menuItem'
+					>
+						All Post
+					</MenuItem>
+					<MenuItem
+						onClick={this.handleClick}
+						data={{ item: 'Stats' }}
+						className='menuItem'
+					>
+						Stats
+					</MenuItem>
+					<MenuItem
+						onClick={this.handleClick}
+						data={{ item: 'Chat' }}
+						className='menuItem'
+					>
+						Chat
+					</MenuItem>
+					<MenuItem
+						onClick={this.handleClick}
+						data={{ item: 'Settings' }}
+						className='menuItem'
+					>
+						Settings
+					</MenuItem>
+					<MenuItem
+						onClick={this.handleClick}
+						data={{ item: 'Profile' }}
+						className='menuItem'
+					>
+						Profile
+					</MenuItem>
+					<MenuItem
+						onClick={this.handleClick}
+						data={{ item: 'Logout' }}
+						className='menuItem'
+					>
+						Logout
+					</MenuItem>
+				</ContextMenu>
+			</div>
+		);
+	}
+}
+```
+
+---
+
+## Demo
+
+<iframe width="928" height="500" src="https://codesandbox.io/embed/how-to-add-custom-context-menu-inreactjs-z09je?from-embed" style=" height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+
+---
+
+### Read More on Medium
+
+- [https://medium.com/officialrajdeepsingh/how-to-read-local-json-file-in-react-js-564125235fc7](https://medium.com/officialrajdeepsingh/how-to-read-local-json-file-in-react-js-564125235fc7)
+- [https://medium.com/officialrajdeepsingh/whats-react-bootstrap-and-how-to-use-it-8b11d200c91](https://medium.com/officialrajdeepsingh/whats-react-bootstrap-and-how-to-use-it-8b11d200c91)
+
+---
+
+## Reference
+
+- [https://www.npmjs.com/package/react-contextmenu](https://www.npmjs.com/package/react-contextmenu)
+- [https://github.com/vkbansal/react-contextmenu](https://github.com/vkbansal/react-contextmenu)
+- [https://vkbansal.github.io/react-contextmenu/#/](https://vkbansal.github.io/react-contextmenu/#/)
+- [https://github.com/vkbansal/react-contextmenu/blob/master/docs/api.md](https://github.com/vkbansal/react-contextmenu/blob/master/docs/api.md)
+- [https://github.com/vkbansal/react-contextmenu/blob/master/docs/usage.md](https://github.com/vkbansal/react-contextmenu/blob/master/docs/usage.md)
+
+---
+
+## Conclusion
+
+I hope you understand how to create a custom context menu in react.js. If Any
+queries, mistakes, and Suggestions. Please tell me in the comment box after we
+update our article.
+
+---

@@ -1,0 +1,102 @@
+---
+categories:
+  - ghost cms
+date: 2020-11-20T08:49:35.000Z
+description: if You are Interested To Add SSL Certificate to Ghost CMS Blog. Then You Are
+  Right Place. You are Follow My Ghost Article Series. You Install the Ghost CMS
+  Blog Use Bitnami. Bitnami Provide a Tool  For You add SSL Certificate With Few
+  Click.
+draft: false
+image: /images/post/2020/11/Bitanmi.png
+tags:
+  - bitnami
+  - CMS
+  - Add Domain With Ghost
+  - GCP
+  - ghost cms
+  - ghost setup
+  - Google Cloud Platform
+  - ghost with bitnami
+  - SSL Certificate
+  - Config ssl in ghost
+  - Auto-Configure With Bitnami
+  - bncert-tool in bitnami
+title: How To Configure SSL Certificate In Ghost CMS With Bitnami on Google Cloud
+  Platform?
+metas:
+  image: /images/post/2020/11/Bitanmi.png
+lastmod: 2023-03-09T15:03:18.298Z
+---
+
+##### Lets Start
+
+## There are 2 steps
+
+1. Access your Ghost instance
+2. Auto-Configure With Bitnami
+
+---
+
+### Access your Ghost instance
+
+![GCP Dashboard](/images/post/2020/11/Google-Console-3.png "GCP Dashboard")
+
+- Open Your Google Console Dashboard.
+
+---
+
+![VM INSTANCES](/images/post/2020/11/GCP-Dmain-3.png "VM INSTANCES")
+
+- Open Your Google Console Dashboard Then Click Top Left Conner humber icon. Click Compute Engine, Select VM Instance, Then Your VM Instance Page Open.
+
+---
+
+![Click SSH](/images/post/2020/11/Ghost-SSH--2.png "Click SSH")
+
+- After the Open Instance page, click SSH Button.
+
+---
+
+![Terminal](/images/post/2020/11/open-new-SSH-2.png "Terminal")
+
+- After Open Your Instance Page. Then Click SSH Button. Some You See Open New
+  Window In button Side you See Your SSH terminal Successfully Open.
+
+---
+
+### Auto-Configure With Bitnami
+
+The Bitnami bncert Tool is a command-line tool for configuring mainly HTTPS
+certificates on Your Website. The Bitnami bncert Tool also provides some common features such as automatic renewals and redirection (e.g., HTTP to HTTPS).
+
+This tool is located in the installation directory of the stack at
+`/opt/bitnami`.
+
+```bash
+sudo /opt/bitnami/bncert-tool
+```
+
+Firstly Paste Cmd In Your SSH Terminal Click To Enter. After bncert-tool Ask you Information.
+
+1. Enter Your Domain List[]: officialrajdeepsingh.dev www.officialrajdepsingh.dev
+2. Enable http to https redirection [y/n]:y
+3. Enable non www to www redirection [y/n]:y
+4. Enable www to non-www redirection [y/n]:n
+5. you agree to these change [y/n]:y
+6. e-mal address []: enter your email here
+7. do you agree to let's encrypt subscriber agreement? [y/n]:y
+8. Press enter : Click enter Button
+
+---
+
+**If You Don't Understand, Then Follow Youtube Video. All Steps Same:**
+
+<iframe width="928" height="550" src="https://www.youtube.com/embed/H2XSc4Uqarc?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+---
+
+### Conclusion
+
+If You Follow My article.You Definite Configure SSL Certificate In Ghost CMS. If
+you have Any Problems or Errors, Contact Me. I try to help and solve your
+problem.

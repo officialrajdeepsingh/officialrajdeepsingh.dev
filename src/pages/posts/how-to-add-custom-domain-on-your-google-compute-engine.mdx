@@ -1,0 +1,181 @@
+---
+categories:
+  - Google Cloud
+
+date: 2020-11-15T10:16:42.000Z
+description: In This Article, I’m Tell You How To Add Your Domain  On  Google Cloud Platform
+draft: false
+image: /images/post/2020/11/My-Blog-Thumb.png
+tags:
+  - Google Cloud Platform
+  - bitnami
+  - GCP
+  - ghost cms
+  - ghost with bitnami
+  - Google Cloud
+  - Add Domain With GCP
+  - Add Domain With Ghost
+  - ghost setup
+title: How To Add Custom Domain on Your Google Compute Engine
+metas:
+  image: /images/post/2020/11/My-Blog-Thumb.png
+lastmod: 2023-03-09T15:02:43.714Z
+---
+
+Recently, I Purchase Domain On Google Domains. Google Domains Provide Services
+Like Godaddy. You Easily Purchase Domain With Googles Domains.
+
+Most Important When You Purchase Domain with Google. You Are Verify On
+Webmaster, Adsense, Google Tag Manager, and Google Analytics. Because Google
+Verify Your Domain Automatic make Sure Your Email Account Same
+
+## Simple Follow This Steps
+
+- Copy Instances IP
+- Add Domain
+- Name Server
+
+### Copy Instances IP
+
+Go to Working Project Dashboard.
+
+[https://console.cloud.google.com/](https://console.cloud.google.com/)
+
+![Dashboard](/images/post/2020/11/gcp-dashboard.png "Dashboard")
+
+Your Dashboard Look Like.
+
+---
+
+![Go To VM Instances page](/images/post/2020/11/GCP-Dmain.png "Go To VM Instances page")
+
+- Open Your Project Dashboard Click To Left Top Conner Navbar Icon After Scroll Down Find Compute Engine.
+- Click Compute Engine Icon After Select VM Instances.
+
+---
+
+![Copy External Ip Address](/images/post/2020/11/External-Copy-IP-.png "Copy External Ip Address")
+
+Make Sure Copy your External Ip Address.
+
+---
+
+### Add Domain
+
+![Firstly Copy Ip Go To Cloud DNS](/images/post/2020/11/Add-Domain-In-GCP-1.png "Firstly Copy Ip Go To Cloud DNS")
+
+- Firstly Copy IP Address Correctly and Go To Left Top Conner Navbar Icon. After Scroll Down, Find Cloud DNS
+
+---
+
+![Enable IP](/images/post/2020/11/Cloud-Deployment-Manager-V2-API-1.png "Enable IP")
+
+- First Time Open Cloud DNS Then You See Enable Ip Address Page. You Click
+  Enable Button.
+
+---
+
+![Create Zone](/images/post/2020/11/Crete-Zone.png "Create Zone")
+
+- First Time Open Cloud DNS Page. Your Page Look Like.
+
+---
+
+![Create Zone](/images/post/2020/11/create-zone.png "Create Zone")
+
+- Your Exiting user or Add Other Domain. Your Cloud DNS Page Look Like. Click Create Zone Page.
+- after Open New Page Enter Your Domain Information
+
+---
+
+![Create DNA Zone](/images/post/2020/11/Create-zones-.png "Create DNA Zone")
+
+- Open Your Create DNS Zone Web Page. Fill in Any Name, Domain Name, And
+  Description. Click To Create Button.
+
+---
+
+![Enter Your Instance IP address](/images/post/2020/11/Name-server.png "Enter Your Instance IP address")
+
+- When Your DNS Zone Create Success Full, You See Zone Details Page. By **Default Look** Like.
+- Inside Your Zone Details Page, You See Your Custom Name Server. Copy Name Server Change in Your Domain.
+
+---
+
+![Add New Record](/images/post/2020/11/Add-Record.png "Add New Record")
+
+- Add New Record In Your Zone So Click To **ADD RECORD** Button.
+- You **Add Only Two New Record** with a or cname Record.
+
+---
+
+### A Record
+
+![Add A Record](/images/post/2020/11/Create-Record.png "add domain in gcp")
+
+- Your **DNA Name** Input Always Blank In A record.
+- Inside Resource Record Type always Set A Record.
+- Inside IPv4 Address input, You Passed Your External
+- Copy Ip Address Here
+- After You Click Save Button.
+
+---
+
+### Cname Record
+
+- You Interested To Open Your Domain in Web Browser With **www.yourdomain.com**.
+- Example: https://www.officialrajdeepsingh.dev.
+
+**If Add www On Your Site Follow This Step:**
+
+![Add CNAME In Your Record](/images/post/2020/11/CNMAE.png "Add CNAME In Your Record")
+
+- You Enter www in your DNA Name Form Field.
+- In Canonical name, Field Add Your Domain Without HTTP, HTTPS, and www.
+- Example : officialrajdeepsingh.dev
+- Fill All Form Then Click Create Button.
+
+---
+
+### Name Server
+
+My Domain Register In Google Domains. So I Open My Google Domain Dashboard.
+Enter New Name Server Provide By Google.Your Domain Register Deferent Make Sure
+You Change Name Server In Your Domain.
+
+Go to >
+[https://domains.google.com/registrar/](https://domains.google.com/registrar/).
+
+![Google Domain Dashboard](/images/post/2020/11/google-Domain-Dashborad.png "Google Domain Dashboard")
+
+- Your Domain Dashboard Look Like. Click To Your Domain.
+
+---
+
+![Click DNS Tab](/images/post/2020/11/Domain-Add-DNS-1.png "Click DNS Tab")
+
+- When Select Your Domain. After Open Your Domain Page. Then Click DNS Tab
+
+---
+
+![Add Custom Name Servers](/images/post/2020/11/Custom-name-Server.png "Add Custom name servers")
+
+- Open Your DNS Page. Click on **use custom name Servers** Button.
+
+---
+
+![You Success Full Add Name Server](/images/post/2020/11/Add-Custom-Name-Servers.png "You success Full Add Name Server")
+
+- After Paste Your Name Server Which You Copy On GCP Account.
+
+When You Register Domain With Google. Your Name Servers change instantly. {.info}
+
+---
+
+### Conclusion
+
+If You Follow My article. You Definite Add Your Domain in GCP Account. Now Your
+Ghost Blog Running Your Domain Without SSL Certificate.
+
+If you have Any Problems or Errors, Contact Me. I try to help solve your
+problem.

@@ -1,0 +1,136 @@
+---
+categories:
+  - ghost cms
+date: 2020-11-18T14:51:16.000Z
+description: In this Article, We discuss How To Config The  Ghost  Domain Url in your
+  Google Cloud Help of Bitnami.
+draft: false
+image: /images/post/2020/11/Sho-2.png
+tags:
+  - ghost cms
+  - ghost setup
+  - ghost with bitnami
+  - google cloud platform
+  - google cloud
+  - Headless CMS
+  - add domain with ghost
+  - gcp
+  - Config Own Domain Name In Ghost CMS
+title: How To Configure Own domain Name for a Ghost Blog on Compute Engine?
+metas:
+  image: /images/post/2020/11/Sho-2.png
+lastmod: 2023-03-09T15:03:14.284Z
+---
+
+If You Install Your Ghost Cms Blog Help Of Bitnami.By Default Ghost CMS, Take
+Your IP Address as Url. When You Add Your Domain On Ghost. You Show By Default
+Your Ip Address Show Inside Your Navigation panel. You Edit Manual To Change
+Url In Navigation.Q: How To Solve This Issue?Ans: Simple You Config Your Domain
+Inside Your Ghost CMS.
+
+1. Google Cloud Dashboard.
+2. Open SSH
+3. Past Some Cmd Command In Terminal.
+
+---
+
+## Google Cloud Dashboard
+
+![Dashboard](/images/post/2020/11/Google-Console-1.png "Dashboard")
+
+- Open Your Google Console Dashboard.
+
+![VM Instance](/images/post/2020/11/GCP-Dmain-1.png "VM Instance")
+
+- Open Your Google Console Dashboard Then Click Top Left Conner humber Icon.
+  Click Compute Engine, Select VM Instance, Then Your VM Instance Page Open.
+
+---
+
+![Click Open SSH](/images/post/2020/11/Ghost-SSH-.png "Click Open SSH")
+
+- After the Open Instance page, click SSH Button.
+
+---
+
+### Open SSH:
+
+![Open Your SSH With Your Terminal](/images/post/2020/11/open-new-SSH.png "Open Your SSH With Your Terminal")
+
+- After Open Your Instance Page. Then Click SSH Button. You See Your SSH
+  terminal Successfully Open.
+
+---
+
+## Basic Information About Ghost Config File.
+
+The ghost requires the domain name to be specified in the
+`/opt/bitnami/apps/ghost/htdocs/config.production.json` file.
+
+Check Your Domain Config. Simple use cat command inside ssh terminal.
+
+```bash
+sudo cat /opt/bitnami/apps/ghost/htdocs/config.production.json
+```
+
+![Your Domain Name](/images/post/2020/11/cat-Command.png "Your Domain Name")
+
+When You Open `config.production.json`, Your URL
+
+```json
+url: 'example.com'
+```
+
+Or, Most Of the Case When You Install Your Ghost cms Help of Bitnami, You Show
+Your External Ip Address URL on file.
+
+```json
+url: 1.23.423,
+```
+
+---
+
+## Past Some Cmd Command In Terminal
+
+### First Command
+
+You Firstly Paste bnconfig configuration tool Command In Your Terminal.
+
+```bash
+sudo /opt/bitnami/apps/ghost/bnconfig --machine_hostname example.com
+```
+
+- example.com Change with Your Domain. Example: officialrajdeepsingh.dev
+- **Do not add Http, Https, and www.**
+
+---
+
+### Second Command
+
+Some Time We Boot Ghost Instance. Our Old IP Address Show in URL Field. So That
+You Do Not Face any Trouble So Rename Your bnconfig File extension To
+bnconfig disabled File. After bnconfig Tool does not change again at boot time:
+Your bnconfig configuration tool Does Not Work Again.
+
+```bash
+sudo mv /opt/bitnami/apps/ghost/bnconfig /opt/bitnami/apps/ghost/bnconfig.disabled
+```
+
+---
+
+### Check Domain Was Config Success Fully In Ghost
+
+![Success Config Your Domain](/images/post/2020/11/SuccessFULL-Config-Domain.png.png "Success Config Your Domain")
+
+Your Command Run Success Fully In Terminal and Your Ghost CMS Run Success On
+Your Domain. Check out Your Ghost CMS Dashboard.
+
+---
+
+### Conclusion
+
+If You Follow My article.You Definite Configure Own domain Name in Ghost CMS. If
+you have Any Problems or Errors, Contact Me. I try to help and solve your
+problem.
+
+---

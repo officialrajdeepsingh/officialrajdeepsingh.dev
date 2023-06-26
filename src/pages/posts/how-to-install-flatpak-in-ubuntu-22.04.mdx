@@ -1,0 +1,75 @@
+---
+categories:
+  - ubuntu
+date: 2022-05-23T08:23:00.000Z
+description: Install flatpak application distribution manager in your Ubuntu machine.
+image: /images/flatpak.png
+tags:
+  - ubuntu-22.04
+  - Install flatpak
+  - flatpak
+  - ubuntu
+title: How to install flatpak in Ubuntu ( 22.04 )?
+draft: false
+metas:
+  image: /images/flatpak.png
+lastmod: 2023-03-09T15:04:19.257Z
+---
+
+Flatpak is a Linux application distribution manager similar to the snap store.
+Flatpak is faster than the snap pack. If you have a snap store user, you face an
+application crash in ubuntu. On but another hand, flatpak is fast, with less
+downtime and less application crashing.
+
+In the article, I guide you to install flatpak in your ubuntu step by step.
+
+1. Install Flatpak
+2. Configure Flatpak plugin
+3. Configure Flathub repository
+
+## Install flatpak
+
+In this way, you can install flatpak in Ubuntu 18.10 or the latest version.
+
+```bash
+sudo apt update
+sudo apt install flatpak
+```
+
+## Configure flatpak plugin
+
+You config the genome plugin in ubuntu, and you install flatpak with GUI.
+
+```bash
+sudo apt install gnome-software-plugin-flatpak
+```
+
+## Configure Flathub repository
+
+In this step, you add the flathub repository to your flatpak. So you can install
+all the available flathub applications with flathub CLI and GUI.
+
+```bash
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+```
+
+---
+
+## References
+
+1. [https://flatpak.org/setup/Ubuntu](https://flatpak.org/setup/Ubuntu)
+2. [https://flathub.org/home](https://flathub.org/home)
+
+---
+
+## Conclusion
+
+I recommended to use flatpak instead of snap. But with flatpak, you have
+enough space for your application. The flatpak use lot more space as compared to
+snap. But with, the snap application opens slowly and sometimes, the Linux
+applications crash. Maybe your data is lost.
+
+If you have any queries or questions, ask them in the comment section and follow
+the medium.
+
+[https://officialrajdeepsingh.medium.com](https://officialrajdeepsingh.medium.com)

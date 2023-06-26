@@ -1,0 +1,125 @@
+---
+categories:
+  - Raspberry pi 4
+  - IDE
+date: 2021-12-19T09:32:22.000Z
+description: A sublime text editor is a lite weight IDE for raspberry pi 4. you can also
+  install sublime text editor for all ecosystems like Windows, Mac, and Linux
+  distro.
+draft: false
+image: /images/post/2021/12/Install-Sublime-text-IDE-in-raspberry-pi-4.png
+tags:
+  - Raspberry pi 4
+  - sublime text IDE
+  - IDE
+  - code editor
+  - linux code editor
+title: How to install sublime text IDE in Raspberry pi 4?
+metas:
+  image: /images/post/2021/12/Install-Sublime-text-IDE-in-raspberry-pi-4.png
+lastmod: 2023-03-09T15:05:00.801Z
+---
+
+You install sublime text IDE is Raspberry pi 4 with very easy command. You paste
+the following command setup by setup.
+
+## How to install Sublime text editor in raspberry pi 4?
+
+There are two ways to install a sublime text editor.
+
+1. Snap command
+2. Official command
+
+### Snap command
+
+Raspberry Pi 4 does not officially [support snap package manager](https://snapcraft.io/docs/installing-snapd). With the snap package manager, you
+install some packages locally in your distro. In the snap, install the package with one command.
+
+You do not install packages directly. Firstly you install snap store package
+manage in raspberry pi 4 and use the snap store command cli command and then run
+the following command to install a sublime text editor.
+
+```bash
+sudo snap install sublime-text --classic
+```
+
+## How to uninstall sublime text editor in Ubuntu?
+
+You just run the following command and delete all configurations of sublime-text
+in one command.
+
+```bash
+sudo snap remove --purge  sublime-text
+```
+
+### Official command
+
+Official command setup provides by the sublime text editor team. for download
+the sublime text editor, your run serval one by one command.
+
+- Install GDP key
+
+```bash
+wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
+```
+
+- Setup HTTP sources
+
+```bash
+sudo apt-get install apt-transport-https
+```
+
+- Select the channel or Branch to use The Branch command helps to download a
+  sublime text editor in a stable or dev branch on your laptop. I recommended
+  downloading a stable branch on the laptop. If the download developer branch
+  follows, click to follow
+  [official docs](https://www.sublimetext.com/docs/linux_repositories.html).
+
+```bash
+echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
+```
+
+- Update apt sources Run Select channel command and after run an update to check
+  everything is proper and update all old packages after running sublime text
+  install command.
+
+```bash
+sudo apt-get update
+```
+
+- Install Sublime Text Update command runs successfully in the terminal, and now
+  you install the sublime-text editor with the following command. Now your
+  download is complete in Ubuntu and opens sublime-text like regular software.
+
+```bash
+sudo apt-get install sublime-text
+```
+
+## How to delete sublime text editor?
+
+```bash
+sudo apt-get purge sublime-text
+```
+
+---
+
+## References
+
+[https://www.sublimetext.com/download](https://www.sublimetext.com/download)
+
+[https://www.sublimetext.com/docs/linux_repositories.html](https://www.sublimetext.com/docs/linux_repositories.html)
+
+[https://snapcraft.io/sublime-text](https://snapcraft.io/sublime-text)
+
+[https://snapcraft.io/docs/installing-snapd](https://snapcraft.io/docs/installing-snapd)
+
+---
+
+## Conclusion
+
+I hope you download sublime text editor in raspberry pi 4. I recommended using
+the official command to install sublime-text IDE. If you have any problem, tell
+in the comment section.
+
+For more updates, click to join our subscriber list and get free benefit to
+lifetime access.

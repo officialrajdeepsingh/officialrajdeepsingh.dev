@@ -1,0 +1,147 @@
+---
+categories:
+  - npm
+date: 2022-03-19T16:56:22.000Z
+description: Npm init command is the first learning stage of npm.
+draft: false
+image: /images/post/2022/03/npm-init-command.png
+tags:
+  - npm
+  - npm-cli
+  - npm init command
+title: What is the NPM init command?
+metas:
+  image: /images/post/2022/03/npm-init-command.png
+lastmod: 2023-03-09T15:11:41.575Z
+---
+
+Npm is the node package manager for JavaScript. The npm help manage code and
+share code with others developers. We start the Npm series for beginners to
+pro-level developers.
+
+Our first command is the npm init command. Next, create a package.json file in
+the folder.
+
+```bash
+npm init <Options>
+```
+
+### Options
+
+1. npm init --yes or -y
+2. npm init aliases or create aliases
+3. npm init -w
+
+## npm init --yes or-y
+
+The npm init command help to create a node.js setup for the developer. In
+step-up, the init command creates a package.json file and add a basic
+configuration related to the project in the package.json file.
+
+```bash
+npm init -y
+```
+
+**`Npm init -y`** flag is most common flag in npm. lots of developers use it daily in the day. **`-y flag`** help to create an essential step up with the `package.json` file.
+
+Inside the `package.json` file, eight properties by default define it.
+
+```json
+{
+	"name": "npmtest",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC"
+}
+```
+
+1. **`Name`** help to define the name of the project.
+2. **`Version`** help to define the version of your project or app.
+3. **`Description`** help to define a small introduction of your project.
+4. The **`main`** property tells which is the project's entry point.
+5. **`Script`** help to define the different command for npm.
+6. **`Keywords`** help for searching and indexing package on npmjs.org.
+7. The **`author`** help define the authorship of the project.
+8. **`License`** help define your project's licensing.
+
+## npm init aliases or create aliases
+
+Most of the time, many people use a create an alias. The **create aliases** are
+the most common alias for react.js developers. So if you are a react.js developer,
+most of the time, you use it to create an alias.
+
+```bash
+npx create-react-app my-app
+
+or
+
+npx create-next-app@latest
+```
+
+With the npm init command, you can install the direct package from [npmjs.org](npmjs.org).
+
+For example, purpose creates a nextjs app with npm init. By default, npm init
+create an alias.
+
+```bash
+npm init next-app
+```
+
+In creating an alias, you do not need to mention create prefixes at the front of
+the command. Init command by default use creates prefix. It runs the
+`create-next-app@latest` version.
+
+Your init next-app command output looks like.
+
+```bash
+npm init create-next-app
+```
+
+## npm init -w
+
+npm init -w command is similar to npm init -w. but npm init -w command help to
+set up your workspace with the project.
+
+```json
+{
+	"name": "npmtest",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"workspaces": [
+		"true"
+	]
+}
+```
+
+npm init -w command add workspaces option in package.json file—the workspace
+help for IDE.
+
+---
+
+## References
+
+[https://docs.npmjs.com/cli/v8/commands/npm-init](https://docs.npmjs.com/cli/v8/commands/npm-init)
+
+---
+
+## Conclusion
+
+npm init is the most used command in npm. Many developers use the init command
+to set up new projects with the default configuration.
+
+Many YouTubers and writers use the npm init -y flag or the option to set up npm
+new project. Because npm init -y comes with straightforward syntax, the second
+reason is that it is straightforward to use compared to npm init -w.

@@ -1,0 +1,117 @@
+---
+categories:
+  - Raspberry pi 4
+
+date: 2021-01-20T07:10:27.000Z
+description: Pycharm is an IDE used for python programming. pycharm develop by JetBrains.
+draft: false
+image: /images/post/2022/03/How-to-install-pycharm-in-raspi-4.png
+tags:
+  - Raspberry
+  - Raspberry pi 4
+  - ras pi
+  - pycharm
+  - pycharm in raspberry pi 4
+  - install pycharm
+title: How to install pycharm in raspberry pi 4?
+metas:
+  image: /images/post/2022/03/How-to-install-pycharm-in-raspi-4.png
+lastmod: 2023-03-09T15:04:45.466Z
+---
+
+Hey!, Everyone my name is Rajdeep Singh. Welcome again to my new post on
+Raspberry pi 4.In this post, We Learn How to install Pycharm Community Version
+On Raspberry pi 4.
+
+##### **Watch This video after following my articles steps**
+
+<iframe width="928" height="428" src="https://www.youtube.com/embed/jAjwzkEDrgI?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### Steps
+
+1. Download
+2. Config
+
+### Download
+
+Go to [Pycharm](https://www.jetbrains.com/pycharm/download/#section=linux) official website and download the latest Linux version in your Raspberry pi 4.
+
+![Download Pycharm Linux Version](/images/post/2021/01/download-pycharm.png "Download Pycharm Linux Version")
+
+---
+
+### Config
+
+- Go to the **download folder** and Select your **download File**. then the **press right-click** after selecting the **extract here** option after your file **successfully extract**. make sure file extract takes time.
+- Open your Linux Terminal using `ctrl+alt+t`
+
+```bash
+ctrl+alt+t
+```
+
+- Go to the **Downloads** folder using `cd Downloads`.
+
+```bash
+cd Downloads
+```
+
+![Go to cd Downloads folders](/images/post/2021/01/pycharm1.png "Go to cd Downloads folders")
+
+- paste **ls commands** inside the Downloads folder
+
+```bash
+ls
+```
+
+![Paste ls command in terminal](/images/post/2021/01/pycharm-2.png "paste ls command in terminal")
+
+- After you see, your pycharm **pycharm-community-2020.3.2** file in the Downloads folder or **similar file** you see it.
+- Then **Move** your **pycharm file** to the pi opt folder. using the **mv command**
+
+```bash
+sudo mv pycharm-community-2020.3.2  /opt/pycharm-community-2020.3.2
+```
+
+![Paste mv command inside terminal](/images/post/2021/01/pycharm-3.png "paste mv command inside terminal")
+
+- Successfully move the file to the **opt folder**. then go back using the **cd
+  ..**
+
+```bash
+cd ..
+```
+
+![Go back in main root folder](/images/post/2021/01/pycharm-4.png "go back in main root folder")
+
+- **go to use cd /opt/pycharm-community-2020.3.2/bin** command into **bin folder**.
+
+```bash
+cd /opt/pycharm-community-2020.3.2/bin
+```
+
+![Go to bin folder in raspberry pi 4](/images/post/2021/01/pycharm-5.png "go to bin folder in raspberry pi 4")
+
+- after run **./pycharm.sh** pycharm Script and your pycharm successful install now.
+
+```bash
+./pycharm.sh
+```
+
+![paste command to install pycharm](/images/post/2021/01/pycharm-6.png "paste command to install pycharm")
+
+### Note
+
+you always open your pycharm using `. /pycharm.sh` command.this pycharm not be
+show in your raspberry pi programing folder.
+
+```bash
+. /pycharm.sh
+```
+
+---
+
+### Reference
+
+[https://www.element14.com/community/community/raspberry-pi/blog/2019/09/12/installing-pycharm-on-raspberry-pi](https://www.element14.com/community/community/raspberry-pi/blog/2019/09/12/installing-pycharm-on-raspberry-pi)
+
+---
