@@ -5,6 +5,7 @@ title: What limitations to using tauri and nextjs together, and frontend develop
 description: I answer the most important two questions, which you know before starting with
   nextjs and tauri, in a straightforward format.
 date: 2023-03-07T17:11:50.500Z
+image: /images/tauri.png 
 tags:
   - Android application
   - Rust
@@ -13,6 +14,8 @@ tags:
 categories:
   - Desktop Application
 lastmod: 2023-03-09T15:13:59.323Z
+author : Rajdeep Singh
+type : post
 ---
 The answer is yes; you can create a desktop application with tauri without knowledge of Rust. Tauri enables nextjs to build a frontend interface for the application. That is the main point, where the limitation or disadvantages starts with nextjs and tauri.
 
@@ -22,7 +25,9 @@ The answer is yes; you can create a desktop application with tauri without knowl
 Tauri uses `npm run build && npm run export` commands to generate a static site. You cant use `getServerSideProps` in nextjs. You can only use `getStaticProps` in tauri. 
 For data fetching, tauri provides an [https API](https://tauri.app/v1/api/js/http) for that. If You enable backend service in your tauri application, then Rust is essential.
 
-The new version of the create-tauri-app has removed the nextjs and other frontend library support like preact, preact-ts, clojurescript, svelte-kit, and svelte-kit-ts templates. {.info}
+<Alert color="blue">
+The new version of the create-tauri-app has removed the nextjs and other frontend library support like preact, preact-ts, clojurescript, svelte-kit, and svelte-kit-ts templates.
+</Alert>
 
 ## Why did tauri remove the support of the template?
 
