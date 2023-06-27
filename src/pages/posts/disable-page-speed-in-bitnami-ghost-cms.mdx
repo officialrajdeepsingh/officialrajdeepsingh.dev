@@ -18,8 +18,9 @@ lastmod: 2023-03-09T15:01:50.201Z
 You deploy ghost CMS with bitnami on google cloud. First, make sure you disable page speed in ghost cms—page speed help to convert your images into webp format to improve web speed in the browser.
 
 ### Note
-
-Disable page speed in apache ways is the same of all cloud provide.{.info}
+<Alert color="green">
+Disable page speed in apache ways is the same of all cloud provide. 
+</Alert>
 
 For converting images into webp format, the image URL starts the break. You face an issue. Some of the pictures do not load, and you debug the problem. You find `mod_pagespeed` is rewriting the image URL, your image URL is broken, and your image does not load.
 

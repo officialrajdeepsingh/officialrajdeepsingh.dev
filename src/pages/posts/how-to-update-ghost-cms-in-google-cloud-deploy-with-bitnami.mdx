@@ -18,6 +18,7 @@ tags:
 title: How to Update Ghost CMS in Google Cloud Deploy with Bitnami?
 lastmod: 2023-03-09T15:05:28.387Z
 author: Rajdeep Singh
+type : post
 ---
 
 My thought update ghost cms are very tricky for a new person. Like me, you are a
@@ -34,7 +35,9 @@ Bitnami and Ghost CMS documentation are excellent. But you are a beginner person
 you do not understand documentation. so in this article, I guide you step by
 step. How to update your ghost CMS without any Error. Just follow me.
 
+<Alert color="green">
 You deploy Ghost CMS on Google cloud and AWS help of bitnami, all the steps same. But I recommended the following official documentation. {.success}
+</Alert>
 
 ### Steps
 
@@ -92,9 +95,11 @@ Create your backup in ghost using the command line. Follow this article. Choose
 your operating system and paste commands one by one your backup is created
 successfully.
 
+<Alert color="blue">
 I'm recommended to use the command-line ways to create
 your backup. which is a straightforward way to create a backup. This backup does
-not need to download files locally. You save the backup on your GCP system. {.success}
+not need to download files locally. You save the backup on your GCP system.
+</Alert>
 
 Take backup using Dashboard, and your backup is incomplete. in this backup image
 not be downloaded.
@@ -182,8 +187,9 @@ Only use _sudo_ if the stack was installed as _root_.
 **Congratulations**! Now your ghost cms update.
 
 ---
-
-Suppose you face this type of error. Don't worry, I'm also facing this error, and I give you a solution. {.success}
+<Alert color="blue">
+Suppose you face this type of error. Don't worry, I'm also facing this error, and I give you a solution.
+</Alert>
 
 **Error 1** Ghost update Error
 
@@ -247,8 +253,10 @@ Login to your ghost CMS dashboard after navigating the **Settings** page and
 select the " **Labs** " section and click on the “**Export**” button. After few
 seconds, your backup is starting to download locally.
 
+<Alert color="green">
 Your image or theme was not downloaded in your **JSON
-backup file**. If you download your image, follow my step 4. {.success}
+backup file**. If you download your image, follow my step 4.
+</Alert>
 
 ![backup your ghost cms blog credit by bitnami](/images/post/2021/05/download-backup-in-ghoct-cms.png "backup your ghost cms blog credit by bitnami")
 

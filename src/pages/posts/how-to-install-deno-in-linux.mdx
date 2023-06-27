@@ -13,6 +13,7 @@ title: How to install deno in linux?
 draft: false
 lastmod: 2023-03-09T15:04:03.759Z
 author: Rajdeep Singh
+type: post
 ---
 
 Deno is a new runtime environment for javascript. You can install deno with a
@@ -25,7 +26,10 @@ curl -fsSL https://deno.land/install.sh | sh
 Output looks like
 ![Install deno with curl command](/images/install-deno-with-curl-command.png "Install deno with curl command")
 
-After Installation is complete, restart your laptop or pc. {.info}
+<Alert color="blue">
+After Installation is complete, restart your laptop or pc.
+</Alert>
+
 
 ## How to upgrade the old deno to the new version?
 
@@ -52,8 +56,9 @@ it with `sudo rm -R $HOME/.deno` command.
 
 `sudo rm -R $HOME/.deno` command does not delete only the deno folder. It also
 deletes the entire configuration and cache.
-
-You can also remove the deno folder with `which deno` command `sudo rm -R $( which deno )` {.info}
+<Alert color="blue">
+You can also remove the deno folder with `which deno` command `sudo rm -R $( which deno )`.
+</Alert>
 
 #### Delete deno configuration
 
@@ -74,7 +79,9 @@ export PATH="$DENO_INSTALL/bin:$PATH"
 If the Following configuring is found, then delete it. Now deno uninstalls
 successfully in your distro.
 
-Remove configuration in `.bashrc` file and suggest reopening the terminal or restarting your system. {.info}
+<Alert color="blue">
+Remove configuration in `.bashrc` file and suggest reopening the terminal or restarting your system.
+</Alert>
 
 ---
 
