@@ -45,21 +45,21 @@ const themeConfig: SectionBlogTheme = {
       name: "Blog",
     },
     {
-      route: "/pages/about",
+      route: "/page/about",
       name: "About",
     },
     {
-      route: "/pages/contact",
+      route: "/page/contact",
       name: "Contact",
     },
   ],
   secondary_navigation: [
     {
-      route: "/pages/disclaimer",
+      route: "/page/disclaimer",
       name: "Disclaimer",
     },
     {
-      route: "/pages/privacy-policy",
+      route: "/page/privacy-policy",
       name: "Privacy policy",
     },
   ],
