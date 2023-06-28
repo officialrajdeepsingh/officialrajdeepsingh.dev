@@ -1,0 +1,28 @@
+---
+title: How to generate a yarn.lock file based on a package.json file for npm or pnpm?
+description: Generate the yarn.lock file based on the package.json file within a single command.
+date: 2023-01-10T08:43:00.000Z
+draft: false
+image: /images/reactjs.png
+tags:
+  - yarn
+  - yarn lock file
+  - create yarn lock file
+categories:
+  - yarn
+type : post
+author : Rajdeep Singh
+---
+
+
+Yarn is a popular package manager among the developer community. There are many tools, and the library uses yarn and npm package manager. 
+
+PNPM is a new package manager for nodejs. Recently, I created a new nextjs application based on pnpm. On the GitHub page deploy time, I need `yarn.lock` file. But the `yarn.lock` file creates by `yarn install` command. That is not true, but you can also create a `yarn.lock` file with the following command.
+
+```bash
+yarn generate-lock-entry >> yarn.lock
+```
+
+![yarn.lock](/images/yarn.lock.png "yarn.lock")
+
+The `yarn generate-lock-entry` command generates a lock file given the current `package.json` manifest file.
