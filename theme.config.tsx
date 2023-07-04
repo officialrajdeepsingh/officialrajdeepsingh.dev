@@ -45,32 +45,36 @@ const themeConfig: SectionBlogTheme = {
       name: "Blog",
     },
     {
-      route: "/page/about",
+      route: "/pages/about",
       name: "About",
     },
     {
-      route: "/page/contact",
+      route: "/pages/contact",
       name: "Contact",
     },
   ],
   secondary_navigation: [
     {
-      route: "/page/disclaimer",
+      route: "/pages/disclaimer",
       name: "Disclaimer",
     },
     {
-      route: "/page/privacy-policy",
+      route: "/pages/privacy-policy",
       name: "Privacy policy",
     },
   ],
   social_links: [
     {
       name: "Twitter",
-      url: "https://facebook.com/officialrajdeepsingh",
+      url: "https://twitter.com/Official_R_deep",
     },
     {
       name: "Github",
-      url: "https://facebook.com/officialrajdeepsingh",
+      url: "https://github.com/officialrajdeepsingh",
+    },
+    {
+      name: "Linkedin",
+      url: "https://www.linkedin.com/in/officalrajdeepsingh/",
     },
   ],
 };
