@@ -5,7 +5,7 @@ const themeConfig: SectionBlogTheme = {
     openGraph: {
       type: "website",
       locale: "en_IE",
-      url: "https://section-theme-blog-docs.vercel.app/",
+      url: "https://officialblog.vercel.app/",
       siteName: "Section theme blog",
     },
     twitter: {
@@ -14,7 +14,7 @@ const themeConfig: SectionBlogTheme = {
       cardType: "summary_large_image",
     },
   },
-  siteURL: "http://localhost:3000",
+  siteURL: "https://officialblog.vercel.app/",
   logo: {
     text: "Rajdeep Singh",
     svg: (
