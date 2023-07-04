@@ -38,6 +38,7 @@ As a developer, I watch and read so many manga and anime in my free time. Most o
 15. [Evolution in the flood/](https://mangagg.com/comic/evolution-in-the-flood/)
 16. [Rebirth of the Emperor in the Reverse World All Chapters](https://www.mangageko.com/manga/rebirth-of-the-emperor-in-the-reverse-world/)
 17. [The Road of Karma](https://www.mangageko.com/manga/the-road-of-karma/)
+18. [ETERNAL CLUB](https://eternalclubmanga.com/)
 
 ## Anime
 
