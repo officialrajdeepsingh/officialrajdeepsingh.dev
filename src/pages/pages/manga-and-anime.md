@@ -5,15 +5,7 @@ lastmod: 2023-03-06T14:20:40.450Z
 title: My favourite List of manhwa and anime
 description: I list my all-time favourite manga and anime and bookmark them when I read.
 date: 2022-06-13T08:15:00.000Z
-tags:
-  - Anime
-  - List of Anime
-  - Manga
-  - Manga-and-Anime
-  - List of manga
 image: /images/about.jpg
-categories:
-  - Manga-and-Anime
 type: page
 ---
 
@@ -39,6 +31,9 @@ As a developer, I watch and read so many manga and anime in my free time. Most o
 16. [Rebirth of the Emperor in the Reverse World All Chapters](https://www.mangageko.com/manga/rebirth-of-the-emperor-in-the-reverse-world/)
 17. [The Road of Karma](https://www.mangageko.com/manga/the-road-of-karma/)
 18. [ETERNAL CLUB](https://eternalclubmanga.com/)
+19. [Dr Player](https://harimanga.com/manga/dr-player)
+20. [DOOM BREAKER](https://doombreakernow.com/)
+
 
 ## Anime
 
