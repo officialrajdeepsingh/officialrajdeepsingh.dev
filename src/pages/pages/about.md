@@ -3,17 +3,9 @@ type: page
 title: About me
 image: /images/about.jpg
 author: Rajdeep Singh
-categories:
-  - Bioinformatics
 date: 2022-06-13T08:15:00.000Z
 description: About the Rajdeep singh
 draft: false
-tags:
-  - Bioinformatics
-  - Rajdeep singh
-  - About me
-  - About
-  - Who is Rajdeep singh
 lastmod: 2023-06-20T09:09:03.898Z
 ---
 
