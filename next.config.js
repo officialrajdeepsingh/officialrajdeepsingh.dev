@@ -9,4 +9,13 @@ const withNextra = require("nextra")({
 
 module.exports = withNextra({
   reactStrictMode: true,
+  async redirects() {
+    return [
+      {
+        source: '/:slug',
+        destination: '/posts/:slug',
+        permanent: true,
+      },
+    ]
+  },
 });
