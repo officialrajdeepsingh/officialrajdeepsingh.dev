@@ -46,10 +46,6 @@ const themeConfig: SectionBlogTheme = {
       name: "Blog",
     },
     {
-      route: "/pages/about",
-      name: "About",
-    },
-    {
       route: "/pages/contact",
       name: "Contact",
     },
