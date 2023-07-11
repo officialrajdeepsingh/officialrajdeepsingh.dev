@@ -1,6 +1,8 @@
 import type { SectionBlogTheme } from "section-theme-blog";
 
 const themeConfig: SectionBlogTheme = {
+  homePageAsAuthor: true,
+  siteURL: "https://officialblog.vercel.app/",
   defaultSeo: {
     openGraph: {
       type: "website",
@@ -14,7 +16,6 @@ const themeConfig: SectionBlogTheme = {
       cardType: "summary_large_image",
     },
   },
-  siteURL: "https://officialblog.vercel.app/",
   logo: {
     text: "Rajdeep Singh",
     svg: (
