@@ -2,7 +2,7 @@ import type { SectionBlogTheme } from "section-theme-blog";
 
 const themeConfig: SectionBlogTheme = {
   homePageAsAuthor: true,
-  siteURL: "https://officialblog.vercel.app/",
+  siteURL: "https://officialrajdeepsingh.dev/",
   defaultSeo: {
     openGraph: {
       type: "website",
@@ -46,19 +46,33 @@ const themeConfig: SectionBlogTheme = {
       name: "Blog",
     },
     {
-      route: "/pages/contact",
-      name: "Contact",
+      route: "/tags/ghost",
+      name:"Ghost CMS"
     },
+    {
+      route: "/tags/linux",
+      name:"Linux"
+    },
+    {
+      route: "/pages/manga-and-anime",
+      name: "Manga and Anime",
+    },
+
   ],
   secondary_navigation: [
     {
-      route: "/pages/disclaimer",
+      route: "https://officialrajdeepsingh.dev/pages/disclaimer",
       name: "Disclaimer",
     },
     {
-      route: "/pages/privacy-policy",
+      route: "https://officialrajdeepsingh.dev/pages/privacy-policy",
       name: "Privacy policy",
     },
+    {
+      route: "https://officialrajdeepsingh.dev/pages/contact",
+      name: "Contact",
+    },
+
   ],
   social_links: [
     {
