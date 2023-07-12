@@ -6,16 +6,6 @@ const withNextra = require("nextra")({
   staticImage: true,
   readingTime: true,
 });
-
 module.exports = withNextra({
-  reactStrictMode: true,
-  async redirects() {
-    return [
-      {
-        source: '/:slug',
-        destination: '/posts/:slug',
-        permanent: true,
-      },
-    ]
-  },
+  reactStrictMode: true
 });
