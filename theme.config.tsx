@@ -2,13 +2,13 @@ import type { SectionBlogTheme } from "section-theme-blog";
 
 const themeConfig: SectionBlogTheme = {
   homePageAsAuthor: true,
-  siteURL: "https://officialrajdeepsingh.dev/",
+  siteURL: "https://officialrajdeepsingh.dev",
   defaultSeo: {
     openGraph: {
       type: "website",
       locale: "en_IE",
-      url: "https://officialblog.vercel.app/",
-      siteName: "Section theme blog",
+      url: "https://officialrajdeepsingh.dev",
+      siteName: "Rajdeep Singh",
     },
     twitter: {
       handle: "@Official_R_deep",
