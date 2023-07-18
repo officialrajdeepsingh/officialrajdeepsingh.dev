@@ -1,5 +1,5 @@
 import '@/styles/globals.css'
-
+import { GoogleAdSense } from "nextjs-google-adsense";
 export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return <> <GoogleAdSense publisherId="ca-pub-9978927393009784" /> <Component {...pageProps} /> </>
 }
