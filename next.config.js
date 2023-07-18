@@ -7,5 +7,14 @@ const withNextra = require("nextra")({
   readingTime: true,
 });
 module.exports = withNextra({
-  reactStrictMode: true
+  reactStrictMode: true,
+  async redirects() {
+    return [
+      {
+        source:"/:slug",
+        destination: '/posts/:slug', // Matched parameters can be used in the destination
+        permanent: true,
+      },
+    ]
+  },
 });
