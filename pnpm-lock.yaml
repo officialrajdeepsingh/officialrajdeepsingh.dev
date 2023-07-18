@@ -26,9 +26,6 @@ dependencies:
   next-sitemap:
     specifier: ^4.1.8
     version: 4.1.8(next@13.4.7)
-  nextjs-google-adsense:
-    specifier: ^1.0.0
-    version: 1.0.0(next@13.4.7)(react@18.2.0)
   nextra:
     specifier: ^2.10.0
     version: 2.10.0(next@13.4.7)(react-dom@18.2.0)(react@18.2.0)
@@ -4667,18 +4664,6 @@ packages:
     transitivePeerDependencies:
       - '@babel/core'
       - babel-plugin-macros
-    dev: false
-
-  /nextjs-google-adsense@1.0.0(next@13.4.7)(react@18.2.0):
-    resolution: {integrity: sha512-gVqV9EH1JkDYT70M8AlqCTYq2DrmtJ8nL8xajXp+D5vK+U5PUwCJHi5XSuD9W0nFMBLYDWhVx452c8OcrI53/A==}
-    peerDependencies:
-      next: '>=11.0.0'
-      react: '>=17.0.0'
-    dependencies:
-      next: 13.4.7(react-dom@18.2.0)(react@18.2.0)
-      react: 18.2.0
-    optionalDependencies:
-      fsevents: 2.3.2
     dev: false
 
   /nextra@2.10.0(next@13.4.2)(react-dom@18.2.0)(react@18.2.0):
