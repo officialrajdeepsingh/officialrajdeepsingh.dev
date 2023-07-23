@@ -1,8 +1,27 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+The official blog project is my personal portfolio website built with [Next.js](https://nextjs.org/), [Nextra](https://nextra.site/), [Mantine UI](https://mantine.dev/) and [Section theme](https://section-theme-blog-docs.vercel.app/).
+In my blog, I write articles about Linux, Ubuntu, Raspberry Pi 4, etc.
 
-## Getting Started
+You can also start your blog using the Section theme. I created a Section theme with Nextra and Mantine UI for the official blog project. So everybody could start their blog within less than 5 mint. 
 
-First, run the development server:
+Nextra is a static site generated based on Next.js, and the good part is the vercel team maintains Nextra. 
+
+With a [Section theme](https://section-theme-blog-docs.vercel.app/), you can focus on writing, not design and configuration. The good part is Section theme comes with less configuration. Section theme includes SEO support, nav customization, Inbuilt search, dark mode, etc.
+
+
+## Getting Started with official blog
+
+First, clone the `git clone https://github.com/officialrajdeepsingh/officialblog` project, and install the dependencies using one of the node package managers NPM, yarn, and pnpm.
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+```
+
+After starting your local development server:
+
 
 ```bash
 npm run dev
@@ -14,25 +33,7 @@ pnpm dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+You can start editing the page by modifying `pages/index.mdx`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+Learn more about nextra and the section theme, and if there is any problem or question about the section theme, contact me.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
