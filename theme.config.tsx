@@ -81,7 +81,7 @@ const themeConfig: SectionBlogTheme = {
     },
     {
       name: "Github",
-      url: "https://github.com/officialrajdeepsingh",
+      url: "https://github.com/officialrajdeepsingh/officialblog",
     },
     {
       name: "Linkedin",
