@@ -16,7 +16,3 @@ module.exports = withNextra({
   }
 })
 
-
-
-// console.log("redirectUrl", redirectUrl)
-
