@@ -5,7 +5,6 @@ image: /images/about.jpg
 author: Rajdeep Singh
 date: 2022-06-13T08:15:00.000Z
 description: Home Page - By Rajdeep Singh
-draft: false
 tags:
   - Bioinformatics
   - Rajdeep singh
@@ -14,35 +13,50 @@ tags:
   - Who is Rajdeep singh
 lastmod: 2023-06-20T09:09:03.898Z
 ---
-
-## Hi, welcome 👋
+import { Card } from "@/components/Card"
+import { Space } from "section-blog-theme/components"
 
 ![Rajdeep singh](https://capsule-render.vercel.app/api?type=soft&color=auto&height=400&section=header&text=Build%20and%20Deploy&fontSize=90&animation=fadeIn)
 
+### Latest Posts
 
-In 2021, I will be completing my Master of Science degree in Biotechnology, marking the culmination of an incredible journey that began after completing my 12th-grade studies and acquiring my first Android mobile phone.
+{ /* 
+  BLOG-POST-LIST:START
+*/ }
 
-It was through the use of my mobile phone that I stumbled upon a transformative YouTube video, introducing me to the world of programming and teaching me the fundamentals of building websites using PHP, HTML, CSS, and JavaScript.
+- [How to Write Good Documentation with Docsify](https://www.freecodecamp.org/news/how-to-write-good-documentation-with-docsify/)
+- [Bun vs Node.js: Feature comparison between bun and Node.js](https://medium.com/frontendweb/bun-vs-node-js-feature-comparison-between-bun-and-node-js-3373ba095a3f?source=rss-87a39efc43fa------2)
+- [How can you use the nix-env command to install an unstable package in NixOS?](https://medium.com/thelinux/how-can-you-use-the-nix-env-command-to-install-an-unstable-package-in-nixos-35a929de61b1?source=rss-87a39efc43fa------2)
+- [The correct way to install the Neovim](https://medium.com/thelinux/the-correct-way-to-install-the-neovim-42f3076f9b88?source=rss-87a39efc43fa------2)
+- [How do you install the Next.js with Bun?](https://medium.com/frontendweb/how-do-you-install-the-next-js-with-bun-56f8aa46ef5a?source=rss-87a39efc43fa------2)
 
-That single video had an immense impact on my life. During my undergraduate studies, I actively pursued opportunities and secured my first internship, as well as a freelance position at a company focused on frontend development.
+{ /* 
+  BLOG-POST-LIST:END 
+*/ }
 
-In my role as a frontend developer, I was responsible for the conversion of PNG designs into functional HTML and CSS code, allowing me to contribute to the visual aspect of web development.
+<Space />
 
-After two years, I was fortunate enough to be selected by a new company where I joined a small team. It was there that I encountered a wonderful mentor who introduced me to the comprehensive realm of frontend development, guiding me through its intricacies from A to Z.
+### Open Source Projects
 
-During my second job, I ventured into the field of technical writing, embarking on a new aspect of my career. Along this path, I achieved significant milestones, including the publication of my first book on Linux and the presentation of a research paper through OSF.
+<div className="grid grid-cols-1 p-2 gap-5 my-5 sm:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 xl:grid-cols-2">
+  <Card tittle="Awesome Nextjs" description="A curated list of awesome Nextjs-based libraries that help build small and large-scale applications with next.js." url="https://github.com/officialrajdeepsingh/awesome-nextjs" />
+  <Card tittle="Section Blog Theme" description="Section blog theme is Nextra, Shadcn UI and Tailwind css based MDX blog." url="https://github.com/frontendweb3/section-blog-theme" />
+</div>
 
-Building upon my writing endeavors, I delved further into my passion for knowledge sharing and published an additional book on bioinformatics. Furthermore, I began contributing weekly articles to prominent platforms such as Medium, freeCodeCamp, and various other publications.
+<Space />
 
-This journey has been an extraordinary one, where my love for programming, frontend development, and writing converged, leading me to where I am today. As I approach the completion of my Master's degree, I eagerly anticipate the future opportunities that await me in the exciting world of biotechnology.
+### Publication
 
-<Divider />
+<div className="grid grid-cols-1 p-2 gap-5 my-5 sm:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 xl:grid-cols-2">
+  <Card tittle="Frontend Web" description="FrontendWeb is a platform for frontend, full-stack, and web developers to read, write, and share knowledge with readers and writers." url="https://medium.com/frontendweb" />
+  <Card tittle="The Linux" description="Explore the Linux world. " url="https://medium.com/thelinux" />
+</div>
 
-## Follow me
+<Space />
 
-<Divider mb={20} size="lg" color="indigo" />
+### Follow me
 
-<div id="badges">
+<div className="flex flex-row justify-between"  id="badges">
 
   <a style={{"margin":" auto 3px"}} target="_blank" href="https://medium.com/@officialrajdeepsingh">
     <img title="Medium" alt="medium" src="https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white" alt="LinkedIn Badge"/>
@@ -62,3 +76,4 @@ This journey has been an extraordinary one, where my love for programming, front
 
 </div>
 
+<Space h="md" />
