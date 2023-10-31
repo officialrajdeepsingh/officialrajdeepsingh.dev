@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://officialblog.vercel.app
+Host: https://officialrajdeepsingh.dev
 
 # Sitemaps
-Sitemap: https://officialblog.vercel.app/sitemap.xml
+Sitemap: https://officialrajdeepsingh.dev/sitemap.xml
