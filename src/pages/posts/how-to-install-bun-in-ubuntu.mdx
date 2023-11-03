@@ -14,9 +14,12 @@ lastmod: 2023-03-09T15:03:55.070Z
 type : post
 ---
 
+import { Alert } from "section-blog-theme/components"
+
 The bun is a new javascript run time environment in the beta stage. The bun is
-only available for testing and not for deployment. You can easily install bun in
-your system like Windows, Linux or macOS.
+only available for testing and not for deployment. 
+
+You can easily install bun in your system like Windows, Linux or macOS.
 
 ### Install the bun in Debian
 
@@ -42,7 +45,8 @@ configuration code into the `.bashrc` file.
 BUN_INSTALL="/home/{YOUR-USER-NAME}/.bun"
 PATH="$BUN_INSTALL/bin:$PATH"
 ```
-<Alert title="Note" color="blue">
+<Alert className="bg-red-300">
+### Note
 The bun path configuration is always different for everyone. Your bun configuration is shown in the output of the curl command. You copy your bun configuration and paste it.
 </Alert>
 ### How to save the `.bashrc` file in nano?

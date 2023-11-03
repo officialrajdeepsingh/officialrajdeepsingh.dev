@@ -16,6 +16,9 @@ type : post
 author : Rajdeep Singh
 ---
 
+import { Alert } from "section-blog-theme/components"
+
+
 Gmail SMTP Provide Free Send 2000 Email Par day. If You use Zoho free Account, You Never Be Send Free Email With SMTP.
 
 [https://support.google.com/a/answer/176600?hl=en](https://support.google.com/a/answer/176600?hl=en)
@@ -93,7 +96,7 @@ Configure Your email settings inside the **config.production.json** file. You
 add the code below just after the _database_ section.
 
 
-<Alert color="green">
+<Alert>
 Suppose You Use Bitnami To Install Ghost CMS. So Follow This Path `/opt/bitnami/apps/ghost/htdocs/config.production.json` to Change Code, And You Do not use Bitnami `config.productio.json` file inside Your Ghost Root Folder.
 </Alert>
 
@@ -124,7 +127,7 @@ In this example, you use Your Gmail. Replace **Your-Gmail@gmail.com** and Paste 
 
 Then, restart all Ghost CMS Services for changes to take effect.
 
-<Alert color="green">
+<Alert>
 Run Command In Ghost Install Folder.
 </Alert>
 

@@ -14,8 +14,9 @@ author: Rajdeep Singh
 type: post
 ---
 
-Deno is a new runtime environment for javascript. You can install deno with a
-bash script. For Installation, you need a curl command.
+import { Alert } from "section-blog-theme/components"
+
+Deno is a new runtime environment for javascript. You can install deno with a bash script. For Installation, you need a curl command.
 
 ```bash
 curl -fsSL https://deno.land/install.sh | sh
@@ -24,7 +25,7 @@ curl -fsSL https://deno.land/install.sh | sh
 Output looks like
 ![Install deno with curl command](/images/install-deno-with-curl-command.png "Install deno with curl command")
 
-<Alert color="blue">
+<Alert>
 After Installation is complete, restart your laptop or pc.
 </Alert>
 
@@ -52,9 +53,9 @@ base guideline, you can easily delete the deno and deno configuration.
 Firstly, You can delete the `.deno` folder in your distro. Then, you can delete
 it with `sudo rm -R $HOME/.deno` command.
 
-`sudo rm -R $HOME/.deno` command does not delete only the deno folder. It also
-deletes the entire configuration and cache.
-<Alert color="blue">
+`sudo rm -R $HOME/.deno` command does not delete only the deno folder. It also deletes the entire configuration and cache.
+
+<Alert>
 You can also remove the deno folder with `which deno` command `sudo rm -R $( which deno )`.
 </Alert>
 
@@ -63,8 +64,7 @@ You can also remove the deno folder with `which deno` command `sudo rm -R $( whi
 In the second step, You can delete the deno configuration in `.bashrc` file.
 Which is added automatically on the installation time.
 
-open bash `.bashrc` file with any IDE. for example, I use nano Linux IDE and
-open `.bashrc` file with nano `nano ./.bashrc`
+open bash `.bashrc` file with any IDE. for example, I use nano Linux IDE and open `.bashrc` file with nano `nano ./.bashrc`
 
 After oping `.bashrc` file, then you find the following configuration.
 
@@ -74,10 +74,9 @@ export DENO_INSTALL="/home/rajdeepsingh/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 ```
 
-If the Following configuring is found, then delete it. Now deno uninstalls
-successfully in your distro.
+If the Following configuring is found, then delete it. Now deno uninstalls successfully in your distro.
 
-<Alert color="blue">
+<Alert>
 Remove configuration in `.bashrc` file and suggest reopening the terminal or restarting your system.
 </Alert>
 

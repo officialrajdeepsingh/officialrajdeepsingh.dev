@@ -17,21 +17,22 @@ author: Rajdeep Singh
 type : post
 ---
 
-My thought update ghost cms are very tricky for a new person. Like me, you are a
-new or beginner in google cloud and deploy your ghost cms website help of
-bitnami. That time you face lots of trouble. You don't not under how to update
-my ghost cms without any error or problem. WordPress cms update with just one
+import { Alert } from "section-blog-theme/components"
+
+My thought update ghost cms are very tricky for a new person. Like me, you are a new or beginner in google cloud and deploy your ghost cms website help of
+bitnami. 
+
+That time you face lots of trouble. You don't not under how to update my ghost cms without any error or problem. WordPress cms update with just one
 click, but you use the command-line tool to update ghost cms in Ghost CMS.
 
-If you beginner person, you face some afraid to run commands. Sometimes you run
-the wrong command, lose your blog article data, and face another issue in your
+If you beginner person, you face some afraid to run commands. Sometimes you run the wrong command, lose your blog article data, and face another issue in your
 ghost blog.
 
-Bitnami and Ghost CMS documentation are excellent. But you are a beginner person
-you do not understand documentation. so in this article, I guide you step by
-step. How to update your ghost CMS without any Error. Just follow me.
+Bitnami and Ghost CMS documentation are excellent. But you are a beginner person you do not understand documentation. 
 
-<Alert color="green">
+so in this article, I guide you step by step. How to update your ghost CMS without any Error. Just follow me.
+
+<Alert>
 You deploy Ghost CMS on Google cloud and AWS help of bitnami, all the steps same. But I recommended the following official documentation. 
 </Alert>
 
@@ -87,11 +88,10 @@ complete backup.
 
 ## Using Command-line
 
-Create your backup in ghost using the command line. Follow this article. Choose
-your operating system and paste commands one by one your backup is created
+Create your backup in ghost using the command line. Follow this article. Choose your operating system and paste commands one by one your backup is created
 successfully.
 
-<Alert color="blue">
+<Alert>
 I'm recommended to use the command-line ways to create
 your backup. which is a straightforward way to create a backup. This backup does
 not need to download files locally. You save the backup on your GCP system.
@@ -118,8 +118,7 @@ sudo npm install ghost-cli
 
 ![update or install ghost-cli](/images/post/2021/05/update-ghost-cli.png "update or install ghost-cli")
 
-When you face any warnings related to the **package.json** file during the
-update process. these warnings can safely be ignored
+When you face any warnings related to the **package.json** file during the update process. these warnings can safely be ignored
 
 That time your npm **command fails**. You paste the command, and your problem
 was solved.
@@ -136,8 +135,7 @@ sudo mv package.json.back package.json
 
 ## Finally, update Ghost CMS
 
-Finally, go to the ghost installation directory and execute the ghost update
-command.
+Finally, go to the ghost installation directory and execute the ghost update command.
 
 Follow this steps
 
@@ -183,7 +181,7 @@ Only use _sudo_ if the stack was installed as _root_.
 **Congratulations**! Now your ghost cms update.
 
 ---
-<Alert color="blue">
+<Alert>
 Suppose you face this type of error. Don't worry, I'm also facing this error, and I give you a solution.
 </Alert>
 
@@ -249,9 +247,8 @@ Login to your ghost CMS dashboard after navigating the **Settings** page and
 select the " **Labs** " section and click on the “**Export**” button. After few
 seconds, your backup is starting to download locally.
 
-<Alert color="green">
-Your image or theme was not downloaded in your **JSON
-backup file**. If you download your image, follow my step 4.
+<Alert>
+Your image or theme was not downloaded in your **JSON backup file**. If you download your image, follow my step 4.
 </Alert>
 
 ![backup your ghost cms blog credit by bitnami](/images/post/2021/05/download-backup-in-ghoct-cms.png "backup your ghost cms blog credit by bitnami")
@@ -264,16 +261,14 @@ Launch a brand new Bitnami ghost instance in GCP.
 
 Import your backup JSON file in your ghost dashboard.
 
-Go to the **settings page.** Click to the **lab section** and click to **choose
-file.** After selecting your **ghost JSON backup** file from your system. then
+Go to the **settings page.** Click to the **lab section** and click to **choose file.** After selecting your **ghost JSON backup** file from your system. then
 click to import button.
 
 ![Import your ghost cms Backup JSON file credit by bitnami](/images/post/2021/05/import-backup-JSON-file-in-ghost-.png "Import your ghost cms Backup JSON file credit by bitnami")
 
 ### Step 4
 
-Copy your image from the old Ghost instance directory to the brand new launch
-directory.
+Copy your image from the old Ghost instance directory to the brand new launch directory.
 
 Your all image save in this directory path
 
@@ -305,8 +300,7 @@ Upload your theme in new ghost cms. You just got to the setting page, clicked on
 
 ### Conclusion
 
-The ghost Cms update process is challenging for a beginner person. All ways run
-these commands. You make sure to take backup of your Ghost CMS using
-command-line. You take backup use ghost dashboard. You do not take an image
-backup. In this backup, you save only post data, and ghost CMS settings and
-images not be included.
+The ghost Cms update process is challenging for a beginner person. All ways run these commands. You make sure to take backup of your Ghost CMS using
+command-line. You take backup use ghost dashboard. 
+
+You do not take an image backup. In this backup, you save only post data, and ghost CMS settings and images not be included.

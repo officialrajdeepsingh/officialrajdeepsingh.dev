@@ -13,15 +13,17 @@ lastmod: 2023-03-09T15:13:59.323Z
 author : Rajdeep Singh
 type : post
 ---
+
+import { Alert } from "section-blog-theme/components"
+
 The answer is yes; you can create a desktop application with tauri without knowledge of Rust. Tauri enables nextjs to build a frontend interface for the application. That is the main point, where the limitation or disadvantages starts with nextjs and tauri.
 
 * You can not create an API with nextjs
 * You can enable SSR in Nextjs with tauri
 
-Tauri uses `npm run build && npm run export` commands to generate a static site. You cant use `getServerSideProps` in nextjs. You can only use `getStaticProps` in tauri. 
-For data fetching, tauri provides an [https API](https://tauri.app/v1/api/js/http) for that. If You enable backend service in your tauri application, then Rust is essential.
+Tauri uses `npm run build && npm run export` commands to generate a static site. You cant use `getServerSideProps` in nextjs. You can only use `getStaticProps` in tauri. For data fetching, tauri provides an [https API](https://tauri.app/v1/api/js/http) for that. If You enable backend service in your tauri application, then Rust is essential.
 
-<Alert color="blue">
+<Alert>
 The new version of the create-tauri-app has removed the nextjs and other frontend library support like preact, preact-ts, clojurescript, svelte-kit, and svelte-kit-ts templates.
 </Alert>
 
@@ -32,5 +34,4 @@ Tauri's official team write a details article on it. You read on the official ta
 * [https://tauri.app/blog/2023/03/01/create-tauri-app-version-3-released](https://tauri.app/blog/2023/03/01/create-tauri-app-version-3-released)
 * [https://github.com/tauri-apps/tauri/discussions/1163](https://github.com/tauri-apps/tauri/discussions/1163)
 
-The removing the nextjs temple support with tauri. It is not the right decision according to me. The next time I work with tauri and nextjs, I will manually write configurations for nextjs in tauri without knowing if it is good or bad for the application. 
-It lit a bit sad and hard for me to write configurations; it is the trick for every developer.
+The removing the nextjs temple support with tauri. It is not the right decision according to me. The next time I work with tauri and nextjs, I will manually write configurations for nextjs in tauri without knowing if it is good or bad for the application. It lit a bit sad and hard for me to write configurations; it is the trick for every developer.
