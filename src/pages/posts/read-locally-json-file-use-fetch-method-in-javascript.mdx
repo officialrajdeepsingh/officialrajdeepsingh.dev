@@ -16,6 +16,8 @@ lastmod: 2023-03-09T15:08:14.876Z
 type : post
 ---
 
+import Iframe from 'react-iframe'
+
 ### Let's Start It
 
 ### Steps
@@ -29,11 +31,9 @@ type : post
 
 <Iframe class='codeSandBoxIframe' url="https://codesandbox.io/embed/read-local-json-file-in-javascript-dnly0?autoresize=1&fontsize=14&hidenavigation=1&theme=dark&view=preview" width="100%" height="460px" display="block" position="relative"/> 
 
-If You Read JSON File, txt File, and Any Other File Inside JavaScript, use Fetch
-Method. Make Sure You use Live Server In JavaScript.
+If You Read JSON File, txt File, and Any Other File Inside JavaScript, use Fetch Method. Make Sure You use Live Server In JavaScript.
 
-Live Server Provide You A HTTP Response For Your Local Production and
-Development base Project You Use Express.js, Vscode Live Server Plugin For Local
+Live Server Provide You A HTTP Response For Your Local Production and Development base Project You Use Express.js, Vscode Live Server Plugin For Local
 Production, and Any other Library.
 
 Secondly, Don't Import JavaScript Files. When Use Fetch Method In Your Project.
@@ -48,8 +48,7 @@ fetch(data).then(function (response) {
 });
 ```
 
-**Resolve SyntaxError: Unexpected token `<` in JSON at position 0 Error**:
-Simple Remove Import Value Inside Fetch Method and Add URL inside fetch.
+**Resolve SyntaxError: Unexpected token `<` in JSON at position 0 Error**: Simple Remove Import Value Inside Fetch Method and Add URL inside fetch.
 
 ### Show A Error Inside Console
 
@@ -61,8 +60,7 @@ Simple Remove Import Value Inside Fetch Method and Add URL inside fetch.
 
 ![Folder Structure](/images/post/2020/12/Json-Folder-Str.png "Folder Structure")
 
-I'm Read Two File In My Demo Project. First File Inside Root Folder And Second
-File Inside src Folder.
+I'm Read Two File In My Demo Project. First File Inside Root Folder And Second File Inside src Folder.
 
 ---
 
@@ -70,8 +68,7 @@ File Inside src Folder.
 
 ![JSON File Structure](/images/post/2020/12/Json-Str-LoOK-lIKE.png "JSON File Structure")
 
-JSON File Structure Most Important For Us, Because when JSON Data **Warp**
-Inside **Array**. In case You Use **Map() Method** And Get Data Easily Inside
+JSON File Structure Most Important For Us, Because when JSON Data **Warp** Inside **Array**. In case You Use **Map() Method** And Get Data Easily Inside
 Your Project.
 
 ```json
@@ -87,10 +84,8 @@ Your Project.
  ]
 ```
 
-You Write Directly Inside JSON File You Use **Object.entries() Method** Firstly,
-after use map() method For Read JSON File. Rest Of Code Same In My Demo
-Project.JSON data Access Not Easily In **Object.entries() Method**. I'm
-Recommend You To Wrap Your JSON Data Firstly Inside the Array.
+You Write Directly Inside JSON File You Use **Object.entries() Method** Firstly, after use map() method For Read JSON File. Rest Of Code Same In My Demo
+Project. JSON data Access Not Easily In **Object.entries() Method**. I'm Recommend You To Wrap Your JSON Data Firstly Inside the Array.
 
 ```json
 {

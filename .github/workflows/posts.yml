@@ -1,0 +1,20 @@
+name: Latest blog post workflow
+on:
+  schedule:
+    # Runs every 8 hour
+    - cron: '0 8 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+
+jobs:
+  update-readme-with-blog:
+    name: Update this repos README with latest blog posts
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: gautamkrishnar/blog-post-workflow@master
+        with:
+          max_post_count: "5"
+          readme_path: "./src/pages/index.mdx"
+          feed_list: "https://officialrajdeepsingh.medium.com/feed, https://www.freecodecamp.org/news/author/officialrajdeepsingh/rss, https://officialrajdeepsingh.dev/sitemap-0.xml"

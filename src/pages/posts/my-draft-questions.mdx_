@@ -16,7 +16,7 @@ type : post
 author : Rajdeep Singh
 ---
 
-DRaft article on my blog with previews.
+Draft article on my blog with previews.
 
 Currently, Pnpm is the best node package manager in the javascript world. it is super fast to install and new application. it take less time to compare yarn and pnpm. with pnpm you can easily create react app.
 

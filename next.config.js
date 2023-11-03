@@ -1,10 +1,10 @@
 /** @type {import('next').NextConfig} */
 
- const redirectUrl = require("./redirect.js")
+const redirectUrl = require("./redirect.js")
 
 const withNextra = require('nextra')({
-  theme: "section-theme-blog",
-  themeConfig: "./theme.config.tsx",
+  theme: "section-blog-theme",
+  themeConfig: "./theme.config.jsx",
   staticImage: true,
   readingTime: true,
 })

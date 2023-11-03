@@ -12,19 +12,19 @@
 
 ---
 
-The official blog project is my personal portfolio website built with [Next.js](https://nextjs.org/), [Nextra](https://nextra.site/), [Mantine UI](https://mantine.dev/) and [Section theme](https://section-theme-blog-docs.vercel.app/).
+The official blog project is my personal portfolio website built with [Next.js](https://nextjs.org/), [Nextra](https://nextra.site/), [shadcn/ui](https://mantine.dev/), [Tailwind CSS](http://tailwindcss.com/) and [Section blog](https://section-theme-blog-docs.vercel.app/).
 In my blog, I write articles about Linux, Ubuntu, Raspberry Pi 4, etc.
 
-You can also start your blog using the Section theme. I created a Section theme with Nextra and Mantine UI for the official blog project. So everybody could start their blog within less than 5 mint. 
+You can also start your blog using the Section Blog theme. I created a Section theme with Nextra and Mantine UI for the official blog project. So everybody could start their blog within less than 5 mint. 
 
 Nextra is a static site generated based on Next.js, and the good part is the vercel team maintains Nextra. 
 
-With a [Section theme](https://section-theme-blog-docs.vercel.app/), you can focus on writing, not design and configuration. The good part is Section theme comes with less configuration. Section theme includes SEO support, nav customization, Inbuilt search, dark mode, etc.
+With a [Section blog](https://section-theme-blog-docs.vercel.app/), you can focus on writing, not design and configuration. The good part is Section theme comes with less configuration. Section theme includes SEO support, nav customization, Inbuilt search, dark mode, etc.
 
 
 ## Getting Started with an official blog
 
-First, clone the `git clone https://github.com/officialrajdeepsingh/officialblog` project, and install the dependencies using one of the node package managers NPM, yarn, and pnpm.
+First, clone the `git clone https://github.com/officialrajdeepsingh/officialrajdeepsingh.dev` project, and install the dependencies using one of the node package managers NPM, yarn, and pnpm.
 
 ```bash
 npm install

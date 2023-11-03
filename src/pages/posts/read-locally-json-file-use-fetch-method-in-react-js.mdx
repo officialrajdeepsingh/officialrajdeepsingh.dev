@@ -31,8 +31,7 @@ type : post
 
 ![React Folder Structure](/images/post/2020/12/screenshot-codesandbox.io-2020.12.12-13_15_34.png "React Folder Structure")
 
-Our JSON File place Inside Public Folder In React.js Project. ReactJS Public
-Folder Access By URL.
+Our JSON File place Inside Public Folder In React.js Project. ReactJS Public Folder Access By URL.
 
 ---
 
@@ -40,9 +39,7 @@ Folder Access By URL.
 
 ![JSON File Structure](/images/post/2020/12/screenshot-codesandbox.io-2020.12.12-14_06_51.png "JSON File Structure")
 
-JSON File Structure Most Important For Us, Because when JSON Data **Warp**
-Inside **Array**. In case You Use **Map() Method** And Get Data Easily Inside
-Your Project.
+JSON File Structure Most Important For Us, Because when JSON Data **Warp** Inside **Array**. In case You Use **Map() Method** And Get Data Easily Inside your Project.
 
 ```json
 [
@@ -57,8 +54,9 @@ Your Project.
  ]
 ```
 
-You Write Directly Inside JSON File You Use `Object.entries() Method` Firstly, after use map() method For Read JSON File. Rest Of Code Same In My Demo
-Project.JSON data Access Not Easily In `Object.entries()` Method. I'm Recommend You To Wrap Your JSON Data Firstly Inside the Array.
+You Write Directly Inside JSON File You Use `Object.entries() Method` Firstly, after use map() method For Read JSON File. Rest Of Code Same In My Demo Project. 
+
+JSON data Access Not Easily In `Object.entries()` Method. I'm Recommend You To Wrap Your JSON Data Firstly Inside the Array.
 
 ```json
 {
@@ -123,12 +121,10 @@ export default function App() {
 ```
 
 - Inside Fetch Method, We Pass Public Folder File Name Only.
-- In My Case My File Inside Public Folder. So we use look like "./data.json".But
-  Do Not Use Absolute Path Look Like `./public/data.json`.
+- In My Case My File Inside Public Folder. So we use look like "./data.json". But Do Not Use Absolute Path Look Like `./public/data.json`.
 - Then use **json()** method Get data From The Response.
 - Do Not use Import File, Inside Fetch Method URL.
-- react.js Server Convert **Public Folder** File Access With URL to **HTTP
-  Response**.
+- react.js Server Convert **Public Folder** File Access With URL to **HTTP Response**.
 - Make Sure Your JSON File Access With URL (Checkout My Example URL).
 
 ### Local Development Access Your File Inside React.js App
@@ -143,5 +139,5 @@ http://your-react-server-port/data.json
 
 ## Reference
 
-[https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
-[https://www.geeksforgeeks.org/javascript-fetch-method/](https://www.geeksforgeeks.org/javascript-fetch-method/)
+* [https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
+* [https://www.geeksforgeeks.org/javascript-fetch-method/](https://www.geeksforgeeks.org/javascript-fetch-method/)

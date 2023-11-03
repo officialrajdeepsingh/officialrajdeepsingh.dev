@@ -14,6 +14,10 @@ lastmod: 2023-03-09T15:05:36.007Z
 type : post
 ---
 
+import { Alert } from "section-blog-theme/components"
+import Iframe from 'react-iframe'
+
+
 ## Basic information
 
 ### What is react.js?
@@ -27,9 +31,8 @@ JavaScript library.
 Bootstrap is the most popular front-end development framework for building
 responsive web layouts with many components.
 
-<Alert color="blue">
-I do not recommend using bootstrap.because bootstrap
-increase HTML and CSS file size. 
+<Alert>
+I do not recommend using bootstrap.because bootstrap increase HTML and CSS file size. 
 </Alert>
 
 ## Two Way
@@ -45,15 +48,13 @@ npm install bootstrap --save
 After installing the bootstrap, you will need to import the CSS file in your
 React app entry file.
 
-If you generated your project using the create-react-app tool, open the src
-folder find the entry file paste.
+If you generated your project using the create-react-app tool, open the src folder find the entry file paste.
 
 ```bash
 import 'bootstrap/dist/css/bootstrap.min.css';
 ```
 
-You can now use the CSS classes and utilities in your application, but if you
-need to use the JavaScript components.
+You can now use the CSS classes and utilities in your application, but if you need to use the JavaScript components.
 
 You will also need to install the jquery and popper.js packages from npm. In your terminal, run the following commands:
 
@@ -73,12 +74,9 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
 
 ### 2. Adding Bootstrap in React Using CDN
 
-In this method, you are integrating Bootstrap with React, i.e., via a CDN. This
-approach is easy for everyone because you need only add a `<link>` tag for
-Bootstrap CDN.
+In this method, you are integrating Bootstrap with React, i.e., via a CDN. This approach is easy for everyone because you need only add a `<link>` tag for Bootstrap CDN.
 
-Go to your project’s root folder, open the `public/index.html` file, and paste
-this code in the `<head>` section.
+Go to your project’s root folder, open the `public/index.html` file, and paste this code in the `<head>` section.
 
 ```html
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -103,8 +101,7 @@ Add the following CDN file before the closing `</body>` tag:
 
 # Conclusion
 
-I hope you understand how to add bootstrap. But I recommend you to use react-bootstrap or reactstrap pre-built framework with react and bootstrap. Any
-queries and suggestions plz tell me in the comment box.
+I hope you understand how to add bootstrap. But I recommend you to use react-bootstrap or reactstrap pre-built framework with react and bootstrap. Any queries and suggestions plz tell me in the comment box.
 
 ---
 

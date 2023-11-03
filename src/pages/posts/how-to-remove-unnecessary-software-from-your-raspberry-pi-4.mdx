@@ -15,6 +15,8 @@ lastmod: 2023-03-09T15:05:21.191Z
 type : post
 ---
 
+import { Alert } from "section-blog-theme/components"
+
 In this post, we learn how to remove unnecessary pre-install software in the raspberry pi 4 models. Firstly, you check out all software inside your raspberry pi 4.
 
 ```bash
@@ -51,10 +53,8 @@ sudo apt-get autoremove
    files.It removes everything but the lock file from /var/cache/apt/archives/
    and /var/cache/apt/archives/partial/.
 
-<Alert color="blue">
-Next, we will remove any unnecessary packages that have
-been installed as dependencies for the software we no longer have used to this.
-We do this with the following command.
+<Alert>
+Next, we will remove any unnecessary packages that have been installed as dependencies for the software we no longer have used to this. We do this with the following command.
 </Alert>
 
 ```bash

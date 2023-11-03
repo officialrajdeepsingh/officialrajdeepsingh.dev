@@ -1,7 +1,6 @@
 ---
 date: 2020-11-24T14:51:48.000Z
-description : In My New Blog Post, We Learn How To Remove:80 Port Error Inside Your Ghost Blog
-draft: false
+description : "In My New Blog Post, We Learn How To Remove:80 Port Error Inside Your Ghost Blog."
 image: /images/post/2020/11/Ghost-80-port-Show-Error.png
 tags:
   - Ghost
@@ -16,10 +15,9 @@ type: post
 author : Rajdeep Singh
 ---
 
+import { Alert } from "section-blog-theme/components"
 
-## Lets Start
-
-### There are 3 steps
+## There are 3 steps
 
 1. Access your Ghost instance
 2. Basic Information About Ghost Config File
@@ -81,7 +79,7 @@ Config the domain name in ghost cms. open your config `Config.production.json` f
 
 If Like nano Editor so paste following command in terminal. Other Wish You can use any other editor Like Vim
 
-<Alert color="red">
+<Alert>
 Config With Nano editor command (Recommended )
 </Alert>
 
@@ -97,12 +95,11 @@ sudo Vim /opt/bitnami/apps/ghost/htdocs/config.production.json
 ```
 
 ---
-<Alert color="green">
+<Alert>
 Config With Nano CMD: 
 </Alert>
 
-<Space h={30} />
-
+<hr />
 
 ![Remove 80 Port In Your Domain](/images/post/2020/11/Remove-80-Port-.png "Remove 80 Port In Your Domain")
 
@@ -137,5 +134,3 @@ After You success full remove `80` port error in your Ghost cms and your cms loo
 **Read More About 80 Port Error On Bitnami Community.**
 
 [https://community.bitnami.com/t/80-in-end-of-domain-name/68342](https://community.bitnami.com/t/80-in-end-of-domain-name/68342)
-
----

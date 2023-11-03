@@ -13,6 +13,7 @@ lastmod: 2023-03-09T15:01:19.031Z
 type: post
 author: Rajdeep Singh
 ---
+import { Alert } from "section-blog-theme/components"
 
 Now there are lots of people using zoom for meetings. Today I will tell you the best ways to install zoom in your ubuntu.
 
@@ -69,11 +70,9 @@ sudo dpkg -i  zoom.deb
 
 After the command successfully runs in your terminal, your zoom application is installed.
 
-<Alert color="green">
+<Alert>
 The most cases `wget` command download file is in the download folder. If you specify a different folder. you can also do that with `wget` command. then you go to the download folder and run `dpkg` the command with the file name. 
 </Alert>
-
----
 
 ## How to Uninstall zoom in ubuntu?
 
@@ -82,8 +81,6 @@ You run the following command to remove the zoom application.
 ```bash
 sudo apt remove --purge zoom
 ```
-
----
 
 ## Conclusion
 

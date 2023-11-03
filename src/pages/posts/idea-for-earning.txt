@@ -6,11 +6,9 @@ title: Idea For Earning
 type : post
 ---
 
-Hey, My name is Rajdeep Singh. I'm a frontend developer and completed my study
-in Master of Science in biotechnology.Recently I found your website and am
-interested in sharing my knowledge with others.Background as a WriterI started
-writing around 4 years ago in computer science and medical science (Biology and
-Bioinformatics).My strong pitches in these fields:
+Hey, My name is Rajdeep Singh. I'm a frontend developer and completed my study in Master of Science in biotechnology. Recently I found your website and am
+interested in sharing my knowledge with others.Background as a Writer I started writing around 4 years ago in computer science and medical science (Biology and
+Bioinformatics). My strong pitches in these fields:
 
 1. Javascript
 2. Python
