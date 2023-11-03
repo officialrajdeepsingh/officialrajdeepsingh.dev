@@ -21,7 +21,7 @@ const themeConfig = {
     },
     {
       name: "github",
-      url: "https://github.com/officialrajdeepsingh/officialblog",
+      url: "https://github.com/officialrajdeepsingh/officialrajdeepsingh.dev",
     },
     {
       name: "linkedin",
