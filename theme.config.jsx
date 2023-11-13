@@ -1,9 +1,10 @@
 const themeConfig = {
   settings: {
-    title: "My title",
-    description: "my descript is here ",
+    title: "Home Page",
+    description: "JavaScript || Reactjs || Nextjs || Python || Rust || Biotechnology || Bioinformatic || Front-end Developer || Author",
+    SiteURL:"https://officialrajdeepsingh.dev",
     defaultSEO: {
-      title: "default SEO  title is here",
+      title: "Home Page",
       titleTemplate: '%s | Rajdeep Singh',
       twitter: {
         handle: "@Official_R_deep",
@@ -13,7 +14,7 @@ const themeConfig = {
     }
   },
   DateFormat: "MMM DD, YYYY",
-  bannerMessage: "Start your markdown portfolio blog with nextjs, nextra, tailwind CSS, and Shadcn UI using <a style='margin: 0px 4px;' target='_blank' href='https://www.npmjs.com/package/section-blog-theme'> the section blog theme. </a>",
+  bannerMessage: "Start your markdown portfolio blog with nextjs, nextra, tailwind CSS, and Shadcn UI using <a style='margin: 0px 4px;text-decoration:underline;' target='_blank' href='https://www.npmjs.com/package/section-blog-theme'> the section blog theme. </a>",
   SocialLinks: [
     {
       name: "twitter",
@@ -25,7 +26,7 @@ const themeConfig = {
     },
     {
       name: "linkedin",
-      url: "https://www.linkedin.com/in/officalrajdeepsingh/",
+      url: "https://www.linkedin.com/in/officalrajdeepsingh",
     }
   ],
   Logo: {
@@ -95,7 +96,7 @@ const themeConfig = {
     },
     {
       href: "/pages/privacy-policy",
-      title: "Privacy policy",
+      title: "Privacy Policy",
     },
     {
       href: "/pages/contact",
