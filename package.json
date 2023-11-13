@@ -10,19 +10,19 @@
     "postbuild": "next-sitemap"
   },
   "dependencies": {
-    "@types/node": "20.8.10",
-    "@types/react": "18.2.34",
-    "@types/react-dom": "18.2.14",
-    "eslint": "8.52.0",
+    "@types/node": "20.9.0",
+    "@types/react": "18.2.37",
+    "@types/react-dom": "18.2.15",
+    "eslint": "8.53.0",
     "eslint-config-next": "14.0.1",
-    "geist": "^1.0.0",
+    "geist": "^1.0.1",
     "next": "14.0.1",
     "next-sitemap": "^4.2.3",
     "nextra": "^2.13.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-iframe": "^1.8.5",
-    "section-blog-theme": "^0.1.4",
+    "section-blog-theme": "^0.1.5",
     "typescript": "5.2.2"
   },
   "devDependencies": {
