@@ -15,6 +15,7 @@ lastmod: 2023-06-20T09:09:03.898Z
 ---
 import { Card } from "@/components/Card"
 import { Space } from "section-blog-theme/components"
+import { Collaboration }  from "@/components/Collaboration"
 
 ![Rajdeep singh](https://capsule-render.vercel.app/api?type=soft&color=auto&height=400&section=header&text=Build%20and%20Deploy&fontSize=90&animation=fadeIn)
 
@@ -29,9 +30,15 @@ import { Space } from "section-blog-theme/components"
 
 <Space />
 
+### Collaboration
+
+<Collaboration />
+
+<Space />
+
 ### Open Source Projects
 
-<div className="grid grid-cols-1 p-2 gap-5 my-5 sm:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 xl:grid-cols-2">
+<div className="grid gap-4 md:gap-8 lg:grid-cols-2 mt-12">
   <Card tittle="Awesome Nextjs" description="A curated list of awesome Nextjs-based libraries that help build small and large-scale applications with next.js." url="https://github.com/officialrajdeepsingh/awesome-nextjs" />
   <Card tittle="Section Blog Theme" description="Section blog theme is Nextra, Shadcn UI and Tailwind css based MDX blog." url="https://github.com/frontendweb3/section-blog-theme" />
 </div>
@@ -40,7 +47,7 @@ import { Space } from "section-blog-theme/components"
 
 ### Publication
 
-<div className="grid grid-cols-1 p-2 gap-5 my-5 sm:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 xl:grid-cols-2">
+<div className="grid gap-4 md:gap-8 lg:grid-cols-2 mt-12">
   <Card tittle="Frontend Web" description="FrontendWeb is a platform for frontend, full-stack, and web developers to read, write, and share knowledge with readers and writers." url="https://medium.com/frontendweb" />
   <Card tittle="The Linux" description="Explore the Linux world. " url="https://medium.com/thelinux" />
 </div>
@@ -49,7 +56,7 @@ import { Space } from "section-blog-theme/components"
 
 ### Follow me
 
-<div className="flex flex-row justify-between"  id="badges">
+<div className="flex flex-row flex-wrap md:justify-between"  id="badges">
 
   <a style={{"margin":" auto 3px"}} target="_blank" href="https://medium.com/@officialrajdeepsingh">
     <img title="Medium" alt="medium" src="https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white" alt="LinkedIn Badge"/>
