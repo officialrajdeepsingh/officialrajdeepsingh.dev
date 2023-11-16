@@ -2,7 +2,7 @@ const themeConfig = {
   settings: {
     title: "Home Page",
     description: "JavaScript || Reactjs || Nextjs || Python || Rust || Biotechnology || Bioinformatic || Front-end Developer || Author",
-    SiteURL:"https://officialrajdeepsingh.dev",
+    SiteURL:"https://officialrajdeepsingh.dev/",
     defaultSEO: {
       title: "Home Page",
       titleTemplate: '%s | Rajdeep Singh',
