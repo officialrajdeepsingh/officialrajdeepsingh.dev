@@ -1,5 +1,19 @@
 import '@/styles/globals.css';
 import "section-blog-theme/styles.css"
+import { AdblockDetector } from 'adblock-detector';
+import { Ads } from "@/components/Ads"
+
 export default function App({ Component, pageProps }) {
-  return (<Component {...pageProps} /> )
+    const adbDetector = new AdblockDetector()
+
+    const userHasAdblock = adbDetector.detect()
+
+  return ( 
+      <>
+          {
+            userHasAdblock? <Ads /> : ""
+          }
+          <Component {...pageProps} />  
+      </> 
+   )
 }
