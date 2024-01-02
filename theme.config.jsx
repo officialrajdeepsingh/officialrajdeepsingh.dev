@@ -30,7 +30,8 @@ const themeConfig = {
     }
   ],
   Logo: {
-    TextLogo: "Rajdeep Singh."
+    logo: "Rajdeep Singh.",
+    target: "_self"
   },
   PrimaryNavigation: [
     {
