@@ -16,7 +16,6 @@
     "adblock-detector": "^2.1.0",
     "eslint": "8.56.0",
     "eslint-config-next": "14.0.4",
-    "geist": "^1.2.1",
     "next": "14.0.4",
     "next-sitemap": "^4.2.3",
     "nextra": "^2.13.2",
