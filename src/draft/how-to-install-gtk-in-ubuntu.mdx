@@ -1,0 +1,30 @@
+---
+date: 2021-09-30T10:07:17.000Z
+description: ''
+draft: true
+image: ''
+title: How to install GTK in ubuntu
+author: Rajdeep Singh
+type: post
+---
+sudo apt-get install  libgtk-4-1
+[sudo] password for rajdeepsingh: 
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+libgtk-4-1 is already the newest version (4.6.6+ds-0ubuntu1).
+libgtk-4-1 set to manually installed.
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+
+~ took 11s 
+
+dpkg -s libgtk-4-1 | grep 'Version'
+Version: 4.6.6+ds-0ubuntu1
+
+
+How to check version of GTK
+
+    ❯ dpkg -s libgtk-4-1 | grep 'Version'
+    Version: 4.6.6+ds-0ubuntu1
+    ~ 
+    ❯
