@@ -13,6 +13,7 @@ module.exports = withNextra({
   reactStrictMode: true,
   async redirects() {
     return redirectUrl
-  }
+  },
+  transpilePackages: ['react-tweet']
 })
 
