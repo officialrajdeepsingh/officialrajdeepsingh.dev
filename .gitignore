@@ -36,4 +36,4 @@ next-env.d.ts
 
 # ignore sitemap
 /public/sitemap.xml
-/public/sitemap-0.xml
+public/sitemap-0.xml
