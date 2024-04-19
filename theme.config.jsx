@@ -1,4 +1,7 @@
 const themeConfig = {
+  CardType:{
+    post:"two"
+  },
   settings: {
     title: "Home Page",
     description:
@@ -29,6 +32,14 @@ const themeConfig = {
     {
       name: "linkedin",
       url: "https://www.linkedin.com/in/officalrajdeepsingh",
+    },
+    {
+      name: "medium",
+      url: "https://officialrajdeepsingh.medium.com"
+    },
+    {
+      name : "linktree",
+      url :"https://linktr.ee/officialrajdeepsingh"
     },
   ],
   Logo: {
@@ -100,6 +111,10 @@ const themeConfig = {
     {
       href: "/pages/manga-and-anime",
       title: "Manga List",
+    },
+      {
+      href: "/pages/future",
+      title: "Future Plan",
     },
   ],
   SecondaryNavigation: [
