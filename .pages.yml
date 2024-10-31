@@ -1,0 +1,33 @@
+media:
+  input: public/images
+  output: /public/images
+
+content:
+  - name: posts
+    label: Posts
+    type: collection
+    path: src/pages/posts
+    fields:
+      - { name: title, label: Title, type: string, required: true }
+      - { name: description, label: Description, type: string }
+      - { name: image, label: Cover image, type: image }
+      - { name: date, label: Date, type: date, options: { time: true, format: "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'" } }
+      - { name: author, label: Author, type: string }
+      - name: type
+        label: Type
+        type: select
+        options:
+            values:
+                - value: post
+                  label: Post Layout
+                - value: home
+                  label: Home Layout
+                - value: raw
+                  label: Raw Layout
+                - value: page
+                  label: Page Layout
+                - value: posts
+                  label: Posts Layout           
+                - value: raw
+                  label: Raw Layout
+      - { name: body, label: Body, type: rich-text }
