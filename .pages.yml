@@ -3,10 +3,12 @@ media:
   output: /image
 
 content:
+
   - name: posts
     label: Posts
     type: collection
     path: src/pages/posts
+    filename: '{fields.title}.md'
     view:
       fields: [ title ]
       primary: title
@@ -20,8 +22,47 @@ content:
       - { name: description, label: Description, type: string }
       - { name: image, label: Cover image, type: image }
       - { name: date, label: Date, type: date, options: { time: true, format: "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'" } }
-      - { name: author, label: Author, type: string }
+      - { name: author, default: "Rajdeep Singh", label: Author, type: string }
       - { name: tags, list: true, label: Tags, type: string }
+      - name: type
+        label: Type
+        type: select
+        default: "post"
+        options:
+            values:
+                - value: post
+                  label: Post Layout
+                - value: home
+                  label: Home Layout
+                - value: raw
+                  label: Raw Layout
+                - value: page
+                  label: Page Layout
+                - value: posts
+                  label: Posts Layout           
+                - value: raw
+                  label: Raw Layout
+      - { name: body, label: Body, type: rich-text }
+
+  - name: Pages
+    label: Pages
+    type: collection
+    path: src/pages/pages
+    filename: '{fields.title}.md'
+    view:
+      fields: [ title ]
+      primary: title
+      sort: [ date, title ]
+      default:
+        search: ''
+        sort: title
+        order: desc
+    fields:
+      - { name: title, label: Title, type: string, required: true }
+      - { name: description, label: Description, type: string }
+      - { name: image, label: Cover image, type: image }
+      - { name: date, label: Date, type: date, options: { time: true, format: "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'" } }
+      - { name: author, default: "Rajdeep Singh", label: Author, type: string }
       - name: type
         label: Type
         type: select
