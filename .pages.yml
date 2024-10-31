@@ -7,14 +7,6 @@ content:
     label: Posts
     type: collection
     path: src/pages/posts
-    view:
-      fields: [ title ]
-      primary: title
-      sort: [ date, title ]
-      default:
-        search: ''
-        sort: title
-        order: desc
     fields:
       - { name: title, label: Title, type: string, required: true }
       - { name: description, label: Description, type: string }
