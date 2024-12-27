@@ -11,7 +11,7 @@ export function Collaboration() {
                 </div>
 
                 <div className="w-full  md:w-4/12 flex justify-center items-center">
-                    <Link className="font-semibold p-2" href="#">Contact Me.</Link>
+                    <Link className="font-semibold p-2" href="/pages/contact">Contact Me.</Link>
                 </div>
 
             </div>
