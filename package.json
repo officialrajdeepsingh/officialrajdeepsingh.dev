@@ -13,7 +13,6 @@
     "@types/node": "20.12.7",
     "@types/react": "18.2.79",
     "@types/react-dom": "18.2.25",
-    "adblock-detector": "^2.1.0",
     "eslint": "9.0.0",
     "eslint-config-next": "14.2.2",
     "next": "14.2.2",
