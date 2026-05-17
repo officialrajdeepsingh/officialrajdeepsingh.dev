@@ -22,7 +22,7 @@ const themeConfig = {
     "Start your markdown portfolio blog with nextjs, nextra, tailwind CSS, and Shadcn UI using <a style='margin: 0px 4px;text-decoration:underline;' target='_blank' href='https://www.npmjs.com/package/section-blog-theme'> the section blog theme. </a>",
   SocialLinks: [
     {
-      name: "twitter",
+      name: "x",
       url: "https://twitter.com/Official_R_deep",
     },
     {
