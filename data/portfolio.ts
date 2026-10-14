@@ -32,23 +32,41 @@ export const profileData = {
   availability: 'Available for freelance & consulting',
   avatarUrl: 'https://www.gravatar.com/avatar/dafca7497609ae294378279ad1d6136c?s=256',
   bannerUrl: '/images/author/banner.png',
-  bio: `Hi, I'm a professional frontend developer with 8 years of experience specialising in Next.js, React.js, and TypeScript. Additionally, I am an open-source contributor, technical documentation manager, and technical writer with 5 years of experience in these roles.`,
+  bio: `Frontend engineer and technical writer with 8+ years of experience crafting accessible, high-performance web applications and developer tooling. Specializing in the React & Next.js ecosystem, headless CMS architecture, and engineering documentation.`,
+  capabilities: [
+    {
+      title: 'Frontend Architecture & Performance',
+      description: 'Optimizing web applications through Next.js (SSR/SSG), TypeScript type safety, dynamic metadata, and Core Web Vitals.',
+    },
+    {
+      title: 'Modern UI & Design Systems',
+      description: 'Building accessible, responsive interfaces and component systems using Tailwind CSS, Radix UI, Shadcn UI, and Aceternity UI.',
+    },
+    {
+      title: 'Technical Writing & Documentation',
+      description: 'Designing and managing clear, developer-friendly documentation platforms and open-source guides with 5+ years of publishing.',
+    },
+    {
+      title: 'Headless CMS & Developer Tooling',
+      description: 'Custom Ghost CMS theme development, headless architectures, and custom Linux & NixOS developer workstations.',
+    },
+  ],
   responsibilities: [
     {
-      title: 'Performance & Architecture',
-      description: 'Optimising Next.js website performance through Server-Side Rendering (SSR) and Static Site Generation (SSG).',
+      title: 'Frontend Architecture & Performance',
+      description: 'Optimizing web applications through Next.js (SSR/SSG), TypeScript type safety, dynamic metadata, and Core Web Vitals.',
     },
     {
-      title: 'SEO & Metadata',
-      description: 'Enhancing website discoverability using the Next.js Metadata API, dynamic Open Graph, and search engine optimization.',
+      title: 'Modern UI & Design Systems',
+      description: 'Building accessible, responsive interfaces and component systems using Tailwind CSS, Radix UI, Shadcn UI, and Aceternity UI.',
     },
     {
-      title: 'Technical Documentation',
-      description: 'Managing and designing comprehensive, clear, and user-friendly documentation websites for developer tools.',
+      title: 'Technical Writing & Documentation',
+      description: 'Designing and managing clear, developer-friendly documentation platforms and open-source guides with 5+ years of publishing.',
     },
     {
-      title: 'Modern UI Engineering',
-      description: 'Building responsive, accessible web applications using Shadcn UI, Radix UI, Tailwind CSS, Aceternity UI, and Headless UI.',
+      title: 'Headless CMS & Developer Tooling',
+      description: 'Custom Ghost CMS theme development, headless architectures, and custom Linux & NixOS developer workstations.',
     },
   ],
 };
@@ -90,6 +108,21 @@ export const socialLinks: SocialLink[] = [
     href: 'https://linktr.ee/officialrajdeepsingh',
     iconName: 'link',
   },
+];
+
+export const contactForm: SocialLink[] = [
+  {
+    name: 'Twitter / X',
+    handle: '@Official_R_deep',
+    href: 'https://twitter.com/Official_R_deep',
+    iconName: 'twitter',
+  },
+  {
+    name: 'LinkedIn',
+    handle: 'in/officalrajdeepsingh',
+    href: 'https://www.linkedin.com/in/officalrajdeepsingh',
+    iconName: 'linkedin',
+  }
 ];
 
 export interface TechStackCategory {
