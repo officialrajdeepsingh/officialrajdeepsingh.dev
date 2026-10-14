@@ -3,6 +3,7 @@ import type { MDXComponents } from 'mdx/types';
 import { Callout } from 'fumadocs-ui/components/callout';
 import { Card } from '@/components/Card';
 import { Collaboration } from '@/components/Collaboration';
+import { ContactForm } from '@/components/ContactForm';
 import { XTweet } from '@/components/Tweet';
 
 export function Alert({ children, ...props }: any) {
@@ -44,6 +45,7 @@ export function getMDXComponents(components?: MDXComponents) {
     Space,
     Card,
     Collaboration,
+    ContactForm,
     XTweet,
     Iframe,
     ...components,
