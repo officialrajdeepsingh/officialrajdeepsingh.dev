@@ -32,6 +32,16 @@ export function formatDate(dateVal?: string | Date) {
   });
 }
 
+export function formatMonthYear(dateVal?: string | Date) {
+  if (!dateVal) return '';
+  const d = new Date(dateVal);
+  if (isNaN(d.getTime())) return '';
+  return d.toLocaleDateString('en-US', {
+    month: 'long',
+    year: 'numeric',
+  });
+}
+
 export function getAllTags() {
   const posts = getAllPosts();
   const tagCounts = new Map<string, number>();
