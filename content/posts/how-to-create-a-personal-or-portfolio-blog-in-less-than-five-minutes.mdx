@@ -28,13 +28,13 @@ The [section blog theme](https://section-blog-theme-docs.vercel.app/) is a nextr
 
 The theme has some helpful built-in features:
 
-*   SEO Support
-*   Inbuilt dark and light mode
-*   Inbuilt Search functionality
-*   Navigation functionality
-*   Multiple Layout Support
-*   Multiple Theme Support
-*   Easy to customize
+- SEO Support
+- Inbuilt dark and light mode
+- Inbuilt Search functionality
+- Navigation functionality
+- Multiple Layout Support
+- Multiple Theme Support
+- Easy to customize
 
 To get started using Next.js, Nextra, and the section blog theme, you'll need the following:
 
@@ -51,8 +51,7 @@ Here are the steps you'll need to follow to install and configure the section bl
 5.  [How to choose different themes](#how-to-choose-different-themes)
 6.  [Conclusion](#conclusion)
 
-Create a New Project with Next.js
----------------------------------
+## Create a New Project with Next.js
 
 To get started, you'll need to create a fresh Next project. You can do that with the [create next app](https://nextjs.org/docs/app/api-reference/create-next-app) CLI using NPM, yarn, or pnpm.
 
@@ -63,7 +62,6 @@ yarn create next-app
 # or
 pnpm create next-app
 ```
-
 
 During installation, the Create Next App CLI will ask you some questions. Nextra can't support app routes, so you'll need to select the **page route** instead.
 
@@ -76,7 +74,6 @@ Would you like to use `src/` directory?  No / Yes
 Would you like to use App Router? (recommended)  No / Yes
 Would you like to customize the default import alias (@/*)?  No / Yes
 ```
-
 
 I choose pnpm to create the Next app, and the command output looks like this:
 
@@ -140,28 +137,24 @@ Initialized a git repository.
 Success! Created section-theme-blog at /home/officialrajdeepsingh/opensource/section-theme-blog
 ```
 
-
-Install Nextra and the Section Blog Theme
------------------------------------------
+## Install Nextra and the Section Blog Theme
 
 The next step is to install the [nextra](https://nextra.site/) and [section-blog-theme](https://section-blog-theme-docs.vercel.app/) packages in your project. Run the following command:
 
 ```bash
 npm install nextra section-blog-theme
-# or 
+# or
 yarn add nextra section-blog-theme
-# or 
+# or
 pnpm add nextra section-blog-theme
 
 ```
-
 
 Install the nextra and section-blog-theme packages.
 
 The nextra and section blog theme packages should be installed successfully in your project. The next step is configuring Nextra and the section blog theme together in Next.js.
 
-Configure Nextra and the Section Blog Theme.
---------------------------------------------
+## Configure Nextra and the Section Blog Theme.
 
 To configure the section blog theme, nextra in nextjs, follow these steps.
 
@@ -182,8 +175,8 @@ const withNextra = require("nextra")({
   theme: "section-blog-theme",
   themeConfig: "./theme.config.jsx",
 });
- 
-module.exports = withNextra(); 
+
+module.exports = withNextra();
 ```
 
 ### Rename the `app.tsx` to `app.mdx`
@@ -193,7 +186,7 @@ The next step is to rename your `app.tsx` to `app.mdx` file.
 ```jsx
 // Rename _app.tsx to _app.mdx
 export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return <Component {...pageProps} />;
 }
 ```
 
@@ -202,14 +195,15 @@ export default function App({ Component, pageProps }) {
 Lastly, import the section blog theme production CSS file inside the `_app.mdx` file. Copy the following code.
 
 ```jsx
-import "section-blog-theme/styles.css"
+import "section-blog-theme/styles.css";
 ```
+
 Then paste into `_app.mdx` file.
 
 ```jsx
-import "section-blog-theme/styles.css"
+import "section-blog-theme/styles.css";
 export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return <Component {...pageProps} />;
 }
 ```
 
@@ -219,70 +213,69 @@ Lastly, create a new `theme.config.jsx` file in your project root level and past
 
 ```jsx
 const themeConfig = {
-    settings: {
-      title: "Start your blog or portfolio using MDX, Next.Js, and Nextra.",
-      description: "Section blog theme is build with Nextjs and tailwind css.",
-      SiteURL: "https://officialrajdeepsingh.dev"
+  settings: {
+    title: "Start your blog or portfolio using MDX, Next.Js, and Nextra.",
+    description: "Section blog theme is build with Nextjs and tailwind css.",
+    SiteURL: "https://officialrajdeepsingh.dev",
+  },
+  SocialLinks: [
+    {
+      name: "github",
+      url: "https://github.com/frontendweb3/section-theme-blog",
     },
-     SocialLinks: [
-      {
-        name: "github",
-        url: "https://github.com/frontendweb3/section-theme-blog",
-      },
-    ],
-    Logo: {
-      logo: (
-        <>
-          <svg
-            width="36"
-            height="36"
-            viewBox="0 0 434 420"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fillRule="evenodd"
-              clipRule="evenodd"
-              fill="currentColor"
-              d="M226.569 66.5458C222.348 59.1514 211.686 59.1514 207.464 66.5458L63.4636 318.753C59.2767 326.086 64.5719 335.207 73.0163 335.207H361.018C369.462 335.207 374.757 326.086 370.57 318.753L226.569 66.5458ZM217.017 270.333C235.355 270.333 250.221 256.557 250.221 239.563C250.221 222.57 235.355 208.793 217.017 208.793C198.679 208.793 183.813 222.57 183.813 239.563C183.813 256.557 198.679 270.333 217.017 270.333Z"
-            />
-          </svg>
-        </>
-      ),
-      link: "/",
-      target: "_blank",
+  ],
+  Logo: {
+    logo: (
+      <>
+        <svg
+          width="36"
+          height="36"
+          viewBox="0 0 434 420"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            fill="currentColor"
+            d="M226.569 66.5458C222.348 59.1514 211.686 59.1514 207.464 66.5458L63.4636 318.753C59.2767 326.086 64.5719 335.207 73.0163 335.207H361.018C369.462 335.207 374.757 326.086 370.57 318.753L226.569 66.5458ZM217.017 270.333C235.355 270.333 250.221 256.557 250.221 239.563C250.221 222.57 235.355 208.793 217.017 208.793C198.679 208.793 183.813 222.57 183.813 239.563C183.813 256.557 198.679 270.333 217.017 270.333Z"
+          />
+        </svg>
+      </>
+    ),
+    link: "/",
+    target: "_blank",
+  },
+  PrimaryNavigation: [
+    {
+      href: "/",
+      title: "Home",
     },
-    PrimaryNavigation: [
-      {
-        href: "/",
-        title: "Home",
-      },
-      {
-        href: "/posts",
-        title: "Blog",
-      },
-      {
-        href: "/about",
-        title: "About",
-      }
-    ],
-    SecondaryNavigation: [
-      {
-        href: "/disclaimer",
-        title: "Disclaimer",
-      },
-      {
-        href: "/privacy-policy",
-        title: "Privacy policy",
-      },
-      {
-        href: "/contact",
-        title: "Contact",
-      },
-    ],
-  };
-  export default themeConfig;
+    {
+      href: "/posts",
+      title: "Blog",
+    },
+    {
+      href: "/about",
+      title: "About",
+    },
+  ],
+  SecondaryNavigation: [
+    {
+      href: "/disclaimer",
+      title: "Disclaimer",
+    },
+    {
+      href: "/privacy-policy",
+      title: "Privacy policy",
+    },
+    {
+      href: "/contact",
+      title: "Contact",
+    },
+  ],
+};
+export default themeConfig;
 ```
-
 
 Paste the following code into `index.mdx` file.
 
@@ -297,8 +290,6 @@ title: Hello world
 Lorem ipsum dolor sit amet consectetur, adipisicing elit dolore vitae deleniti tempore.
 ```
 
-
-
 Then start your development server using NPM or yarn and pnpm.
 
 ```bash
@@ -309,14 +300,11 @@ yarn dev
 pnpm dev
 ```
 
-
 After your running development, your website looks like this in the browser.
 
 ![Home Page](https://www.freecodecamp.org/news/content/images/2024/01/section-blog-theme-demo-1.png)
 
-
-Define Layout
--------------
+## Define Layout
 
 The section blog theme uses `type` metadata in Markdown to define the layout structure. In the section blog theme, there are six types of layouts available.
 
@@ -362,7 +350,7 @@ title: About Page
 
 ## About Page
 
-Lorem ipsum dolor sit amet consectetur, adipisicing elit dolore vitae deleniti tempore. 
+Lorem ipsum dolor sit amet consectetur, adipisicing elit dolore vitae deleniti tempore.
 ```
 
 Your about page looks like it is in a browser.
@@ -376,7 +364,6 @@ Create a new post in the section blog theme, and you must pass additional `type:
 Make sure first to create a `posts` folder inside the project, then create a new `src/pages/posts/how-to-fetch-the-data-in-nextjs.mdx` post with mdx extension.
 
 ```markdown
-
 ---
 type: post
 title: How to fetch theb data in nextjs?
@@ -389,8 +376,7 @@ image: /images/photographer.jpg
 author: Rajdeep Singh
 ---
 
-Fetch() API help to  access the data in next.js on every request.
-
+Fetch() API help to access the data in next.js on every request.
 ```
 
 Your post looks like this in the browser.
@@ -411,16 +397,14 @@ title: Lists All the articles
 
 ## Lists Posts
 
-Lorem ipsum dolor sit amet consectetur, adipisicing elit dolore vitae deleniti tempore. 
+Lorem ipsum dolor sit amet consectetur, adipisicing elit dolore vitae deleniti tempore.
 ```
-
 
 Paste the following code into `src/pages/posts/index.mdx` file.
 
 Your posts page looks like this in the browser.
 
 ![Posts Page](https://www.freecodecamp.org/news/content/images/2024/01/section-blog-theme-posts.png)
-
 
 ### Tag Layout
 
@@ -448,14 +432,13 @@ Your tag page looks like this in the browser.
 
 ![Tag page](https://www.freecodecamp.org/news/content/images/2024/01/section-theme-tags.png)
 
-
 ### 404 Layout
 
 To create a 404 page in your blog with the following code.
 
 ```markdown
 ---
-type : 404
+type: 404
 ---
 ```
 
@@ -463,16 +446,13 @@ Your 404 page looks like this in the browser.
 
 ![404 page](https://www.freecodecamp.org/news/content/images/2024/01/404-section-blog-theme.png)
 
-
-How to choose different themes?
--------------------------------
+## How to choose different themes?
 
 Section blog theme based on shadcn UI, shadcn UI has the functionality to use a different theme. There are tons of themes available on the internet, you can use any of them.
 
 The [ui.jln.dev](https://ui.jln.dev/) website offers you more than 10000 custom Shadcn UI. You can select the theme and then paste your `globals.css` file without the `@layer` directive.
 
 ```css
-
 /*  Custom Shadcn UI theme by https://ui.jln.dev */
 :root {
   --background: 133 69% 99%;
@@ -520,10 +500,9 @@ The [ui.jln.dev](https://ui.jln.dev/) website offers you more than 10000 custom 
 }
 ```
 
-
 There are lots of other configurations available by the section blog theme. Check out the [section blog theme documentation](https://section-blog-theme-docs.vercel.app/) for more configuration. You can easily configure it by copying and pasting the code.
 
-* * *
+---
 
 ### Conclusion
 
