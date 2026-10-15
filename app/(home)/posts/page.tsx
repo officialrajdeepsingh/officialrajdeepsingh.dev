@@ -1,5 +1,5 @@
-import Link from 'next/link';
-import { getAllPosts, formatMonthYear } from '@/lib/posts';
+import { getAllPosts } from '@/lib/posts';
+import { PostCard } from '@/components/PostCard';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -27,18 +27,7 @@ export default function PostsPage() {
 
       <div className="border-t border-fd-border/40">
         {posts.map((post) => (
-          <Link
-            key={post.url}
-            href={post.url}
-            className="group flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 sm:gap-6 -mx-3 px-3 py-3.5 rounded-lg border-b border-fd-border/40 hover:bg-fd-accent/40 transition-all duration-150"
-          >
-            <span className="text-base sm:text-lg font-serif text-fd-foreground/80 group-hover:text-fd-foreground group-hover:translate-x-0.5 transition-all duration-150">
-              {post.data.title}
-            </span>
-            <time className="shrink-0 text-xs sm:text-sm text-fd-muted-foreground/75 group-hover:text-fd-muted-foreground transition-colors font-sans sm:text-right">
-              {formatMonthYear(post.data.date)}
-            </time>
-          </Link>
+          <PostCard key={post.url} post={post} />
         ))}
       </div>
     </div>
