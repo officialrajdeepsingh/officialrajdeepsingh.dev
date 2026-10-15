@@ -3,6 +3,7 @@ import './global.css';
 import { Inter } from 'next/font/google';
 import type { Metadata } from 'next';
 import { siteUrl } from '@/lib/shared';
+import { BackgroundDecorations } from '@/components/BackgroundDecorations';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -20,7 +21,8 @@ export default function Layout({ children }: LayoutProps<'/'>) {
       style={{ colorScheme: 'dark' }}
       suppressHydrationWarning
     >
-      <body className="flex flex-col min-h-screen">
+      <body className="flex flex-col min-h-screen relative bg-fd-background">
+        <BackgroundDecorations />
         <RootProvider
           theme={{
             defaultTheme: 'dark',
