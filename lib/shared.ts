@@ -1,3 +1,5 @@
+import { createGetUrl } from 'fumadocs-core/source';
+
 export const appName = 'Rajdeep Singh.';
 export const siteDescription =
   'JavaScript || Reactjs || Nextjs || Python || Rust || Biotechnology || Bioinformatic || Front-end Developer || Author';
@@ -36,3 +38,22 @@ export const socialLinks = [
     icon: 'linktree',
   },
 ];
+export const docsContentRoute = '/llms.mdx/posts';
+
+const getContentUrl = createGetUrl(docsContentRoute);
+
+export function getPageMarkdownUrl(page: { slugs: string[]; locale?: string }) {
+  const segments = [...page.slugs, 'content.md'];
+
+  return { segments, url: getContentUrl(segments, page.locale) };
+}
+
+export const docsImageRoute = '/og/posts';
+
+const getImageUrl = createGetUrl(docsImageRoute);
+
+export function getPageImageUrl(page: { slugs: string[]; locale?: string }) {
+  const segments = [...page.slugs, 'image.webp'];
+
+  return { segments, url: getImageUrl(segments, page.locale) };
+}
