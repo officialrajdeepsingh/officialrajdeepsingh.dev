@@ -31,5 +31,10 @@
     "postcss": "^8.5.29",
     "tailwindcss": "^4.3.3",
     "typescript": "^7.0.2"
+  },
+  "pnpm": {
+    "patchedDependencies": {
+      "@fumadocs/base-ui@16.17.1": "patches/@fumadocs__base-ui.patch"
+    }
   }
 }
