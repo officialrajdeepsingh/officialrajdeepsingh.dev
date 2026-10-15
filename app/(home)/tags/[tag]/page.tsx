@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { getAllPosts, getAllTags, formatDate } from '@/lib/posts';
+import { getAllPosts, getAllTags } from '@/lib/posts';
+import { PostCard } from '@/components/PostCard';
 import { ArrowLeft } from 'lucide-react';
 import type { Metadata } from 'next';
 
@@ -81,46 +82,10 @@ export default async function TagFilterPage(props: TagPageProps) {
       </header>
 
       {/* Post List */}
-      <div className="divide-y divide-fd-border">
-        {matchingPosts.map((post) => {
-          const formatted = formatDate(post.data.date);
-          return (
-            <article key={post.url} className="py-6 group">
-              <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 mb-2">
-                <Link
-                  href={post.url}
-                  className="text-lg font-medium text-fd-foreground group-hover:text-fd-primary transition-colors"
-                >
-                  {post.data.title}
-                </Link>
-                {formatted && (
-                  <time className="text-xs text-fd-muted-foreground shrink-0 font-mono">
-                    {formatted}
-                  </time>
-                )}
-              </div>
-
-              {post.data.description && (
-                <p className="text-sm text-fd-muted-foreground line-clamp-2 leading-relaxed mb-3">
-                  {post.data.description}
-                </p>
-              )}
-
-              {Array.isArray(post.data.tags) && post.data.tags.length > 0 && (
-                <div className="flex flex-wrap gap-1.5">
-                  {post.data.tags.map((t) => (
-                    <span
-                      key={t}
-                      className="text-[11px] px-2 py-0.5 rounded bg-fd-muted/50 text-fd-muted-foreground border border-fd-border/60"
-                    >
-                      {t}
-                    </span>
-                  ))}
-                </div>
-              )}
-            </article>
-          );
-        })}
+      <div className="border-t border-fd-border/40">
+        {matchingPosts.map((post) => (
+          <PostCard key={post.url} post={post} />
+        ))}
       </div>
     </div>
   );
