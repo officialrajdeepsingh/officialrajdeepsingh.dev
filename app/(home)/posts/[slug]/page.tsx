@@ -3,7 +3,8 @@ import Link from 'next/link';
 import { blogSource } from '@/lib/source';
 import { getAllPosts, formatDate, getPostReadingTime, getRelatedPosts } from '@/lib/posts';
 import { getMDXComponents } from '@/components/mdx';
-import { DocsBody } from 'fumadocs-ui/layouts/docs/page';
+import { DocsBody, MarkdownCopyButton, ViewOptionsPopover } from 'fumadocs-ui/layouts/docs/page';
+import { getPageImageUrl, getPageMarkdownUrl, gitConfig } from '@/lib/shared';
 
 import { PostDock } from '@/components/PostDock';
 import { RelatedPosts } from '@/components/RelatedPosts';
@@ -27,6 +28,8 @@ export async function generateMetadata(props: PostPageProps): Promise<Metadata> 
   const page = blogSource.getPage([slug]);
   if (!page) return {};
 
+  const ogImage = page.data.image || getPageImageUrl(page).url;
+
   return {
     title: `${page.data.title} | Rajdeep Singh`,
     description: page.data.description,
@@ -35,6 +38,18 @@ export async function generateMetadata(props: PostPageProps): Promise<Metadata> 
       description: page.data.description,
       type: 'article',
       publishedTime: page.data.date ? new Date(page.data.date).toISOString() : undefined,
+      images: [
+        {
+          url: ogImage,
+          alt: page.data.title,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: page.data.title,
+      description: page.data.description,
+      images: [ogImage],
     },
   };
 }
@@ -49,6 +64,10 @@ export default async function PostPage(props: PostPageProps) {
   const author = page.data.author || 'Rajdeep Singh';
   const readingTime = getPostReadingTime(slug);
   const relatedPosts = getRelatedPosts(slug, 2);
+
+  const markdownUrl = getPageMarkdownUrl(page).url;
+  const owner = gitConfig.user;
+  const repo = gitConfig.repo;
 
   // Previous and next articles
   const allPosts = getAllPosts();
@@ -70,7 +89,7 @@ export default async function PostPage(props: PostPageProps) {
       </div>
 
       {/* Header */}
-      <header className="mb-8 pb-8 border-b border-fd-border">
+      <header className="mb-8">
         {/* Metadata info */}
         <div className="flex flex-wrap items-center gap-4 text-xs font-mono text-fd-muted-foreground mb-4">
           {formattedDate && (
@@ -101,10 +120,18 @@ export default async function PostPage(props: PostPageProps) {
         </h1>
 
         {page.data.description && (
-          <p className="text-base sm:text-lg text-fd-muted-foreground leading-relaxed">
+          <p className="text-base sm:text-lg text-fd-muted-foreground leading-relaxed mb-6">
             {page.data.description}
           </p>
         )}
+
+        <div className="flex flex-row gap-2 items-center border-b border-fd-border pt-2 pb-6">
+          <MarkdownCopyButton markdownUrl={markdownUrl} />
+          <ViewOptionsPopover
+            markdownUrl={markdownUrl}
+            githubUrl={`https://github.com/${owner}/${repo}/blob/main/content/posts/${page.path}`}
+          />
+        </div>
       </header>
 
       {/* Article Body */}
