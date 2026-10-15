@@ -12,7 +12,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   verification: {
-    google: 'NZNWCJUeY5WANZJci-oy7EPCT08xS8WNV06CTkYFULs',
+    google: 'qvBRn03vI2BjMmcAMez4U68vlG2tT2iguciQ3LAJ8Hk',
   },
 };
 
