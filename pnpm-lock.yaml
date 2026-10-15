@@ -5,7 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 patchedDependencies:
-  '@fumadocs/base-ui@16.17.1': 564cb0c6ffb72ef4dfeead47f2d2973226bc8f26feb78cc801cfc90269f90cd3
+  '@fumadocs/base-ui@16.17.1':
+    hash: 564cb0c6ffb72ef4dfeead47f2d2973226bc8f26feb78cc801cfc90269f90cd3
+    path: patches/@fumadocs__base-ui.patch
 
 importers:
 
