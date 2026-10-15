@@ -25,6 +25,15 @@ const config = {
     ],
   },
   transpilePackages: ['react-tweet'],
+  async rewrites() {
+    return [
+      {
+        source: '/posts/:slug*.md',
+        destination: '/llms.mdx/posts/:slug*/content.md',
+      },
+    ];
+  },
+  serverExternalPackages: ['@takumi-rs/core'],
 };
 
 export default withMDX(config);
