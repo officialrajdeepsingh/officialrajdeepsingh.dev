@@ -12,3 +12,41 @@ html > body[data-scroll-locked] {
   margin-right: 0px !important;
   --removed-body-scroll-bar-size: 0px !important;
 }
+
+/* =========================================================================
+   REACT-TWEET / X EMBED STYLES (Seamless dark theme integration)
+   ========================================================================= */
+.react-tweet-theme {
+  --tweet-container-margin: 0 !important;
+  --tweet-bg-color: var(--color-fd-card, #141416) !important;
+  --tweet-bg-color-hover: var(--color-fd-muted, #1c1c20) !important;
+  --tweet-border: 1px solid var(--color-fd-border, rgba(255, 255, 255, 0.08)) !important;
+  --tweet-font-family: inherit !important;
+  --tweet-font-color: var(--color-fd-foreground, #ededed) !important;
+  --tweet-font-color-secondary: var(--color-fd-muted-foreground, #a1a1aa) !important;
+  --tweet-color-blue-primary: #38bdf8 !important;
+  --tweet-color-blue-primary-hover: #7dd3fc !important;
+  --tweet-twitter-icon-color: var(--color-fd-muted-foreground, #a1a1aa) !important;
+  --tweet-quoted-bg-color-hover: rgba(255, 255, 255, 0.04) !important;
+  --tweet-skeleton-gradient: linear-gradient(
+    270deg,
+    hsl(0, 0%, 10%),
+    hsl(0, 0%, 15%),
+    hsl(0, 0%, 15%),
+    hsl(0, 0%, 10%)
+  ) !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  border-radius: 0.75rem !important;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.15) !important;
+  transition: border-color 0.2s ease, background-color 0.2s ease, transform 0.2s ease !important;
+}
+
+.react-tweet-theme:hover {
+  border-color: hsla(0, 0%, 100%, 0.25) !important;
+}
+
+.react-tweet-theme img {
+  border-radius: 0.5rem;
+}
+

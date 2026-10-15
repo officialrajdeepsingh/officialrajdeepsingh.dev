@@ -11,6 +11,9 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
+  verification: {
+    google: 'NZNWCJUeY5WANZJci-oy7EPCT08xS8WNV06CTkYFULs',
+  },
 };
 
 export default function Layout({ children }: LayoutProps<'/'>) {

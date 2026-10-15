@@ -165,7 +165,7 @@ export const ghostThemes: ProjectItem[] = [
     description: 'A curated list of awesome resources, themes, tools, integrations, and tutorials for Ghost CMS.',
     url: 'https://github.com/frontendweb3/awesome-ghost',
     tag: 'Curated Resource',
-    badge: 'Directory',
+    badge: 'resources',
   },
   {
     title: 'Ghost Theme Builder',
@@ -179,14 +179,14 @@ export const ghostThemes: ProjectItem[] = [
     description: 'Lightweight Ghost theme designed to launch a fast personal or technical blog with Ghost CMS in under 5 minutes.',
     url: 'https://github.com/frontendweb3/fastest',
     tag: 'Handlebars / Ghost',
-    badge: 'Theme',
+    badge: 'Ghost Theme',
   },
   {
     title: 'Logly',
     description: 'A minimalist open-source theme designed specifically for content creators and technical Ghost blogs.',
     url: 'https://github.com/frontendweb3/logly',
     tag: 'Ghost CMS',
-    badge: 'Theme',
+    badge: 'Ghost Theme',
   },
   {
     title: 'Ghost Theme Starter Kit',
@@ -200,14 +200,14 @@ export const ghostThemes: ProjectItem[] = [
     description: 'A modern Ghost CMS theme designed for blogs, technical tutorials, and knowledge-driven publishing.',
     url: 'https://github.com/frontendweb3/outline',
     tag: 'Documentation / Publishing',
-    badge: 'Theme',
+    badge: 'Ghost Theme',
   },
   {
     title: 'Pulse',
     description: 'A minimal, dark-mode-first Ghost CMS theme built with Vite, Tailwind CSS 4, and Alpine.js.',
     url: 'https://github.com/frontendweb3/pulse',
     tag: 'Tailwind 4 + Alpine.js',
-    badge: 'Theme',
+    badge: 'Ghost Theme',
   },
 ];
 

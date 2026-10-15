@@ -3,6 +3,7 @@ import { getAllPosts } from '@/lib/posts';
 import { PostCard } from '@/components/PostCard';
 import { Collaboration } from '@/components/Collaboration';
 import { TechIcon } from '@/components/TechIcon';
+import { XTweet } from '@/components/Tweet';
 import {
   profileData,
   socialLinks,
@@ -441,6 +442,39 @@ export default function HomePage() {
           ))}
         </div>
       </section>
+
+
+      {/* =========================================================================
+          COMMUNITY & EDITORIAL FEATURES
+          ========================================================================= */}
+      <section id="community" className="space-y-6 scroll-mt-20">
+        <div className="flex flex-wrap items-center justify-between gap-2 pb-3 border-b border-fd-border">
+          <div className="flex items-center gap-2">
+            <svg className="w-5 h-5 fill-current text-fd-primary shrink-0" viewBox="0 0 24 24">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 24.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+            </svg>
+            <h2 className="text-xl sm:text-2xl font-bold tracking-tight text-fd-foreground">
+              Community &amp; Features
+            </h2>
+          </div>
+          <a
+            href="https://x.com/Official_R_deep"
+            target="_blank"
+            rel="noreferrer"
+            className="text-xs font-mono text-fd-muted-foreground hover:text-fd-foreground transition-colors inline-flex items-center gap-1 group"
+          >
+            <span>@Official_R_deep</span>
+            <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
+          </a>
+        </div>
+
+        <p className="text-sm text-fd-muted-foreground leading-relaxed -mt-2">
+          Editorial features by freeCodeCamp and real-world feedback on open-source projects and guides.
+        </p>
+
+        <XTweet />
+      </section>
+
 
       {/* =========================================================================
           COLLABORATION & FREELANCE CTA
