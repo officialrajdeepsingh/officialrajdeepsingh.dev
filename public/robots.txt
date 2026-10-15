@@ -1,9 +1,0 @@
-# *
-User-agent: *
-Allow: /
-
-# Host
-Host: https://officialrajdeepsingh.dev
-
-# Sitemaps
-Sitemap: https://officialrajdeepsingh.dev/sitemap.xml
