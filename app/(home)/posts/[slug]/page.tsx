@@ -4,7 +4,7 @@ import { blogSource } from '@/lib/source';
 import { getAllPosts, formatDate, getPostReadingTime, getRelatedPosts } from '@/lib/posts';
 import { getMDXComponents } from '@/components/mdx';
 import { DocsBody, MarkdownCopyButton, ViewOptionsPopover } from 'fumadocs-ui/layouts/docs/page';
-import { getPageImageUrl, getPageMarkdownUrl, gitConfig } from '@/lib/shared';
+import { getPageImageUrl, getPageMarkdownUrl, gitConfig, siteUrl } from '@/lib/shared';
 
 import { PostDock } from '@/components/PostDock';
 import { RelatedPosts } from '@/components/RelatedPosts';
@@ -144,7 +144,7 @@ export default async function PostPage(props: PostPageProps) {
         items={page.data.toc || []}
         readingTimeMinutes={readingTime}
         title={page.data.title}
-        url={`https://officialrajdeepsingh.dev/posts/${slug}`}
+        url={`${siteUrl}/posts/${slug}`}
       />
 
       {/* Related Articles */}

@@ -52,4 +52,4 @@ You can start editing the page by modifying `pages/index.mdx`. The page auto-upd
 Learn more about nextra and the section theme, and if there is any problem or question about the section theme, contact me.
 
 ## Note
-Before deploying your site, remove the https://officialrajdeepsingh.dev domain in next-sitemap.config.js and theme.config.tsx file. 
+Before deploying your site, remove the https://officialrajdeepsingh.netlify.app domain in next-sitemap.config.js and theme.config.tsx file. 

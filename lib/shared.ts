@@ -3,7 +3,7 @@ import { createGetUrl } from 'fumadocs-core/source';
 export const appName = 'Rajdeep Singh.';
 export const siteDescription =
   'JavaScript || Reactjs || Nextjs || Python || Rust || Biotechnology || Bioinformatic || Front-end Developer || Author';
-export const siteUrl = 'https://officialrajdeepsingh.dev';
+export const siteUrl = 'https://officialrajdeepsingh.netlify.app';
 
 export const gitConfig = {
   user: 'officialrajdeepsingh',
