@@ -32,7 +32,7 @@ export const profileData = {
   availability: 'Available for freelance & consulting',
   avatarUrl: 'https://www.gravatar.com/avatar/dafca7497609ae294378279ad1d6136c?s=256',
   bannerUrl: '/images/author/banner.png',
-  bio: `Frontend engineer and technical writer with 8+ years of experience crafting accessible, high-performance web applications and developer tooling. Specializing in the React & Next.js ecosystem, headless CMS architecture, and engineering documentation.`,
+  bio: `Hi, I'm a professional frontend developer with eight years of experience specialising in Next.js, React.js, and TypeScript. Additionally, I am an open-source contributor, technical documentation manager, Ghost CMS, and technical writer with five years of experience in these roles.`  ,
   capabilities: [
     {
       title: 'Frontend Architecture & Performance',
@@ -178,14 +178,14 @@ export const ghostThemes: ProjectItem[] = [
     title: 'Fastest',
     description: 'Lightweight Ghost theme designed to launch a fast personal or technical blog with Ghost CMS in under 5 minutes.',
     url: 'https://github.com/frontendweb3/fastest',
-    tag: 'Handlebars / Ghost',
+    tag: 'Ghost / Handlebars',
     badge: 'Ghost Theme',
   },
   {
     title: 'Logly',
     description: 'A minimalist open-source theme designed specifically for content creators and technical Ghost blogs.',
     url: 'https://github.com/frontendweb3/logly',
-    tag: 'Ghost CMS',
+    tag: 'Ghost / Handlebars',
     badge: 'Ghost Theme',
   },
   {
@@ -199,7 +199,7 @@ export const ghostThemes: ProjectItem[] = [
     title: 'Outline',
     description: 'A modern Ghost CMS theme designed for blogs, technical tutorials, and knowledge-driven publishing.',
     url: 'https://github.com/frontendweb3/outline',
-    tag: 'Documentation / Publishing',
+    tag: 'Ghost / Handlebars',
     badge: 'Ghost Theme',
   },
   {

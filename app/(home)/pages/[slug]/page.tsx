@@ -35,17 +35,11 @@ export default async function StandalonePage(props: StaticPageProps) {
 
   return (
     <div className="container max-w-3xl mx-auto px-4 sm:px-6 py-12 md:py-16">
-      <header className="mb-10 pb-8 border-b border-fd-border">
-        <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-fd-foreground mb-3">
+      <header className="pb-6">
+        <h1 className="text-3xl text-left sm:text-4xl font-bold tracking-tight text-fd-foreground mb-3">
           {page.data.title}
         </h1>
-        {page.data.description && (
-          <p className="text-base sm:text-lg text-fd-muted-foreground leading-relaxed">
-            {page.data.description}
-          </p>
-        )}
       </header>
-
       <DocsBody className="prose dark:prose-invert max-w-none leading-relaxed">
         <MDX components={getMDXComponents()} />
       </DocsBody>
