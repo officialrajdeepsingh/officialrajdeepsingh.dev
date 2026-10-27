@@ -2,7 +2,10 @@ import { Tweet } from 'react-tweet';
 
 export function XTweet() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 [color-scheme:dark] *:my-0">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 scheme-dark *:my-0">
+      <div className="flex justify-center [&_.react-tweet-theme]:my-0 [&_.react-tweet-theme]:w-full">
+        <Tweet id="1976207966652203108" />
+      </div>
       <div className="flex justify-center [&_.react-tweet-theme]:my-0 [&_.react-tweet-theme]:w-full">
         <Tweet id="1718296988729356404" />
       </div>
